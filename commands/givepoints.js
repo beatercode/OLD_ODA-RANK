@@ -1,0 +1,108 @@
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require('discord.js');
+const Users = require("../models/Users");
+const roleHelper = require("../helper/roleHelper")
+const mainHelper = require("../helper/mainHelper");
+const { DBSETTINGS } = require("../helper/databaseHelper")
+
+module.exports = {
+	data: new SlashCommandBuilder()
+		.setName("givepoints")
+		.setDescription("Give points to user")
+		.addUserOption((option) =>
+			option
+				.setName("users")
+				.setDescription("The user who receive the points")
+				.setRequired(true)
+		)
+		.addIntegerOption((option) =>
+			option
+				.setName("points")
+				.setDescription("The amount of points")
+				.setRequired(true)
+		),
+	async execute(interaction) {
+		const inPoints = interaction.options.getInteger("points")
+		const inUser = interaction.options.getUser("users")
+		const inMember = await mainHelper.getMemberFromId(interaction.client, inUser.id);
+		const fromMember = interaction.member;
+		let roleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(fromMember._roles);
+		let isAdmin = await mainHelper.isAdminAccount(fromMember)
+		if (isAdmin) {
+			await Users.updateMany({ user_id: inUser.id }, { $inc: { points: inPoints } })
+			let msgOutput = `Points were sent correctly to <@${inUser.id}>`;
+			const claimEmbed = new MessageEmbed()
+				.setColor(roleSettings.color)
+				.setTitle('Give points')
+				.setDescription(msgOutput)
+			interaction.reply({
+				embeds: [claimEmbed],
+				ephemeral: true
+			})
+			return
+		}
+		let startingUser = await Users.findOne({ user_id: interaction.user.id, points: { $gte: inPoints } })
+		if (!startingUser) {
+			let msgOutput = `You can't send ${inPoints} ODA points to <@${inUser.id}> as you don't have enough`;
+			const claimEmbed = new MessageEmbed()
+				.setColor(roleSettings.color)
+				.setTitle('Give points')
+				.setDescription(msgOutput)
+			interaction.reply({
+				embeds: [claimEmbed],
+				ephemeral: true
+			})
+			return
+		}
+		let finalUser = await Users.findOne({ user_id: inUser.id })
+		if (!finalUser) {
+			let msgOutput = `You can't send ${inPoints} ODA points to <@${inUser.id}> as this user is not valid`;
+			const claimEmbed = new MessageEmbed()
+				.setColor(roleSettings.color)
+				.setTitle('Give points')
+				.setDescription(msgOutput)
+			interaction.reply({
+				embeds: [claimEmbed],
+				ephemeral: true
+			})
+			return
+		}
+
+		const DB_SETTINGS = await DBSETTINGS();
+		let finalUserPointsReceived = finalUser.monthly_points_received;
+		if ((finalUserPointsReceived + inPoints) > DB_SETTINGS.MONTHLY_POINTS_RECEIVED_LIMIT) {
+			let msgOutput = `You can't send ${inPoints} ODA points to <@${inUser.id}> as this user would exceed the monthly limit of points achievable via gift`;
+			const claimEmbed = new MessageEmbed()
+				.setColor(roleSettings.color)
+				.setTitle('Give points')
+				.setDescription(msgOutput)
+			interaction.reply({
+				embeds: [claimEmbed],
+				ephemeral: true
+			})
+			return
+		}
+
+		await Users.updateMany({ user_id: inUser.id }, { $inc: { points: inPoints, monthly_points_received: inPoints } })
+		await Users.updateMany({ user_id: interaction.user.id }, { $inc: { points: -inPoints } })
+		let msgOutput = `Points were sent correctly to <@${inUser.id}>`;
+		const claimEmbed = new MessageEmbed()
+			.setColor(roleSettings.color)
+			.setTitle('Give points')
+			.setDescription(msgOutput)
+		interaction.reply({
+			embeds: [claimEmbed],
+			ephemeral: true
+		})
+		let outRoleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(inMember._roles);
+		const chatChannel = interaction.client.channels.cache.get(outRoleSettings.chat_channel_id);
+		let outputString = `<@${interaction.member.id}> just gave away ${inPoints} ODA points to <@${inUser.id}>!`;
+		const claimEmbedPublic = new MessageEmbed()
+			.setColor(roleSettings.color)
+			.setTitle('Points gifted! 🚀')
+			.setDescription(outputString)
+		await chatChannel.send({
+			embeds: [claimEmbedPublic]
+		})
+	},
+};
