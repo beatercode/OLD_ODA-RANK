@@ -4,6 +4,7 @@ const Users = require("../models/Users")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
 const logger = require("../helper/_logger")
+const config = require("../backup/config.json")
 const { DBSETTINGS } = require("../helper/databaseHelper")
 
 module.exports = {
@@ -30,7 +31,7 @@ module.exports = {
 				+ (interaction.options && interaction.options.getInteger("points") ? `[${interaction.options.getInteger("points")}]` : ""))
 			const inPoints = interaction.options.getInteger("points")
 			const inUser = interaction.options.getUser("users")
-			const inMember = await mainHelper.getMemberFromId(interaction.client, inUser.id)
+			//const inMember = await mainHelper.getMemberFromId(interaction.client, inUser.id)
 			const fromMember = interaction.member
 			let roleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(fromMember._roles)
 			let isAdmin = await mainHelper.isAdminAccount(fromMember)
@@ -105,14 +106,14 @@ module.exports = {
 				embeds: [claimEmbed],
 				ephemeral: true
 			})
-			let outRoleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(inMember._roles)
-			const chatChannel = interaction.client.channels.cache.get(outRoleSettings.chat_channel_id)
+			const DB_CHANNELS = config.Channels.values
+			const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
 			let outputString = `<@${interaction.member.id}> just gave away ${inPoints} ODA points to <@${inUser.id}>!`
 			const claimEmbedPublic = new MessageEmbed()
 				.setColor(roleSettings.color)
 				.setTitle("Points gifted! 🚀")
 				.setDescription(outputString)
-			await chatChannel.send({
+			await pointsEventsChannel.send({
 				embeds: [claimEmbedPublic]
 			})
 			logger.info("[COMMAND] givepoints end")

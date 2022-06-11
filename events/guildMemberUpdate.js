@@ -10,6 +10,7 @@ module.exports = {
 		try {
 			if (newMember.nickname !== oldMember.nickname || newMember.user.username != oldMember.user.username) {
 
+				/*
 				if (newMember.premiumSince || oldMember.premiumSince) {
 					logger.info(oldMember.nickname ? oldMember.nickname : oldMember.user.username 
 						+ " has Nitro anche will change nick to [" + newMember.nickname + "]!")
@@ -18,6 +19,7 @@ module.exports = {
 						newMember.setNickname(null)
 					}
 				}
+				*/
 
 				let newNick = !newMember.nickname ? newMember.user.username : newMember.nickname
 				let updated = await Users.updateOne({ user_id: newMember.user.id }, { $set: { username: newNick } })

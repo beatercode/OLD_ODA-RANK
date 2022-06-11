@@ -3,7 +3,7 @@ const Invites = require("../models/Invites")
 const OdaSwitch = require("../models/OdaSwitch")
 const logger = require("../helper/_logger")
 const config = require("../backup/config.json")
-const old_user = require("../old_user.json")
+const old_user = require("../__old_user.json")
 const Users = require("../models/Users")
 
 module.exports = {

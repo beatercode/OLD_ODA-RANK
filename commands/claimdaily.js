@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js")
 const Users = require("../models/Users")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
-const { DBSETTINGS } = require("../helper/databaseHelper")
+const config = require("../backup/config.json")
 const logger = require("../helper/_logger")
 const { logOnServer } = require("../helper/mainHelper")
 
@@ -33,7 +33,7 @@ module.exports = {
 				return
 			}
 
-			const DB_SETTINGS = await DBSETTINGS()
+			const DB_SETTINGS = config.Settings.values
 			let bonusMul = currentUser.oda_in_name_bonus ? 1.1 : 1
 			let deservedPoints = Math.round((DB_SETTINGS.DAILY_POINTS * (100 + DB_SETTINGS.MULT_PERCENTAGE * currentUser.consecutive_daily) / 100) * bonusMul)
 
@@ -66,8 +66,8 @@ module.exports = {
 					logger.info("[COMMAND] claimdaily end")
 					return
 				}
-				console.log("chat id " + roleSettings.chat_channel_id)
-				const chatChannel = interaction.client.channels.cache.get(roleSettings.chat_channel_id)
+				const DB_CHANNELS = config.Channels.values
+				const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
 				outputString = `<@${member.id}> just claimed **${deservedPoints}** ODA points! `
 				outputString += `He is in a **${(currentUser.consecutive_daily + 1)}** days streak! 🚀`
 
@@ -75,7 +75,7 @@ module.exports = {
 					.setColor(roleSettings.color)
 					.setTitle("Daily Claim")
 					.setDescription(outputString)
-				await chatChannel.send({
+				await pointsEventsChannel.send({
 					embeds: [claimEmbed]
 				})//.then(async msg => { await msg.react('🔥') })
 				logger.info("[COMMAND] claimdaily end")
