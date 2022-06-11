@@ -2,7 +2,6 @@ const logger = require("../helper/_logger");
 const Users = require("../models/Users");
 const roleHelper = require("../helper/roleHelper");
 
-
 module.exports = {
     name: "guildMemberUpdate",
     async execute(oldMember, newMember) {

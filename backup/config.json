@@ -163,6 +163,7 @@
       "ch_commands_tenno": "978285455923622000",
       "ch_list_surveys": "978286479778394123",
       "ch_announcements": "961195506187505674",
+      "ch_bot_feedback": "981207942655275068",
       "ch_feedback": "",
       "ch_rank": "984559814539608165",
       "ch_moderazione": "984545926792224828",
@@ -179,6 +180,7 @@
       "setupdb_permitted": true,
       "setupmessages_permitted": true,
       "enabled_discount": false,
+      "enabled_ds_log": true,
       "only_view": true,
       "BOT_NAME": "ODA Clan Points Manager & Gameloop",
       "GUILD_ID": "961194963549429821",
@@ -189,7 +191,7 @@
       "DAILY_POINTS": 200,
       "SURVEY_POINTS": 200,
       "INVITATION_POINTS": 500,
-      "MULT_PERCENTAGE": 1.5,
+      "MULT_PERCENTAGE": 3,
       "MONTHLY_POINTS_RECEIVED_LIMIT": 5000
     }
   },

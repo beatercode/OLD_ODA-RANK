@@ -3,6 +3,7 @@ const { getHigherRoleByArrayOfRolesID } = require("../helper/roleHelper");
 const Users = require("../models/Users");
 const mainHelper = require("../helper/mainHelper");
 const config = require("../backup/config.json");
+const logger = require("../helper/_logger")
 const { setOdaDb, DBUSERDUMMY, DBSETTINGS } = require("../helper/databaseHelper");
 
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
     async execute(interaction) {
 
         try {
-            logger.info("Lanciato comando /setupdb")
+            logger.info("[COMMAND] setupdb start")
             const member = interaction.member;
 
             let isAdmin = await mainHelper.isAdminAccount(member);
@@ -59,45 +60,13 @@ module.exports = {
                         return;
                     }
                 })
-
-                // insert dummy users
-                if (false) {
-                    for (let index = 0; index < 25; index++) {
-                        newUser = new Users({
-                            user_id: '00000000',
-                            username: member.user.username + '-dummy',
-                            role_id: userRole.id,
-                            role: userRole.name,
-                            points: Math.round((Math.random() * (20000 - 210) + 210) * 100),
-                            daily: false,
-                            consecutive_daily: 0,
-                            monthly_invitation: 0,
-                            monthly_points_received: 0,
-                            multiplier: 1,
-                            oda_in_name: true,
-                            oda_in_name_bonus: false,
-                            consecutive_oda: 0,
-                            invitedBy: {
-                                inviterId: "",
-                                inviterPoints: 0,
-                                invitedWithCode: "",
-                            },
-                        })
-                        await newUser.save(err => {
-                            if (err) {
-                                console.log(err);
-                                interaction.reply("Error during setup user [" + member.user.username + "]");
-                                return;
-                            }
-                        })
-                    }
-                }
             })
 
             interaction.reply({
                 content: "Database updated",
                 ephemeral: true
             });
+            logger.info("[COMMAND] setupdb end")
 
         } catch (err) {
             if (err) {

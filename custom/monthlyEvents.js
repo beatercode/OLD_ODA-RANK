@@ -8,6 +8,7 @@ module.exports = {
 
     async monthlyCheck(client) {
 
+        logger.info("[MONTHLY] routine starts")
         this.monthlyAdjustRole(client);
         this.defaultMonthlyResets();
     },
@@ -15,11 +16,12 @@ module.exports = {
     async defaultMonthlyResets() {
         // reset month invite, mult, points
         await Users.updateMany({},
-            { $set: { monthly_invitation: 0, multiplier: 1, points: 0 } })
+            { $set: { monthly_invitation: 0 } })
     },
 
     async monthlyAdjustRole(client) {
 
+        logger.info("[MONTHLY] monthlyAdjustRole start")
         const searchLimit = 0;
         const samuraiBoard = await roleHelper.getBoardByRoleName(searchLimit, "samurai");
         const nokaBoard = await roleHelper.getBoardByRoleName(searchLimit, "noka");
@@ -226,5 +228,6 @@ module.exports = {
         if (finalEmbeds && finalEmbeds.length)
             await channelAnnouncements.send({ embeds: [finalEmbeds] })
 
+        logger.info("[MONTHLY] monthlyAdjustRole end")
     }
 }

@@ -1,11 +1,13 @@
 const Invites = require("../models/Invites")
 const Users = require("../models/Users")
 const { DBSETTINGS } = require("../helper/databaseHelper")
+const logger = require("../helper/_logger")
 
 module.exports = {
 	name: "guildMemberAdd",
 	async execute(member) {
 
+		logger.info("[TRIGGER] guildMemberad start")
 		const newInvites = await member.guild.invites.fetch();
 		let oldInvites = await Invites.find({}, '-_id code amount');
 		if (!oldInvites) {
@@ -18,13 +20,21 @@ module.exports = {
 		let invitedWithCode = "";
 		const DB_SETTINGS = await DBSETTINGS();
 		if (inviter && invite.code) {
+			logger.info("[TRIGGER] guildMemberad inviter [" + invite.code + "]")
 			invitedWithCode = invite.code
 			let updatesInv = await Invites.updateMany({ code: invitedWithCode }, { $inc: { valid: 1, amount: 1 } })
 			inviterId = inviter.id;
 			
 			let inviterUserDb = await Users.findOne({ user_id: inviterId});
+			if(!inviterUserDb) {
+				logger.error(`GO CHECK THIS ID [${member.user.id}][${member.user.username}]`)
+				logger.error(`HE JOINED THE GUILD WITH INV. LINK [${invite.code}] OF SOMEONE ID [${inviterId}]`)
+				logger.error(`BUT CAN't FIND HIS REF ON DB`)
+				return;
+			}
 			let pointsBonusMul = inviterUserDb.monthly_invitation < 3 ? 2 : 1;
-			inviterPoints = DB_SETTINGS.INVITATION_POINTS * pointsBonusMul;
+			//let pointsBonusOdaInNameMul = inviterUserDb.oda_in_name_bonus ? 1.1 : 1;
+			inviterPoints = DB_SETTINGS.INVITATION_POINTS * pointsBonusMul; // * pointsBonusOdaInNameMul
 			if (updatesInv.modifiedCount > 0) {
 				logger.info(`User joined with inv. code [${invitedWithCode}] -> DB updated`)
 			} else {
@@ -32,13 +42,15 @@ module.exports = {
 			}
 
 			let updatesUsr = await Users.updateMany({ user_id: inviter.id },
-				{ $inc: { points: inviterPoints, monthly_invitation: 1 } })
+				{ $inc: { points: inviterPoints, monthly_invitation: 1, total_invitation: 1 } })
 			if (updatesUsr.modifiedCount > 0) {
 				logger.info(`User joined with inv. code [${invitedWithCode}] -> inviter point's fived`)
 			} else {
 				logger.error(`User joined with inv. code [${invitedWithCode}] -> can't update DB`)
 			}
 		}
+		logger.info("[TRIGGER] guildMemberad " 
+			+ (inviter && invite.code) ? " [" + invite.code + "]" : " no inviter");
 
 		let newUser = new Users({
 			user_id: member.user.id,
@@ -50,7 +62,6 @@ module.exports = {
 			consecutive_daily: 0,
 			monthly_invitation: 0,
 			monthly_points_received: 0,
-			multiplier: 1,
 			oda_in_name: true,
 			oda_in_name_bonus: false,
 			consecutive_oda: 0,
@@ -60,9 +71,11 @@ module.exports = {
 				invitedWithCode: invitedWithCode,
 			},
 		})
+		logger.info("[TRIGGER] guildMemberad end");
 		await newUser.save(err => {
 			if (err) {
-				console.log(err);
+				logger.info("[TRIGGER] guildMemberad error")
+				logger.info(err)
 				interaction.reply("Error during setup user [" + member.user.username + "]");
 				return;
 			}

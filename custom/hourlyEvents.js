@@ -7,12 +7,14 @@ module.exports = {
 
     async hourlyChecks(client) {
 
+        logger.info("[HOURLY] routine starts")
         await updateLeaderboard.updateLeaderboard(client);
         await this.checkOdaInName(client);
 
     },
 
     async checkOdaInName(client) {
+        logger.info("[HOURLY] checkOdaInName starts")
         let allUsers = await Users.find({ oda_in_name: true });
         let mapped = allUsers.map(({ user_id, username, oda_in_name }) => ({ user_id, username, oda_in_name }))
         for (const x of mapped) {
@@ -24,5 +26,6 @@ module.exports = {
         let notOdaInNameArray = (mapped.filter(x => !x.oda_in_name && x.user_id != "00000000")).map(x => x.user_id);
         let updatedRows = await Users.updateMany({ user_id: { $in: notOdaInNameArray } }, { $set: { oda_in_name: false } })
         logger.info("Hourly check ODA IN NAME done ---> updated: " + updatedRows.modifiedCount)
+        logger.info("[HOURLY] checkOdaInName end")
     },
 }

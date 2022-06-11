@@ -14,7 +14,11 @@ module.exports = {
             let reactedChannel = reaction.message.channelId;
 
             if (reactionChannels.includes(reactedChannel) && !user.bot) {
-                let res = await Users.updateMany({ user_id: user.id }, { $inc: { points: -(DB_SETTINGS.REACTION_POINTS) } })
+                let inUser = await Users.findOne({ user_id: user.id });
+                if (!inUser) { return }
+                //let pointsBonusOdaInNameMul = inUser.oda_in_name_bonus ? 1.1 : 1;
+                let deservedPoints = DB_SETTINGS.REACTION_POINTS; // * pointsBonusOdaInNameMul
+                let res = await Users.updateMany({ user_id: user.id }, { $inc: { points: -deservedPoints } })
                 if (res.modifiedCount > 0) {
                     logger.debug(`${user.username} just removed reaction to message id [${reaction.message.id}]`)
                 } else {

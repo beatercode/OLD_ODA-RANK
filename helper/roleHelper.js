@@ -54,7 +54,7 @@ module.exports = {
             roleSettings = await this.getRoleSettingsByValue("id", selectedRoleId);
             imTheRole = selectedRoleId == myRoleSettings.id;
         }
-        let accessible = (roleSettings.lvl < 6 && roleSettings.lvl >= 2) || imTheRole;
+        let accessible = roleSettings && (roleSettings.lvl < 6 && roleSettings.lvl >= 2) || imTheRole;
         return accessible
             ? this.generateBoardInternal(member, imTheRole, roleSettings, 10)
             : {
@@ -115,10 +115,10 @@ module.exports = {
             let pos = counter == x.position ? emojiRank[counter - 1] : x.position ? x.position : emojiRank[counter - 1];
             let newRow = "";
             if (x.user_id == myId) {
-                newRow = `**${pos}** <@${x.user_id}> with **${x.points}** points\n`;
+                newRow = `**${pos}** <@${x.user_id}> with **${x.points}** ODA points\n`;
             } else {
                 let atmUser = (x.username).includes("dummy") ? '@dummyUser' : '<@' + x.user_id + '>';
-                newRow = `**${pos}** ${atmUser} with **${x.points}** points\n`;
+                newRow = `**${pos}** ${atmUser} with **${x.points}** ODA points\n`;
             }
             description += newRow;
             let space = "ㅤ";

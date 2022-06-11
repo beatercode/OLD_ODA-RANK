@@ -3,6 +3,7 @@ const { MessageEmbed } = require('discord.js');
 const Users = require("../models/Users");
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper");
+const logger = require("../helper/_logger");
 const { DBSETTINGS } = require("../helper/databaseHelper")
 
 module.exports = {
@@ -22,6 +23,12 @@ module.exports = {
 				.setRequired(true)
 		),
 	async execute(interaction) {
+
+		logger.info("[COMMAND] givepoints start "
+			+ ((interaction.options != null && interaction.options.length > 0
+				&& interaction.options.getUser("account")) ? interaction.options.getUser("account").id : "")
+			+ ((interaction.options != null && interaction.options.length > 1
+				&& interaction.options.getInteger("points")) ? " " + interaction.options.getUser("points").id : ""));
 		const inPoints = interaction.options.getInteger("points")
 		const inUser = interaction.options.getUser("users")
 		const inMember = await mainHelper.getMemberFromId(interaction.client, inUser.id);
@@ -39,6 +46,8 @@ module.exports = {
 				embeds: [claimEmbed],
 				ephemeral: true
 			})
+			mainHelper.logOnServer(interaction.client, msgOutput)
+			logger.info("[COMMAND] givepoints end")
 			return
 		}
 		let startingUser = await Users.findOne({ user_id: interaction.user.id, points: { $gte: inPoints } })
@@ -52,6 +61,7 @@ module.exports = {
 				embeds: [claimEmbed],
 				ephemeral: true
 			})
+			logger.info("[COMMAND] givepoints end")
 			return
 		}
 		let finalUser = await Users.findOne({ user_id: inUser.id })
@@ -65,6 +75,7 @@ module.exports = {
 				embeds: [claimEmbed],
 				ephemeral: true
 			})
+			logger.info("[COMMAND] givepoints end")
 			return
 		}
 
@@ -80,6 +91,7 @@ module.exports = {
 				embeds: [claimEmbed],
 				ephemeral: true
 			})
+			logger.info("[COMMAND] givepoints end")
 			return
 		}
 
@@ -104,5 +116,7 @@ module.exports = {
 		await chatChannel.send({
 			embeds: [claimEmbedPublic]
 		})
+		logger.info("[COMMAND] givepoints end")
+		mainHelper.logOnServer(interaction.client, outputString)
 	},
 };

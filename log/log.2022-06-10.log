@@ -180,3 +180,797 @@
 [2022-06-10T02:07:28.647] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
 [2022-06-10T02:09:44.174] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
 [2022-06-10T02:10:13.265] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T02:45:40.735] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T03:30:33.755] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T03:33:55.889] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T03:34:04.429] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T03:34:04.430] [ERROR] default - ReferenceError: consolelog is not defined
+    at Object.odaNameDiffChecker (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:118:2)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:70:21)
+[2022-06-10T03:35:57.975] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T08:54:00.963] [INFO] default - Update leaderboard launched!
+[2022-06-10T09:00:00.995] [INFO] default - Update leaderboard launched!
+[2022-06-10T09:00:02.960] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-10T09:03:53.813] [DEBUG] default - Giove just reacted to message id [984513706773864458]
+[2022-06-10T09:03:55.842] [DEBUG] default - Giove just reacted to message id [984513706773864458]
+[2022-06-10T09:03:58.507] [DEBUG] default - Giove just reacted to message id [984513706773864458]
+[2022-06-10T09:15:13.513] [INFO] default - Update leaderboard launched!
+[2022-06-10T10:31:54.527] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:32:10.438] [INFO] default - Update leaderboard launched!
+[2022-06-10T10:32:33.946] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:32:39.769] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T10:32:39.769] [ERROR] default - TypeError: DBCHANNELS is not a function
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:132:35)
+    at Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:42)
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:10:24)
+    at Client.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/bot.js:44:44)
+    at Client.emit (node:events:527:28)
+    at InteractionCreateAction.handle (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at module.exports [as INTERACTION_CREATE] (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:478:22)
+    at WebSocketShard.onMessage (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+[2022-06-10T10:33:16.219] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:33:19.332] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T10:33:19.333] [ERROR] default - TypeError: DBCHANNELS is not a function
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:132:35)
+    at Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:42)
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:10:24)
+    at Client.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/bot.js:44:44)
+    at Client.emit (node:events:527:28)
+    at InteractionCreateAction.handle (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at module.exports [as INTERACTION_CREATE] (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:478:22)
+    at WebSocketShard.onMessage (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+[2022-06-10T10:33:45.402] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:34:30.411] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:35:16.374] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:35:27.443] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:41:48.351] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:42:01.595] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:42:13.236] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:43:36.990] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:44:26.177] [ERROR] default - User [911350399200534618] ID [marigold] filed/not necessary role update
+[2022-06-10T10:44:26.230] [INFO] default - User joined with inv. code [H69Us6xry2] -> DB updated
+[2022-06-10T10:44:26.266] [INFO] default - User joined with inv. code [H69Us6xry2] -> inviter point's fived
+[2022-06-10T10:44:30.242] [INFO] default - User [911350399200534618] ID [marigold] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T10:44:30.419] [ERROR] default - User [911350399200534618] ID [marigold] filed/not necessary role update
+[2022-06-10T10:44:37.363] [INFO] default - User [911350399200534618] ID [marigold] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T10:44:37.547] [ERROR] default - User [911350399200534618] ID [marigold] filed/not necessary role update
+[2022-06-10T10:44:45.951] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:44:46.406] [INFO] default - User [911350399200534618] ID [marigold] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T10:44:46.608] [ERROR] default - User [911350399200534618] ID [marigold] filed/not necessary role update
+[2022-06-10T10:44:50.857] [INFO] default - User [911350399200534618] ID [marigold] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T10:44:51.118] [ERROR] default - User [911350399200534618] ID [marigold] filed/not necessary role update
+[2022-06-10T10:47:10.338] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:47:46.235] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:47:52.531] [INFO] default - User [911350399200534618] ID [marigold] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-10T10:47:52.733] [ERROR] default - User [911350399200534618] ID [marigold] filed/not necessary role update
+[2022-06-10T10:47:53.568] [INFO] default - Update leaderboard launched!
+[2022-06-10T10:50:33.714] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:50:49.843] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:52:08.626] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:52:52.004] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:53:14.486] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:53:21.095] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:53:51.625] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:54:58.624] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:57:12.143] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:57:23.438] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:57:31.251] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T10:57:31.251] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:160:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T10:57:51.793] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:57:59.159] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T10:57:59.159] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:161:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T10:58:21.158] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:58:25.520] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T10:58:25.520] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:161:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T10:58:42.430] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T10:58:46.592] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T10:58:46.592] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:162:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:00:00.592] [INFO] default - Update leaderboard launched!
+[2022-06-10T11:00:02.484] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-10T11:05:22.839] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:05:28.557] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:05:28.557] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:161:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:06:09.592] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:06:15.942] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:06:15.948] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:161:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:06:30.405] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:06:35.751] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:06:35.751] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:07:21.757] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:07:25.257] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:07:25.258] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:07:31.033] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:07:32.870] [DEBUG] default - pino just reacted to message id [981544653830639656]
+[2022-06-10T11:07:35.566] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:07:35.566] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:07:49.237] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:07:52.028] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:07:52.028] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:07:59.476] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:08:01.501] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:08:01.502] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:08:17.131] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:08:24.229] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:08:24.229] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:08:43.582] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:08:45.267] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:08:45.267] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:08:53.153] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:08:56.962] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:08:56.962] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:09:21.571] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:09:27.138] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:09:27.138] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:160:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:09:49.743] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:09:52.919] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:09:52.919] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:166:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:10:20.857] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:10:31.333] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:10:31.608] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:10:31.608] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:160:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:12:48.545] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:12:51.575] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:12:51.575] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:163:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:13:46.328] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:13:49.950] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:13:49.950] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:163:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:13:54.896] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:13:56.824] [DEBUG] default - pino just reacted to message id [980954810545209402]
+[2022-06-10T11:13:57.972] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:13:57.972] [ERROR] default - ReferenceError: reaction is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:163:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:15:55.640] [ERROR] default - User [446348134369591296] ID [MaxOne | ODA Clan] filed/not necessary role update
+[2022-06-10T11:15:55.807] [INFO] default - User [446348134369591296] ID [MaxOne | ODA Clan] role updated to [Samurai 武士 - Lvl.5]
+[2022-06-10T11:16:06.996] [ERROR] default - User [446348134369591296] ID [MaxOne | ODA Clan] filed/not necessary role update
+[2022-06-10T11:16:07.180] [INFO] default - User [446348134369591296] ID [MaxOne | ODA Clan] role updated to [Admin]
+[2022-06-10T11:16:07.398] [INFO] default - User [446348134369591296] ID [MaxOne | ODA Clan] role updated to [Nōka 農家 - Lvl.4]
+[2022-06-10T11:17:35.619] [INFO] default - User [446348134369591296] ID [MaxOne | ODA Clan] role updated to [Daimyō 大名 - Lvl.6]
+[2022-06-10T11:17:35.923] [ERROR] default - User [446348134369591296] ID [MaxOne | ODA Clan] filed/not necessary role update
+[2022-06-10T11:17:37.987] [ERROR] default - User [446348134369591296] ID [MaxOne | ODA Clan] filed/not necessary role update
+[2022-06-10T11:17:51.983] [INFO] default - New invite created - code [J9V4g43B] from user id [276816888263081985]
+[2022-06-10T11:17:52.043] [INFO] default - Invite delete [J9V4g43B] -> DB updated
+[2022-06-10T11:18:08.989] [INFO] default - User id [276816888263081985] quit the guild. Inviter id was []. Points removed from DB
+[2022-06-10T11:18:09.076] [INFO] default - User id [276816888263081985] quit the guild. Delete from DB
+[2022-06-10T11:18:14.713] [DEBUG] default - drdri just reacted to message id [984513706773864458]
+[2022-06-10T11:18:16.782] [DEBUG] default - drdri just reacted to message id [984513706773864458]
+[2022-06-10T11:18:21.936] [ERROR] default - User [276816888263081985] ID [DarkChri | ODA Clan] filed/not necessary role update
+[2022-06-10T11:26:45.129] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:30:33.082] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:30:39.202] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:36:29.559] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:37:39.181] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:38:18.295] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:39:59.749] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:40:59.020] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:41:36.397] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:43:02.783] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:44:05.042] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:44:26.663] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:44:40.141] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:45:00.082] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:45:13.165] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:46:48.483] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:47:12.827] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:47:40.454] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:48:23.605] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:48:26.907] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:48:26.907] [ERROR] default - ReferenceError: p is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:150:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T11:50:02.315] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:51:10.763] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:53:44.619] [DEBUG] default - Keepthyfaith just reacted to message id [984513706773864458]
+[2022-06-10T11:54:57.747] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:55:02.471] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:55:02.471] [ERROR] default - ReferenceError: getUserWhoReacted is not defined
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:9)
+    at Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:42)
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:10:24)
+    at Client.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/bot.js:44:44)
+    at Client.emit (node:events:527:28)
+    at InteractionCreateAction.handle (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at module.exports [as INTERACTION_CREATE] (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:478:22)
+    at WebSocketShard.onMessage (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+[2022-06-10T11:55:12.041] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:55:13.957] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:55:13.958] [ERROR] default - ReferenceError: client is not defined
+    at Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:142:25)
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:34)
+    at Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:42)
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:10:24)
+    at Client.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/bot.js:44:44)
+    at Client.emit (node:events:527:28)
+    at InteractionCreateAction.handle (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at module.exports [as INTERACTION_CREATE] (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:478:22)
+[2022-06-10T11:55:25.536] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:55:55.084] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:56:10.509] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:56:30.873] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:59:27.311] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T11:59:30.692] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T11:59:30.692] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'cache')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:146:52
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:143:9)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:00:00.394] [INFO] default - Update leaderboard launched!
+[2022-06-10T12:00:02.332] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-10T12:00:25.675] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:00:27.476] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T12:00:27.476] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'cache')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:146:52
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:143:9)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:00:33.038] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:00:37.353] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T12:00:37.354] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'get')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:146:52
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:143:9)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:02:04.133] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:02:38.910] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:03:13.063] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:03:19.416] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T12:03:19.416] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'cache')
+    at Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:146:52)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:03:34.757] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:03:38.986] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T12:03:38.987] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'fetch')
+    at Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:146:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:03:44.462] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:03:48.530] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T12:03:48.530] [ERROR] default - TypeError: message.fetch is not a function
+    at Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:146:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:10:02.972] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:10:07.371] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T12:10:07.372] [ERROR] default - ReferenceError: messages is not defined
+    at Object.getUserWhoReacted (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:144:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:136:23)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T12:10:19.907] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:10:37.027] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:10:58.512] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:11:16.170] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:12:41.027] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:13:05.344] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:13:17.177] [DEBUG] default - The GodFathers8x just reacted to message id [979091563068157962]
+[2022-06-10T12:13:24.706] [DEBUG] default - The GodFathers8x just reacted to message id [981532732972761169]
+[2022-06-10T12:13:29.351] [DEBUG] default - The GodFathers8x just reacted to message id [981533189438857256]
+[2022-06-10T12:14:10.453] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:14:46.765] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:15:05.189] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:16:53.959] [ERROR] default - User [676512568088723456] ID [Gualty79] filed/not necessary role update
+[2022-06-10T12:16:54.132] [INFO] default - User joined with inv. code [cbbptVKD] -> DB updated
+[2022-06-10T12:16:54.168] [INFO] default - User joined with inv. code [cbbptVKD] -> inviter point's fived
+[2022-06-10T12:53:44.103] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:59:30.152] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T12:59:55.259] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:00:00.317] [INFO] default - Update leaderboard launched!
+[2022-06-10T13:00:02.241] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-10T13:00:09.212] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:01:06.917] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:01:39.283] [DEBUG] default - frank007 just reacted to message id [982672796901580840]
+[2022-06-10T13:01:40.165] [DEBUG] default - frank007 just reacted to message id [982672796901580840]
+[2022-06-10T13:01:52.641] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:02:33.557] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:03:22.090] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:15:16.170] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:16:15.336] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:16:31.269] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:17:02.975] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:17:21.952] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:17:44.540] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:19:12.289] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:21:08.327] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:21:34.419] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:22:44.920] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:23:11.685] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:23:31.904] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:26:22.704] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:26:35.129] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:26:35.130] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'count')
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:137:66)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T13:26:53.466] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:27:16.556] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:27:36.330] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:27:50.116] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:31:36.337] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:31:57.307] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:32:34.487] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:32:44.716] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:33:01.027] [DEBUG] default - BeaterFit | ODA Clan just removed reaction to message id [979087412024184832]
+[2022-06-10T13:33:01.991] [DEBUG] default - BeaterFit | ODA Clan just reacted to message id [979087412024184832]
+[2022-06-10T13:33:38.292] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:33:58.496] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:34:01.248] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:34:01.248] [ERROR] default - TypeError: userReactions.fetch is not a function
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:140:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T13:34:11.906] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:34:35.031] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:35:17.993] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:35:27.446] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:35:32.391] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:35:32.391] [ERROR] default - TypeError: userReactions.users is not a function
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:140:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T13:35:41.292] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:35:44.191] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:35:44.191] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'fetch')
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:140:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T13:35:55.994] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:35:58.922] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:35:58.922] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'cache')
+    at Object.checkReactCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:140:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:21)
+[2022-06-10T13:36:17.580] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:36:28.153] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:36:37.756] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:36:57.183] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:40:21.941] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:22.591] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:23.477] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:23.804] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:24.546] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:25.151] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:25.903] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:26.385] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:27.069] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:27.750] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:28.473] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:29.177] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:29.885] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:30.718] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:31.383] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:32.257] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:32.822] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:33.721] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:34.313] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:40:35.028] [DEBUG] default - Thoommmm97 just reacted to message id [984513706773864458]
+[2022-06-10T13:42:47.708] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:43:02.929] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:43:02.930] [ERROR] default - ReferenceError: DBCHANNELS is not defined
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:144:29)
+    at Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:42)
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:10:24)
+    at Client.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/bot.js:44:44)
+    at Client.emit (node:events:527:28)
+    at InteractionCreateAction.handle (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at module.exports [as INTERACTION_CREATE] (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:478:22)
+    at WebSocketShard.onMessage (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+[2022-06-10T13:43:18.704] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:43:21.858] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T13:43:21.858] [ERROR] default - ReferenceError: message is not defined
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:148:27)
+    at Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:42)
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:10:24)
+    at Client.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/bot.js:44:44)
+    at Client.emit (node:events:527:28)
+    at InteractionCreateAction.handle (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/actions/InteractionCreate.js:83:12)
+    at module.exports [as INTERACTION_CREATE] (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/handlers/INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketManager.js:346:31)
+    at WebSocketShard.onPacket (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:478:22)
+    at WebSocketShard.onMessage (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/client/websocket/WebSocketShard.js:317:10)
+[2022-06-10T13:43:53.085] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:44:18.501] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:45:19.120] [ERROR] default - User [180973015608066048] ID [Panzer8] filed/not necessary role update
+[2022-06-10T13:45:19.404] [INFO] default - User joined with inv. code [H69Us6xry2] -> DB updated
+[2022-06-10T13:45:19.453] [INFO] default - User joined with inv. code [H69Us6xry2] -> inviter point's fived
+[2022-06-10T13:45:44.917] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:46:05.467] [INFO] default - User [180973015608066048] ID [Panzer8] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T13:46:05.681] [ERROR] default - User [180973015608066048] ID [Panzer8] filed/not necessary role update
+[2022-06-10T13:48:04.129] [INFO] default - User [180973015608066048] ID [Panzer8] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T13:48:04.412] [ERROR] default - User [180973015608066048] ID [Panzer8] filed/not necessary role update
+[2022-06-10T13:48:50.107] [INFO] default - User [180973015608066048] ID [Panzer8] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T13:48:50.286] [ERROR] default - User [180973015608066048] ID [Panzer8] filed/not necessary role update
+[2022-06-10T13:49:05.837] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:49:19.451] [INFO] default - User [180973015608066048] ID [Panzer8] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T13:49:19.688] [ERROR] default - User [180973015608066048] ID [Panzer8] filed/not necessary role update
+[2022-06-10T13:49:32.420] [INFO] default - User [180973015608066048] ID [Panzer8] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-10T13:49:32.608] [ERROR] default - User [180973015608066048] ID [Panzer8] filed/not necessary role update
+[2022-06-10T13:49:35.813] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:51:25.187] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:51:39.538] [DEBUG] default - Panzer8 just reacted to message id [979087412024184832]
+[2022-06-10T13:52:59.346] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:53:16.568] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T13:55:24.625] [INFO] default - User joined with inv. code [PYPfkQ2hF8] -> DB updated
+[2022-06-10T13:55:24.653] [ERROR] default - User [694210246285066262] ID [Hiei] filed/not necessary role update
+[2022-06-10T13:55:24.694] [INFO] default - User joined with inv. code [PYPfkQ2hF8] -> inviter point's fived
+[2022-06-10T13:55:31.102] [INFO] default - User [694210246285066262] ID [Hiei] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T13:55:31.246] [ERROR] default - User [694210246285066262] ID [Hiei] filed/not necessary role update
+[2022-06-10T14:00:00.208] [INFO] default - Update leaderboard launched!
+[2022-06-10T14:00:02.450] [INFO] default - Hourly check ODA IN NAME done ---> updated: 2
+[2022-06-10T14:16:43.501] [DEBUG] default - mass89 just reacted to message id [984513706773864458]
+[2022-06-10T14:30:18.459] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:32:14.194] [ERROR] default - User [658427045788778537] ID [Lestath84] filed/not necessary role update
+[2022-06-10T14:32:14.245] [INFO] default - User joined with inv. code [vT5QrxT4eh] -> DB updated
+[2022-06-10T14:32:14.283] [INFO] default - User joined with inv. code [vT5QrxT4eh] -> inviter point's fived
+[2022-06-10T14:32:16.771] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:32:36.292] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:32:52.305] [INFO] default - User id [658427045788778537] quit the guild. Inviter id was [351480824266358784]. Points removed from DB
+[2022-06-10T14:32:52.388] [INFO] default - User id [658427045788778537] quit the guild. Delete from DB
+[2022-06-10T14:33:37.108] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:34:06.622] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:35:04.886] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:35:20.676] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:35:43.272] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:38:12.864] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:38:16.128] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:38:16.128] [ERROR] default - ReferenceError: ar is not defined
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:151:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:38:26.153] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:38:36.118] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:39:32.446] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:40:01.936] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:41:05.542] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:41:15.730] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:45:37.690] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:45:47.924] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:45:50.751] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:45:50.752] [ERROR] default - ReferenceError: data is not defined
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:158:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:46:02.219] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:46:04.877] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:46:04.877] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'split')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:36
+    at Array.reduce (<anonymous>)
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:158:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:46:42.121] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:46:44.842] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:46:44.843] [ERROR] default - TypeError: game.time.split is not a function
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:159:36
+    at Array.reduce (<anonymous>)
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:158:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:48:05.221] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:48:07.263] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:48:07.263] [ERROR] default - TypeError: item.time.split is not a function
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:160:36
+    at Array.reduce (<anonymous>)
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:158:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:48:21.914] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:48:26.941] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:48:26.941] [ERROR] default - TypeError: item.time.split is not a function
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:160:38
+    at Array.reduce (<anonymous>)
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:158:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:52:10.079] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:52:26.576] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:52:31.516] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:52:31.516] [ERROR] default - ReferenceError: grogroupsDateups is not defined
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:164:13
+    at Array.reduce (<anonymous>)
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:158:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:52:49.577] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:53:44.086] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:54:15.505] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:54:20.912] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:54:20.912] [ERROR] default - DiscordAPIError: Invalid Form Body
+limit: int value should be less than or equal to 100.
+    at RequestHandler.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/rest/RequestHandler.js:350:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async RequestHandler.push (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/rest/RequestHandler.js:51:14)
+    at async MessageManager._fetchMany (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/discord.js/src/managers/MessageManager.js:226:18)
+    at async Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:147:24)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21) {
+  method: 'get',
+  path: '/channels/976782323125219339/messages?limit=5000',
+  code: 50035,
+  httpStatus: 400,
+  requestData: { json: undefined, files: [] }
+}
+[2022-06-10T14:56:02.360] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:56:12.343] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:56:14.898] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:56:14.898] [ERROR] default - TypeError: channel.fetchMessages is not a function
+    at Object.lots_of_messages_getter (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:198:44)
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:149:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:56:42.575] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:56:46.330] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:56:46.331] [ERROR] default - TypeError: messages.array is not a function
+    at Object.lots_of_messages_getter (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:199:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:149:24)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:57:12.635] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:57:32.714] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:57:32.714] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:152:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T14:57:57.558] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T14:58:22.028] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T14:58:22.028] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'startsWith')
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:153:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T15:01:13.350] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:01:30.789] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T15:01:30.790] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'content')
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:152:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T15:02:12.239] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:02:28.781] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T15:02:28.782] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'content')
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:152:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T15:06:42.199] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:06:46.678] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T15:06:46.678] [ERROR] default - ReferenceError: consolelog is not defined
+    at Object.odaNameDiffChecker (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:119:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:70:21)
+[2022-06-10T15:07:03.462] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:10:46.918] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:12:12.835] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:12:24.162] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T15:12:24.162] [ERROR] default - TypeError: Cannot read properties of null (reading 'includes')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:123:31
+    at _Collection.forEach (<anonymous>)
+    at Object.odaNameDiffChecker (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:119:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:70:21)
+[2022-06-10T15:12:24.426] [ERROR] default - User 350656267582439424 nickname updated! DB not updated! Go check what happen.
+[2022-06-10T15:12:29.152] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T15:12:29.153] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'content')
+    at Object.checkDailyCount (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:155:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:78:21)
+[2022-06-10T15:12:36.164] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:13:19.952] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:13:36.372] [DEBUG] default - Maicol | ODA Clan just reacted to message id [981544653830639656]
+[2022-06-10T15:13:38.854] [DEBUG] default - Maicol | ODA Clan just reacted to message id [979091467740020787]
+[2022-06-10T15:13:44.393] [DEBUG] default - Maicol | ODA Clan just reacted to message id [984513706773864458]
+[2022-06-10T15:14:24.486] [DEBUG] default - Maicol | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-10T15:14:30.404] [DEBUG] default - Maicol | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-10T15:14:33.110] [DEBUG] default - Maicol | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-10T15:21:35.114] [INFO] default - User [887461539207086081] ID [Cremann] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T15:21:35.362] [ERROR] default - User [887461539207086081] ID [Cremann] filed/not necessary role update
+[2022-06-10T15:22:07.807] [DEBUG] default - Andrea90 just reacted to message id [983805429870120980]
+[2022-06-10T15:22:54.119] [INFO] default - User [887461539207086081] ID [Cremann] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T15:22:54.229] [ERROR] default - User [887461539207086081] ID [Cremann] filed/not necessary role update
+[2022-06-10T15:23:44.645] [INFO] default - User [887461539207086081] ID [Cremann] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T15:23:44.882] [ERROR] default - User [887461539207086081] ID [Cremann] filed/not necessary role update
+[2022-06-10T15:24:04.910] [INFO] default - User [887461539207086081] ID [Cremann] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-10T15:24:05.365] [ERROR] default - User [887461539207086081] ID [Cremann] filed/not necessary role update
+[2022-06-10T15:41:36.408] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-10T15:41:37.030] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-10T15:41:37.612] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-10T15:41:38.418] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-10T15:41:39.123] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-10T15:41:50.854] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [980952743076323358]
+[2022-06-10T15:41:51.353] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [980952743076323358]
+[2022-06-10T15:41:52.118] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [980952743076323358]
+[2022-06-10T15:41:52.894] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [980952743076323358]
+[2022-06-10T15:41:53.454] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [980952743076323358]
+[2022-06-10T15:41:54.686] [DEBUG] default - Christian.24 | ODA Clan just reacted to message id [980952743076323358]
+[2022-06-10T15:43:29.894] [INFO] default - User joined with inv. code [7AKrvxDtwf] -> DB updated
+[2022-06-10T15:43:29.931] [INFO] default - User joined with inv. code [7AKrvxDtwf] -> inviter point's fived
+[2022-06-10T15:43:30.945] [INFO] default - User [262156726134898688] ID [sergeychers89] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T15:53:48.367] [DEBUG] default - Knight of Zero | ODA Clan just reacted to message id [984513706773864458]
+[2022-06-10T15:53:48.945] [DEBUG] default - Knight of Zero | ODA Clan just reacted to message id [984513706773864458]
+[2022-06-10T15:53:49.457] [DEBUG] default - Knight of Zero | ODA Clan just reacted to message id [984513706773864458]
+[2022-06-10T15:53:50.319] [DEBUG] default - Knight of Zero | ODA Clan just reacted to message id [984513706773864458]
+[2022-06-10T15:53:51.441] [DEBUG] default - Knight of Zero | ODA Clan just reacted to message id [984513706773864458]
+[2022-06-10T15:54:09.373] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T15:54:52.461] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:00:00.872] [INFO] default - Update leaderboard launched!
+[2022-06-10T16:00:03.635] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-10T16:01:44.681] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:02:30.933] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:02:50.559] [INFO] default - Update leaderboard launched!
+[2022-06-10T16:05:09.532] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:05:13.840] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T16:05:13.840] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'points')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:103:40
+    at Array.forEach (<anonymous>)
+    at Object.moveUsersPoints (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:102:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:66:21)
+[2022-06-10T16:08:20.008] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:08:24.488] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T16:08:24.488] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'points')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:102:40
+    at Array.forEach (<anonymous>)
+    at Object.moveUsersPoints (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:101:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:66:21)
+[2022-06-10T16:09:22.197] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:09:32.593] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:09:33.783] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T16:09:33.784] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'points')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:101:40
+    at Array.forEach (<anonymous>)
+    at Object.moveUsersPoints (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:100:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:66:21)
+[2022-06-10T16:10:55.177] [INFO] default - User [970219585657794631] ID [Benchuks] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T16:10:55.406] [ERROR] default - User [970219585657794631] ID [Benchuks] filed/not necessary role update
+[2022-06-10T16:11:13.462] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:11:42.837] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:12:17.371] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:12:41.009] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:13:50.787] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:21:18.337] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:31:41.722] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:42:08.277] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:43:25.092] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:43:34.783] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T16:53:37.354] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:00:00.885] [INFO] default - Update leaderboard launched!
+[2022-06-10T17:00:02.902] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-10T17:07:14.496] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:09:03.028] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:10:16.165] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:10:27.475] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:17:47.285] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:18:08.840] [INFO] default - Update leaderboard launched!
+[2022-06-10T17:18:17.837] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-10T17:18:17.837] [ERROR] default - ReferenceError: invited_by is not defined
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:113:40
+    at Array.forEach (<anonymous>)
+    at Object.moveUsersData (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:100:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:66:21)
+[2022-06-10T17:18:29.929] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:19:09.969] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:20:17.737] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:20:51.968] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:20:54.251] [DEBUG] default - DanTheKing23 just reacted to message id [980954810545209402]
+[2022-06-10T17:20:54.333] [DEBUG] default - DanTheKing23 just reacted to message id [980954810545209402]
+[2022-06-10T17:21:00.389] [DEBUG] default - DanTheKing23 just reacted to message id [980954810545209402]
+[2022-06-10T17:36:25.315] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:42:55.965] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T17:43:13.782] [INFO] default - Lanciato comando /setupdb
+[2022-06-10T17:43:59.111] [INFO] default - Update leaderboard launched!
+[2022-06-10T17:45:10.975] [INFO] default - Update leaderboard launched!
+[2022-06-10T17:51:15.458] [INFO] default - User id [510204449185071114] quit the guild. Inviter id was []. Points removed from DB
+[2022-06-10T17:51:15.544] [INFO] default - User id [510204449185071114] quit the guild. Delete from DB
+[2022-06-10T17:52:15.140] [INFO] default - User id [262156726134898688] quit the guild. Inviter id was [517079228311797792]. Points removed from DB
+[2022-06-10T17:52:15.315] [INFO] default - User id [262156726134898688] quit the guild. Delete from DB
+[2022-06-10T17:59:54.016] [ERROR] default - User [630415962931462146] ID [Benas] filed/not necessary role update
+[2022-06-10T17:59:54.105] [INFO] default - User joined with inv. code [fHNPCuPCbt] -> DB updated
+[2022-06-10T17:59:54.149] [INFO] default - User joined with inv. code [fHNPCuPCbt] -> inviter point's fived
+[2022-06-10T18:00:00.720] [INFO] default - Update leaderboard launched!
+[2022-06-10T18:00:02.655] [INFO] default - Hourly check ODA IN NAME done ---> updated: 4
+[2022-06-10T19:00:00.527] [INFO] default - Update leaderboard launched!
+[2022-06-10T19:00:02.251] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-10T19:45:59.239] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-10T20:00:00.713] [INFO] default - Update leaderboard launched!
+[2022-06-10T20:00:02.831] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-10T20:32:12.725] [DEBUG] default - _jollywonka just reacted to message id [983805429870120980]
+[2022-06-10T20:32:38.535] [DEBUG] default - _jollywonka just reacted to message id [984513706773864458]
+[2022-06-10T20:32:44.665] [DEBUG] default - _jollywonka just reacted to message id [983807423770951691]
+[2022-06-10T21:00:00.700] [INFO] default - Update leaderboard launched!
+[2022-06-10T21:00:02.298] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-10T21:05:55.938] [INFO] default - User joined with inv. code [8M7fQbjAGf] -> DB updated
+[2022-06-10T21:05:55.943] [ERROR] default - User [705499504631349279] ID [MrJijo] filed/not necessary role update
+[2022-06-10T21:05:55.998] [INFO] default - User joined with inv. code [8M7fQbjAGf] -> inviter point's fived
+[2022-06-10T21:06:43.920] [INFO] default - User [705499504631349279] ID [MrJijo] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T21:06:44.177] [ERROR] default - User [705499504631349279] ID [MrJijo] filed/not necessary role update
+[2022-06-10T21:13:00.190] [INFO] default - User [656441673324298240] ID [T.Eracle] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T21:13:47.161] [INFO] default - User id [656441673324298240] quit the guild. Inviter id was []. Points removed from DB
+[2022-06-10T21:13:47.240] [INFO] default - User id [656441673324298240] quit the guild. Delete from DB
+[2022-06-10T21:46:58.087] [INFO] default - User id [339837647956475908] quit the guild. Inviter id was []. Points removed from DB
+[2022-06-10T21:46:58.165] [INFO] default - User id [339837647956475908] quit the guild. Delete from DB
+[2022-06-10T21:55:44.036] [INFO] default - User [705499504631349279] ID [MrJijo] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T21:55:44.205] [ERROR] default - User [705499504631349279] ID [MrJijo] filed/not necessary role update
+[2022-06-10T21:55:53.148] [INFO] default - User [705499504631349279] ID [MrJijo] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T21:55:53.393] [ERROR] default - User [705499504631349279] ID [MrJijo] filed/not necessary role update
+[2022-06-10T21:56:04.018] [INFO] default - User [705499504631349279] ID [MrJijo] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-10T21:56:04.255] [ERROR] default - User [705499504631349279] ID [MrJijo] filed/not necessary role update
+[2022-06-10T21:56:15.961] [INFO] default - User [705499504631349279] ID [MrJijo] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-10T21:56:16.171] [ERROR] default - User [705499504631349279] ID [MrJijo] filed/not necessary role update
+[2022-06-10T22:00:00.080] [INFO] default - Update leaderboard launched!
+[2022-06-10T22:00:02.270] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-10T23:02:15.032] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN

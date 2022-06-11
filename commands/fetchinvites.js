@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const mainHelper = require("../helper/mainHelper");
 const { getMemberFromId } = require('../helper/mainHelper');
 const { saveInvitesToDb } = require('../helper/databaseHelper');
+const logger = require("../helper/_logger")
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,11 +12,14 @@ module.exports = {
     async execute(interaction) {
 
         // this interaction is a Message object
+        
+        logger.info("[FETCH INVITES] start");
         const member = await getMemberFromId(interaction.client, interaction.author.id)
 
         let isAdmin = await mainHelper.isAdminAccount(member);
         if (!isAdmin) {
             interaction.reply({ content: "Only admin can use this command", ephemeral: true });
+            logger.info("[FETCH INVITES] end");
             return
         }
         
@@ -26,6 +30,7 @@ module.exports = {
             content: "Invites fetched & Database updated",
             ephemeral: true
         })
+        logger.info("[FETCH INVITES] end");
 
     }
 }

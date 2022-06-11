@@ -11,11 +11,13 @@ module.exports = {
     async execute(interaction) {
 
         try {
+            logger.info("[COMMAND] claimdaily start");
             const member = interaction.member;
+            let outputString = '';
             let roleSettings = null;
             let currentUser = await Users.findOne({ user_id: member.id });
             if (!currentUser) {
-                let outputString = `I don't know you Kyodai 😥 Go open a ticket`;
+                outputString = `I don't know you Kyodai 😥 Go open a ticket`;
                 const accountEmbed = new MessageEmbed()
                     .setTitle('ODA Clan | Claim Info')
                     .setDescription(`${outputString}`)
@@ -23,19 +25,18 @@ module.exports = {
                     embeds: [accountEmbed],
                     ephemeral: true
                 })
+                logger.info("[COMMAND] claimdaily end")
                 return
             }
 
             const DB_SETTINGS = await DBSETTINGS();
             let bonusMul = currentUser.oda_in_name_bonus ? 1.1 : 1;
-            let deservedPoints = Math.round(DB_SETTINGS.DAILY_POINTS * currentUser.multiplier * bonusMul);
-            let nextMult = currentUser.multiplier * (1 + (DB_SETTINGS.MULT_PERCENTAGE / 100));
+            let deservedPoints = Math.round((DB_SETTINGS.DAILY_POINTS * (100 + DB_SETTINGS.MULT_PERCENTAGE * currentUser.consecutive_daily) / 100) * bonusMul);
 
             let res = await Users.updateOne(
                 { user_id: member.id, daily: false },
                 {
                     daily: true,
-                    multiplier: nextMult,
                     $inc: {
                         consecutive_daily: 1,
                         points: deservedPoints
@@ -55,13 +56,15 @@ module.exports = {
                 ephemeral: true
             })
             if (res.modifiedCount > 0) {
+                const { logOnServer } = require("../helper/mainHelper")
+                logOnServer(interaction.client, `Daily claim done <@${member.id}> with **${deservedPoints}**`)
                 if (["daimyo", "tenno"].includes(roleSettings.command)) {
+                    logger.info("[COMMAND] claimdaily end")
                     return;
                 }
                 const chatChannel = interaction.client.channels.cache.get(roleSettings.chat_channel_id);
-                // add points
-                let outputString = `<@${member.id}> just claimed **${deservedPoints}** daily points! You are in a **${(currentUser.consecutive_daily + 1)}** days streak!`;
-                //chatChannel.send(outputString)
+                outputString = `<@${member.id}> just claimed **${deservedPoints}** daily points! `
+                outputString += `You are in a **${(currentUser.consecutive_daily + 1)}** days streak!`;
 
                 const claimEmbed = new MessageEmbed()
                     .setColor(roleSettings.color)
@@ -70,11 +73,13 @@ module.exports = {
                 await chatChannel.send({
                     embeds: [claimEmbed]
                 })//.then(async msg => { await msg.react('🔥') })
+                logger.info("[COMMAND] claimdaily end")
             }
 
         } catch (err) {
             if (err) {
                 logger.error(`ERROR SOMEWHERE ON [claimdaily] - check error and go fix`)
+                logger.info("ERROR SOMEWHERE ON [claimdaily] - check error and go fix")
                 logger.error(err)
             }
         }

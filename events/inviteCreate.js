@@ -15,9 +15,9 @@ module.exports = {
             let newInvite = new Invites({ code: newInviteCode, amount: 0, valid: 0, inviterId: invite.inviter.id })
             let added = await newInvite.save();
             if (added) {
-                logger.info(`Invite delete [${newInviteCode}] -> DB updated`)
+                logger.info(`Invite create [${newInviteCode}] -> DB updated`)
             } else {
-                logger.error(`Invite delete [${newInviteCode}] -> can't update DB`)
+                logger.error(`Invite create [${newInviteCode}] -> can't update DB`)
             }
         }
     }

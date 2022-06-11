@@ -2,6 +2,7 @@ const setupdb = require("../commands/setupdb")
 const setupmessages = require("../commands/setupmessages")
 const fetchinvites = require("../commands/fetchinvites")
 const { DBSETTINGS } = require("../helper/databaseHelper")
+const logger = require("../helper/_logger")
 
 module.exports = {
     name: "messageCreate",

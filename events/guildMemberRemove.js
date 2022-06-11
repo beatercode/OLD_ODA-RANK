@@ -1,10 +1,13 @@
 const Users = require("../models/Users");
 const Invites = require("../models/Invites");
+const logger = require("../helper/_logger")
+const mainHelper = require("../helper/mainHelper");
 
 module.exports = {
 	name: "guildMemberRemove",
 	async execute(member) {
 
+		logger.info("[TRIGGER] guildMemberRemove start");
 		const memberId = member.user.id;
 		const acc = await Users.findOne({ user_id: memberId });
 		let inviter = acc && acc.invitedBy ? acc.invitedBy : null;
@@ -13,7 +16,7 @@ module.exports = {
 			let inviterPoints = inviter.inviterPoints;
 			let updatedRows = await Users.updateOne(
 				{ user_id: acc.invitedBy.inviterId },
-				{ $inc: { monthly_invitation: -1, points: -inviterPoints } }
+				{ $inc: { monthly_invitation: -1, total_invitation: -1, points: -inviterPoints } }
 			);
 			if (updatedRows.modifiedCount > 0) {
 				logger.info(`User id [${memberId}] quit the guild. Inviter id was [${inviterId}]. Points removed from DB`);
@@ -22,13 +25,15 @@ module.exports = {
 			}
 
 			try {
-				updatedRows = await Invites.updateMany({ invitedBy: acc.invitedBy.inviterId }, { $inc: { valid: -1 } })
+				updatedRows = await Invites.updateMany({ invitedBy: acc.invitedBy.inviterId, valid: { $gt: 0 } }, { $inc: { valid: -1 } })
 			} catch (err) { logger.error(err) }
 		} else {
+			logger.info(`User id [${member.id}] quit the guild. No inviter to get data from`);
 			logger.info(`User id [${member.id}] quit the guild. No inviter to get data from`);
 		}
 
 		let deleteRows = await Users.deleteOne({ user_id: member.id });
 		logger.info(`User id [${member.id}] quit the guild. Delete from DB`);
+		logger.info("[TRIGGER] guildMemberRemove end");
 	}
 }

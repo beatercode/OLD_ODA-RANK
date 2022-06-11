@@ -62,13 +62,21 @@ module.exports = {
                     await updateLeaderboard.updateLeaderboard(interaction.client)
                     interaction.reply({ content: "Leaderboard updated", ephemeral: true });
                     break;
-                case 'mvUserPoints':
-                    await databaseHelper.moveUsersPoints()
+                case 'mvUserData':
+                    await databaseHelper.moveUsersData()
                     interaction.reply({ content: "Users points moved", ephemeral: true });
                     break;
                 case 'odaNameDiffChekc':
                     await databaseHelper.odaNameDiffChecker(interaction.client)
                     interaction.reply({ content: "Users nick check done", ephemeral: true });
+                    break;
+                case 'checkReactCount':
+                    await databaseHelper.checkReactCount(interaction.client)
+                    interaction.reply({ content: "Check [reaction] done, view logs", ephemeral: true });
+                    break;
+                case 'checkDailyCount':
+                    await databaseHelper.checkDailyCount(interaction.client)
+                    interaction.reply({ content: "Check [daily] done, view logs", ephemeral: true });
                     break;
             }
         } catch (err) {

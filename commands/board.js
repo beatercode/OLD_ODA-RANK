@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageEmbed } = require('discord.js');
 const roleHelper = require('../helper/roleHelper');
+const logger = require("../helper/_logger")
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -14,6 +15,9 @@ module.exports = {
         ),
     async execute(interaction) {
 
+        logger.info("[COMMAND] board start "
+            + ((interaction.options != null && interaction.options.length > 0 
+                && interaction.options.getRole("role")) ? interaction.options.getRole("role").id : ""));
         let { board, myId, roleName, roleColor } = await roleHelper.generateBoard(interaction);
 
         if (!board) {
@@ -24,6 +28,7 @@ module.exports = {
                 .setColor(roleColor);
 
             interaction.reply({ embeds: [finalEmbed], ephemeral: true })
+            logger.info("[COMMAND] board end")
             return;
         }
 
@@ -58,18 +63,19 @@ module.exports = {
         }
 
         if (isMyRole) {
-            if (couldDowngrade) {
+            if (couldDowngrade && percentageDown != 0) {
                 finalDescription += "\n\n**Your commitment is not enough; "
-                    + "you are in the worst " + percentageDown + " of your role. Increase your points or you "
+                    + "you are in the worst " + percentageDown + " of your role. Increase your ODA points or you "
                     + "will be downgraded at the end of the month**";
-            } else if (couldUpgrade) {
+            } else if (couldUpgrade && percentageUp != 0) {
                 let topAmount = percentageUpFixed ? percentageUp : (percentageUp + "%");
                 finalDescription += "\n\n**You are doing a great job Kyodai! You are in the top " + topAmount + ", "
                     + "keep it up and you will be promoted to the next rank at the end of the month!**"
             }
             const { myTopPosition, myTopPercentage } = await roleHelper.getUserUpDownMyPosition(role.id, myId)
+            const formatterPercentage = Math.round(100 - myTopPercentage);
             finalDescription += `\n\nYou are the ${myTopPosition}° in your role's board!`;
-            finalDescription += `\nYou are better than ${myTopPercentage}% of your role's kyodai!`;
+            finalDescription += `\nYou are better than ${formatterPercentage}% of your role's kyodai!`;
         }
 
         finalDescription = finalDescription == "" ? "Hey Kyodai! Can't find any member at this level." : finalDescription;
@@ -79,5 +85,6 @@ module.exports = {
             .setColor(roleColor);
 
         interaction.reply({ embeds: [finalEmbed], ephemeral: true })
+        logger.info("[COMMAND] board end")
     }
 }

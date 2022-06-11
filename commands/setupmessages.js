@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
 const mainHelper = require("../helper/mainHelper")
 const updateLeaderboard = require("../helper/updateLeaderboard")
+const logger = require("../helper/_logger")
 const { DBCHANNELS } = require("../helper/databaseHelper")
 
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
     async execute(interaction) {
 
         try {
+            logger.info("[COMMAND] setupmessages start")
             const member = interaction.member;
 
             let isAdmin = await mainHelper.isAdminAccount(member);
@@ -87,15 +89,20 @@ module.exports = {
                 const row2 = new MessageActionRow()
                     .addComponents(
                         new MessageButton().setCustomId('updateLeaderboard').setLabel('🔴 UPDATE LEADERBOARD').setStyle('PRIMARY'),
-                        new MessageButton().setCustomId('mvUserPoints').setLabel('🔴 MV USR. POINTS').setStyle('PRIMARY'),
+                        new MessageButton().setCustomId('mvUserData').setLabel('⚪️ MV USR. DATA').setStyle('DANGER'),
                         new MessageButton().setCustomId('odaNameDiffChekc').setLabel('🔴 ODA NAME CHECK').setStyle('PRIMARY'),
                     );
                 const row3 = new MessageActionRow()
                     .addComponents(
+                        new MessageButton().setCustomId('checkReactCount').setLabel('🔴 CHECK REACT. POINT').setStyle('PRIMARY'),
+                        new MessageButton().setCustomId('checkDailyCount').setLabel('🔴 CHECK DAILY COUNT').setStyle('PRIMARY'),
+                    );
+                const row4 = new MessageActionRow()
+                    .addComponents(
                         new MessageButton().setCustomId('dailyTrue').setLabel('🔵 D. TRUE').setStyle('PRIMARY'),
                         new MessageButton().setCustomId('dailyFalse').setLabel('🔵 D. FALSE').setStyle('PRIMARY'),
-                        new MessageButton().setCustomId('setupdb').setLabel('🔵 SET DB').setStyle('PRIMARY'),
-                        new MessageButton().setCustomId('setupmessages').setLabel('🔵 SET MSG').setStyle('PRIMARY'),
+                        new MessageButton().setCustomId('setupdb').setLabel('🔵 SET DB').setStyle('DANGER'),
+                        new MessageButton().setCustomId('setupmessages').setLabel('🔵 SET MSG').setStyle('DANGER'),
                     );
 
                 const embed = new MessageEmbed()
@@ -110,15 +117,15 @@ module.exports = {
                     )
                     .setFooter({ text: 'ODA Clan bot management', iconURL: 'https://i.imgur.com/1ED6ifg.jpeg' });
 
-                await channelDebug.send({ embeds: [embed], components: [row1, row2, row3] })
+                await channelDebug.send({ embeds: [embed], components: [row1, row2, row3, row4] })
                 contentOutput += 'Default Moderation message created'
             } else {
                 contentOutput += 'Default Moderation message exist. Delete it and launch the command again'
             }
 
             updateLeaderboard.updateLeaderboard(client);
-
             interaction.reply({ content: contentOutput, ephemeral: true });
+            logger.info("[COMMAND] setupmessages end")
 
         } catch (err) {
             if (err) {

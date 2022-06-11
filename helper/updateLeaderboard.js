@@ -9,7 +9,7 @@ module.exports = {
 
         try {
 
-            logger.info("Update leaderboard launched!")
+            logger.info("[HOURLY] update leaderboard launched!")
             const DB_CHANNELS = await DBCHANNELS();
             const channelLeaderboardsID = DB_CHANNELS.ch_leaderboards;
             const channelLeaderboards = client.channels.cache.get(channelLeaderboardsID);
@@ -86,6 +86,8 @@ module.exports = {
                     logger.debug("Leaderboards updated ---> also updated Leaderboard Message ID to: " + nextMsgId)
                 }
             }
+
+            logger.info("[HOURLY] update!")
             return
         } catch (err) {
             if (err) {
