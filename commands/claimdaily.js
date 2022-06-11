@@ -61,7 +61,7 @@ module.exports = {
 				ephemeral: true
 			})
 			if (outpdateRow > 0) {
-				logOnServer(interaction.client, `Daily claim done <@${member.id}> with **${deservedPoints}**`)
+				logOnServer(interaction.client, `Daily claim done <@${member.id}> of **${deservedPoints}** points`)
 				if (["daimyo", "tenno"].includes(roleSettings.command)) {
 					logger.info("[COMMAND] claimdaily end")
 					return

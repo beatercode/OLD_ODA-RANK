@@ -26,6 +26,26 @@ module.exports = {
 					logger.error(`${user.username} just reacted to message id [${reaction.message.id}] WITHOUT UPDATING DB`)
 				}
 			}
+
+			if (!reactionChannels.includes(reactedChannel) && !user.bot) {
+				if(reaction.emoji.name == "⭐") {
+					const guild = reaction.message.guild
+					const member = guild.members.cache.get(user.id)
+					const memberRoles = member._roles
+					if(!memberRoles.some(r=> DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
+					let message = reaction.message
+					let targetUserId = null
+					let fetched = await message.channel.messages.fetch(message.id)
+					targetUserId = fetched.author.id
+					if(!targetUserId) {
+						logger.error("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "]")
+						return
+					}
+					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
+					await Users.updateOne({ user_id: targetUserId }, { $set: { daily_starred: targetMsgUrl }})
+					return
+				}
+			}
 		} catch (err) {
 			mainHelper.commonCatch(err, "messageReactionAdd", logger)
 			return

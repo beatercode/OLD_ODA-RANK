@@ -66,6 +66,7 @@ module.exports = {
 				monthly_points_received: 0,
 				oda_in_name: true,
 				oda_in_name_bonus: false,
+				daily_starred: "",
 				consecutive_oda: 0,
 				invitedBy: {
 					inviterId: inviterId,

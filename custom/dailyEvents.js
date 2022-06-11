@@ -1,6 +1,9 @@
 const Users = require("../models/Users")
 const logger = require("../helper/_logger")
 const mainHelper = require("../helper/mainHelper")
+const config = require("../backup/config.json")
+const { MessageEmbed } = require("discord.js")
+const { getRoleSettingsByValue } = require("../helper/roleHelper")
 
 module.exports = {
 
@@ -10,6 +13,7 @@ module.exports = {
 		logger.info("[DAILY] routine starts")
 		await this.resetDailyClaim(client)
 		await this.dailyAdjustOdaInName(client)
+		await this.adjustStarred(client)
 
 	},
 
@@ -52,6 +56,43 @@ module.exports = {
 			{ $set: { oda_in_name_bonus: false, consecutive_oda: 0 } })
 		logger.info("Daily adjust ODA IN NAME removed ---> " + toRemoveBonusRows.modifiedCount)
 		logger.info("[DAILY] dailyAdjustOdaInName end")
+	},
+
+	async adjustStarred(client) {
+		mainHelper.logOnServer(client, "[DAILY] dailyAdjustStarred start")
+		logger.info("[DAILY] dailyAdjustStarred start")
+
+		const starBonusPoints = config.Settings.values.DAILY_STAR_BONUS
+		const chpointsEventId = config.Channels.values.ch_points_events
+		let starredUser = await Users.find({ daily_starred: { $ne: "" } })
+		let outputString = ""
+		let roleSettings = null
+
+		for (const x of starredUser) {
+			console.log(x)
+			const pointsEventsChannel = client.channels.cache.get(chpointsEventId)
+			outputString = `<@${x.user_id}> was rewarded as he brought value within the clan today! ⭐️`
+			outputString += `\nMessage reference [here ➡️](${x.daily_starred})`
+
+			roleSettings = await getRoleSettingsByValue("id", x.role_id)
+			const claimEmbed = new MessageEmbed()
+				.setColor(roleSettings.color)
+				.setTitle("Daily Bonus")
+				.setDescription(outputString)
+			await pointsEventsChannel.send({
+				embeds: [claimEmbed]
+			})//.then(async msg => { await msg.react('🔥') })
+		}
+
+		let updated = await Users.updateMany(
+			{ daily_starred: { $ne: "" } }, 
+			{ 
+				$set: { daily_starred: "" },
+				$inc: { points: starBonusPoints }  
+			})
+
+		logger.info("Daily adjust ODA IN NAME added ---> " + updated.modifiedCount)
+		logger.info("[DAILY] dailyAdjustStarred end")
 	}
 
 }

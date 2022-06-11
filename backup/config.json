@@ -114,7 +114,7 @@
       },
       "admin": {
         "name": "Admin",
-        "id": "980853319419453491",
+        "id": "973833462891032597",
         "lvl": 0,
         "color": "#ff0000",
         "command": "admin",
@@ -190,6 +190,7 @@
       "BOT_NAME": "ODA Rank",
       "GUILD_ID": "961194963549429821",
       "ADMIN_NAMES": ["admin", "tenno", "daimyo"],
+      "MOD_ROLE_IDS": ["973833462891032597", "961197439979761723", "980853319419453491"],
       "HIDDEN_COMMAND": ["setupdb", "setupmessages", "fetchinvites"],
       "TEXT_OPEN_A_TICK": "\n```You have any problem? [Open a ticket](https://discord.com/channels/961194963549429821/961207655085506560/981244368126103632)```",
       "EVERYONE_ID": "961194963549429821",
@@ -197,6 +198,7 @@
       "DAILY_POINTS": 200,
       "SURVEY_POINTS": 200,
       "INVITATION_POINTS": 500,
+      "DAILY_STAR_BONUS": 300,
       "MULT_PERCENTAGE": 3,
       "MONTHLY_POINTS_RECEIVED_LIMIT": 5000
     }
@@ -217,6 +219,7 @@
       "oda_in_name": true,
       "oda_in_name_bonus": false,
       "consecutive_oda": 0,
+      "daily_starred": "",
       "invitedBy": {
         "inviterId": "",
         "inviterPoints": 0,

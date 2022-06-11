@@ -91,11 +91,12 @@ module.exports = {
 						new MessageButton().setCustomId("updateLeaderboard").setLabel("🔴 UPDATE LEADERBOARD").setStyle("PRIMARY"),
 						//new MessageButton().setCustomId("mvUserData").setLabel("⚪️ MV USR. DATA").setStyle("DANGER"),
 						new MessageButton().setCustomId("odaNameDiffChekc").setLabel("🔴 ODA NAME CHECK").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("adjustStarred").setLabel("⭐️ ADJS. STARRED").setStyle("PRIMARY"),
 					)
 				const row3 = new MessageActionRow()
 					.addComponents(
-						new MessageButton().setCustomId("dailyTrue").setLabel("🔵 D. TRUE").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("dailyFalse").setLabel("🔵 D. FALSE").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("PRIMARY"),
 						new MessageButton().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle("DANGER"),
 						new MessageButton().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
 					)

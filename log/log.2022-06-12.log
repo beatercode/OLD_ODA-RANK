@@ -1,0 +1,171 @@
+[2022-06-12T00:00:00.166] [INFO] default - [HOURLY] routine starts
+[2022-06-12T00:00:00.167] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-12T00:00:00.168] [INFO] default - [DAILY] routine starts
+[2022-06-12T00:00:00.168] [INFO] default - [DAILY] resetDailtClaim start
+[2022-06-12T00:00:00.249] [INFO] default - DAILY CLAIM RESET DONE [31] --------
+[2022-06-12T00:00:00.250] [INFO] default - DAILY CLAIM RESET DONE [40] --------
+[2022-06-12T00:00:00.250] [INFO] default - [DAILY] resetDailtClaim end
+[2022-06-12T00:00:00.264] [INFO] default - [DAILY] dailyAdjustOdaInName start
+[2022-06-12T00:00:00.310] [INFO] default - Daily adjust ODA IN NAME added ---> 27
+[2022-06-12T00:00:00.347] [INFO] default - Daily adjust ODA IN NAME removed ---> 0
+[2022-06-12T00:00:00.347] [INFO] default - [DAILY] dailyAdjustOdaInName end
+[2022-06-12T00:00:00.347] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:00:00.506] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:00:00.506] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:00:01.240] [INFO] default - [HOURLY] update!
+[2022-06-12T00:00:01.240] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-12T00:00:01.317] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-12T00:00:01.317] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-12T00:01:42.118] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:01:43.171] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:01:43.243] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:01:43.244] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:01:48.441] [ERROR] default - Error in [messageReactionAdd]
+[2022-06-12T00:01:48.441] [ERROR] default - ReferenceError: msgId is not defined
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/messageReactionAdd.js:36:54)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-12T00:02:00.444] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:02:01.499] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:02:01.563] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:02:01.563] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:02:03.744] [ERROR] default - Error in [messageReactionAdd]
+[2022-06-12T00:02:03.745] [ERROR] default - TypeError: reaction.message.channel.fetchMessages is not a function
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/messageReactionAdd.js:36:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-12T00:02:12.158] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:02:13.216] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:02:13.283] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:02:13.284] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:02:50.236] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:02:51.293] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:02:51.363] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:02:51.363] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:02:54.489] [ERROR] default - Error in [messageReactionAdd]
+[2022-06-12T00:02:54.489] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'id')
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/messageReactionAdd.js:36:64)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-12T00:03:19.621] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:03:20.677] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:03:20.753] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:03:20.754] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:03:24.405] [ERROR] default - Error in [messageReactionAdd]
+[2022-06-12T00:03:24.405] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'channel')
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/messageReactionAdd.js:38:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-12T00:03:37.750] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:03:38.806] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:03:38.875] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:03:38.875] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:06:15.598] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:06:16.652] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:06:16.720] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:06:16.720] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:06:54.357] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:06:55.413] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:06:55.478] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:06:55.479] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:08:16.671] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:08:17.716] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:08:17.780] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:08:17.780] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:08:27.759] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:08:57.169] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:10:57.408] [INFO] default - [COMMAND] setupmessages start
+[2022-06-12T00:10:58.364] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-12T00:10:58.368] [INFO] default - [COMMAND] setupmessages end
+[2022-06-12T00:10:59.352] [INFO] default - [HOURLY] update!
+[2022-06-12T00:12:04.852] [ERROR] default - [ADD STARRED ERROR] check msg id [985216346684030986]
+[2022-06-12T00:12:08.541] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:12:08.618] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-12T00:12:08.619] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:12:54.911] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:13:45.079] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:14:01.526] [ERROR] default - [REM STARRED ERROR] check msg id [985216430461051000]
+[2022-06-12T00:14:03.113] [ERROR] default - [REM STARRED ERROR] check msg id [985216346684030986]
+[2022-06-12T00:14:16.942] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:14:32.193] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:14:39.191] [ERROR] default - [ADD STARRED ERROR] check msg id [985216346684030986]
+[2022-06-12T00:16:17.386] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:16:23.265] [ERROR] default - Error in [messageReactionAdd]
+[2022-06-12T00:16:23.266] [ERROR] default - MongoServerError: FieldPath field names may not start with '$'. Consider using $getField or $setField.
+    at Connection.onMessage (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/mongodb/lib/cmap/connection.js:203:30)
+    at MessageStream.<anonymous> (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/mongodb/lib/cmap/connection.js:63:60)
+    at MessageStream.emit (node:events:527:28)
+    at processIncomingData (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/mongodb/lib/cmap/message_stream.js:108:16)
+    at MessageStream._write (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/node_modules/mongodb/lib/cmap/message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:390:12)
+    at _write (node:internal/streams/writable:331:10)
+    at Writable.write (node:internal/streams/writable:335:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22)
+    at TLSSocket.emit (node:events:527:28) {
+  ok: 0,
+  code: 16410,
+  codeName: 'Location16410',
+  '$clusterTime': {
+    clusterTime: new Timestamp({ t: 1654985783, i: 1 }),
+    signature: {
+      hash: new Binary(Buffer.from("8afa7c7b100cc4506f323877ca508453d9fec008", "hex"), 0),
+      keyId: new Long("7061967652524130309")
+    }
+  },
+  operationTime: new Timestamp({ t: 1654985783, i: 1 }),
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-06-12T00:17:14.533] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:17:24.657] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:18:13.943] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:18:14.373] [INFO] default - Daily adjust ODA IN NAME added ---> 1
+[2022-06-12T00:18:14.374] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:21:39.313] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:21:49.402] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:23:44.351] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:26:24.597] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:26:44.414] [ERROR] default - User [659047167121555470] ID [giugno96] filed/not necessary role update
+[2022-06-12T00:26:44.617] [INFO] default - User [659047167121555470] ID [giugno96] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T00:26:45.243] [INFO] default - User [659047167121555470] ID [giugno96] role updated to []
+[2022-06-12T00:26:45.416] [INFO] default - User [659047167121555470] ID [giugno96] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T00:26:54.831] [INFO] default - User [659047167121555470] ID [giugno96] role updated to [Nōka 農家 - Lvl.4]
+[2022-06-12T00:26:55.019] [ERROR] default - User [659047167121555470] ID [giugno96] filed/not necessary role update
+[2022-06-12T00:30:28.621] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:31:39.300] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:31:40.007] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:40.734] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:41.581] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:42.161] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:42.709] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:43.281] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:43.912] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:44.540] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:45.061] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:45.681] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:46.365] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:47.150] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:47.722] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:48.845] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:49.109] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:49.769] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:50.504] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:51.281] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:31:51.960] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-12T00:33:19.755] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:33:32.706] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:34:13.529] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:36:00.447] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:36:13.599] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:36:14.103] [INFO] default - Daily adjust ODA IN NAME added ---> 1
+[2022-06-12T00:36:14.103] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:36:38.283] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:36:46.407] [INFO] default - [DAILY] dailyAdjustStarred start
+[2022-06-12T00:36:46.831] [INFO] default - Daily adjust ODA IN NAME added ---> 1
+[2022-06-12T00:36:46.832] [INFO] default - [DAILY] dailyAdjustStarred end
+[2022-06-12T00:36:48.822] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T00:36:48.930] [INFO] default - [COMMAND] claimdaily end
+[2022-06-12T00:36:55.003] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T00:36:57.889] [INFO] default - [COMMAND] board start 
+[2022-06-12T00:36:58.010] [INFO] default - [COMMAND] board end
+[2022-06-12T00:37:05.025] [INFO] default - [COMMAND] account start - inpect 446348134369591296
+[2022-06-12T00:37:05.082] [INFO] default - [COMMAND] account end
+[2022-06-12T00:37:13.374] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T00:37:17.099] [INFO] default - [COMMAND] board start 
+[2022-06-12T00:37:17.245] [INFO] default - [COMMAND] board end
+[2022-06-12T00:37:53.368] [INFO] default - ODA Rank is online | ----> RUN
