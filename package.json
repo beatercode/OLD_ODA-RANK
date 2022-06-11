@@ -4,6 +4,7 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
     "start": "node bot.js",
     "dev": "nodemon bot.js"
   },
@@ -24,6 +25,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "eslint": "^8.17.0",
     "nodemon": "^2.0.14"
   }
 }

@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose")
 
 const CommandsLogSchema = new mongoose.Schema({
-    command: String,
-    user_id: String,
-    user_nick: String,
-    date: Date,
-});
+	command: String,
+	user_id: String,
+	user_nick: String,
+	date: Date,
+})
 
-module.exports = mongoose.model("CommandsLog", CommandsLogSchema);
+module.exports = mongoose.model("CommandsLog", CommandsLogSchema)

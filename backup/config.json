@@ -186,6 +186,7 @@
       "GUILD_ID": "961194963549429821",
       "ADMIN_NAMES": ["admin", "tenno", "daimyo"],
       "HIDDEN_COMMAND": ["setupdb", "setupmessages", "fetchinvites"],
+      "TEXT_OPEN_A_TICK": "\n```You have any problem? [Open a ticket](https://discord.com/channels/961194963549429821/961207655085506560/981244368126103632)```",
       "EVERYONE_ID": "961194963549429821",
       "REACTION_POINTS": 10,
       "DAILY_POINTS": 200,
