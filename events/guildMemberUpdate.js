@@ -10,9 +10,10 @@ module.exports = {
 		try {
 			if (newMember.nickname !== oldMember.nickname || newMember.user.username != oldMember.user.username) {
 
-				if (!newMember.premiumSince || !oldMember.premiumSince) {
-					//console.log(newMember.user.username + " has a nitro account")
-					//console.log("his nick ---> " + x.nickname)
+				if (newMember.premiumSince || oldMember.premiumSince) {
+					logger.info(oldMember.nickname ? oldMember.nickname : oldMember.user.username 
+						+ " has Nitro anche will change nick to [" + newMember.nickname + "]!")
+				} else {
 					if (newMember.nickname !== null) {
 						newMember.setNickname(null)
 					}
