@@ -349,3 +349,47 @@
 [2022-06-11T18:12:10.305] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
 [2022-06-11T18:12:11.175] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
 [2022-06-11T18:12:12.391] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
+[2022-06-11T18:12:16.084] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:12:24.549] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:12:24.928] [INFO] default - [COMMAND] board end
+[2022-06-11T18:12:25.357] [DEBUG] default - Marcokaizen just reacted to message id [985212149209108570]
+[2022-06-11T18:12:26.078] [DEBUG] default - Marcokaizen just reacted to message id [985212149209108570]
+[2022-06-11T18:12:26.757] [DEBUG] default - Marcokaizen just reacted to message id [985212149209108570]
+[2022-06-11T18:12:30.111] [INFO] default - [COMMAND] account start - inpect 786602302454104094
+[2022-06-11T18:12:30.175] [INFO] default - [COMMAND] account end
+[2022-06-11T18:12:55.827] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:12:56.521] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:12:57.237] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:12:57.768] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:12:58.868] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:12:59.069] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:12:59.664] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:00.458] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:01.191] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:01.816] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:02.539] [DEBUG] default - Thoommmm97 just removed reaction to message id [985212149209108570]
+[2022-06-11T18:13:03.327] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:03.977] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:04.690] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:05.932] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:06.185] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:13:07.876] [DEBUG] default - Thoommmm97 just reacted to message id [985212149209108570]
+[2022-06-11T18:14:42.651] [INFO] default - [COMMAND] account start - inpect 385376364737462283
+[2022-06-11T18:14:42.731] [INFO] default - [COMMAND] account end
+[2022-06-11T18:16:42.488] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-11T18:16:53.495] [ERROR] default - User 202500951230119936 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:17:03.285] [ERROR] default - User 202500951230119936 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:17:18.697] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-11T18:17:44.841] [ERROR] default - User 446348134369591296 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:17:45.084] [ERROR] default - User 446348134369591296 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:18:28.318] [ERROR] default - User 591169733240422410 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:18:28.522] [ERROR] default - User 591169733240422410 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:18:57.761] [ERROR] default - User 591169733240422410 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:18:57.929] [ERROR] default - User 591169733240422410 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:19:21.057] [ERROR] default - User 591169733240422410 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:19:21.273] [ERROR] default - User 591169733240422410 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:19:24.088] [ERROR] default - User 978320538290233434 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:19:29.037] [ERROR] default - User 978320538290233434 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:19:37.095] [ERROR] default - User 978320538290233434 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:19:42.362] [ERROR] default - User 978320538290233434 nickname updated! DB not updated! Go check what happen.
+[2022-06-11T18:20:27.704] [INFO] default - ODA Rank is online | ----> RUN

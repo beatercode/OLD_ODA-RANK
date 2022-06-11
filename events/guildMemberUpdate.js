@@ -9,6 +9,15 @@ module.exports = {
 
 		try {
 			if (newMember.nickname !== oldMember.nickname || newMember.user.username != oldMember.user.username) {
+
+				if (!newMember.premiumSince || !oldMember.premiumSince) {
+					//console.log(newMember.user.username + " has a nitro account")
+					//console.log("his nick ---> " + x.nickname)
+					if (newMember.nickname !== null) {
+						newMember.setNickname(null)
+					}
+				}
+
 				let newNick = !newMember.nickname ? newMember.user.username : newMember.nickname
 				let updated = await Users.updateOne({ user_id: newMember.user.id }, { $set: { username: newNick } })
 				if (updated == 1) {
