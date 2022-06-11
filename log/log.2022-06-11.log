@@ -206,3 +206,32 @@
 [2022-06-11T12:23:10.001] [INFO] default - [COMMAND] account end
 [2022-06-11T12:23:14.684] [INFO] default - [COMMAND] account start - inpect 202500951230119936
 [2022-06-11T12:23:14.754] [INFO] default - [COMMAND] account end
+[2022-06-11T12:30:13.081] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:30:30.481] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:30:41.935] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-06-11T12:30:42.011] [INFO] default - [COMMAND] account end
+[2022-06-11T12:32:25.336] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:32:41.134] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-06-11T12:32:41.200] [INFO] default - [COMMAND] account end
+[2022-06-11T12:35:13.819] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:36:23.516] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:37:01.566] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:37:10.735] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:37:33.145] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:39:31.817] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:40:29.115] [INFO] default - [COMMAND] account start - inpect 446348134369591296
+[2022-06-11T12:40:29.180] [INFO] default - [COMMAND] account end
+[2022-06-11T12:40:47.888] [INFO] default - [COMMAND] board start 
+[2022-06-11T12:40:48.031] [INFO] default - [COMMAND] board end
+[2022-06-11T12:40:52.300] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:43:06.738] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:43:21.698] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:43:21.703] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:43:46.585] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:43:50.821] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:43:50.824] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T12:45:48.649] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:46:57.540] [INFO] default - [COMMAND] board start 
+[2022-06-11T12:46:57.841] [INFO] default - [COMMAND] board end
+[2022-06-11T12:47:09.001] [INFO] default - [COMMAND] account start - inpect 446348134369591296
+[2022-06-11T12:47:09.067] [INFO] default - [COMMAND] account end

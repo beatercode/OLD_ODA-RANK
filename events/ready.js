@@ -12,7 +12,6 @@ module.exports = {
 	once: true,
 	async execute(client, commands) {
 		const DB_SETTINGS = config.Settings.values
-		console.log(DB_SETTINGS.BOT_NAME + " is online | ----> RUN")
 		logger.info(DB_SETTINGS.BOT_NAME + " is online | ----> RUN")
 		await wait(1000)
 
