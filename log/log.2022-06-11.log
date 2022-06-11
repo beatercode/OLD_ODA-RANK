@@ -181,3 +181,171 @@
 [2022-06-11T17:32:46.277] [INFO] default - ODA Rank is online | ----> RUN
 [2022-06-11T17:33:53.527] [INFO] default - ODA Rank is online | ----> RUN
 [2022-06-11T17:33:59.300] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-11T17:48:53.119] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-11T17:48:59.259] [ERROR] default - [handlePointSystemButton] ---->
+[2022-06-11T17:48:59.259] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'points')
+    at /Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:100:23
+    at Array.forEach (<anonymous>)
+    at Object.moveUsersData (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/databaseHelper.js:98:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.handlePointSystemButton (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/interactionButtonHandler.js:74:5)
+[2022-06-11T17:50:02.251] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T17:50:02.779] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T17:50:06.107] [INFO] default - [COMMAND] board start 
+[2022-06-11T17:50:06.536] [INFO] default - [COMMAND] board end
+[2022-06-11T17:51:13.913] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-11T17:51:23.629] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-11T17:51:25.911] [INFO] default - [HOURLY] update!
+[2022-06-11T17:51:35.769] [INFO] default - [COMMAND] board start 
+[2022-06-11T17:51:35.942] [INFO] default - [COMMAND] board end
+[2022-06-11T17:52:46.542] [INFO] default - [COMMAND] board start 
+[2022-06-11T17:52:46.672] [INFO] default - [COMMAND] board end
+[2022-06-11T17:52:48.687] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T17:52:48.828] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:00:00.614] [INFO] default - [HOURLY] routine starts
+[2022-06-11T18:00:00.615] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-11T18:00:01.628] [INFO] default - [HOURLY] update!
+[2022-06-11T18:00:01.630] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-11T18:00:01.758] [INFO] default - Hourly check ODA IN NAME done ---> updated: 9
+[2022-06-11T18:00:01.759] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-11T18:01:06.052] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-11T18:01:07.600] [INFO] default - [HOURLY] update!
+[2022-06-11T18:01:15.826] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:01:15.942] [INFO] default - [COMMAND] board end
+[2022-06-11T18:01:31.352] [DEBUG] default - MaxOne | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-11T18:02:04.145] [DEBUG] default - poi just reacted to message id [985212149209108570]
+[2022-06-11T18:02:17.060] [DEBUG] default - LucaReal just reacted to message id [985212149209108570]
+[2022-06-11T18:02:19.645] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:02:20.267] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:02:27.227] [INFO] default - [COMMAND] account start - inpect 591169733240422410
+[2022-06-11T18:02:27.292] [INFO] default - [COMMAND] account end
+[2022-06-11T18:02:31.389] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:02:31.819] [INFO] default - [COMMAND] board end
+[2022-06-11T18:02:33.062] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:02:33.469] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:02:45.753] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:46.455] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:47.099] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:47.491] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:02:47.599] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:47.630] [INFO] default - [COMMAND] board end
+[2022-06-11T18:02:48.917] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:49.331] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:50.179] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:50.730] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:51.442] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:02:51.565] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:02:51.590] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:52.971] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:53.512] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:54.153] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:54.952] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:56.144] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:57.245] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:57.761] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:02:58.162] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:02:59.992] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:03:00.743] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:03:00.813] [INFO] default - [COMMAND] account start - inpect 446348134369591296
+[2022-06-11T18:03:00.880] [INFO] default - [COMMAND] account end
+[2022-06-11T18:03:01.477] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:03:02.522] [DEBUG] default - Xand3r just reacted to message id [985212149209108570]
+[2022-06-11T18:03:05.604] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:03:05.725] [INFO] default - [COMMAND] board end
+[2022-06-11T18:03:06.139] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:11.186] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:03:11.675] [INFO] default - [COMMAND] board end
+[2022-06-11T18:03:12.635] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:15.379] [DEBUG] default - Operation SIN Vermord just reacted to message id [985212149209108570]
+[2022-06-11T18:03:16.128] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:16.547] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:03:22.253] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:28.079] [INFO] default - [COMMAND] account start - inpect 767822545483202600
+[2022-06-11T18:03:28.143] [INFO] default - [COMMAND] account end
+[2022-06-11T18:03:28.274] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:28.685] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:03:34.474] [DEBUG] default - Zen65486 just reacted to message id [985212149209108570]
+[2022-06-11T18:03:35.539] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:37.877] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:38.701] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:03:39.269] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:03:43.551] [INFO] default - [COMMAND] account start - inpect 368697233031430144
+[2022-06-11T18:03:43.630] [INFO] default - [COMMAND] account end
+[2022-06-11T18:03:43.699] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:03:44.042] [INFO] default - [COMMAND] board end
+[2022-06-11T18:03:44.660] [DEBUG] default - KS Hyun- just reacted to message id [985212149209108570]
+[2022-06-11T18:03:48.406] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:03:48.860] [INFO] default - [COMMAND] board end
+[2022-06-11T18:03:56.435] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:04:04.356] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:04:04.821] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:04:07.510] [DEBUG] default - Gabriele just reacted to message id [985212149209108570]
+[2022-06-11T18:04:09.832] [DEBUG] default - Gabriele just reacted to message id [985212149209108570]
+[2022-06-11T18:04:17.176] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:04:21.624] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:04:22.094] [INFO] default - [COMMAND] board end
+[2022-06-11T18:04:27.256] [INFO] default - [COMMAND] account start - inpect 790444131217440788
+[2022-06-11T18:04:27.333] [INFO] default - [COMMAND] account end
+[2022-06-11T18:04:35.497] [INFO] default - [COMMAND] account start - inpect 435775351897980928
+[2022-06-11T18:04:35.564] [INFO] default - [COMMAND] account end
+[2022-06-11T18:04:45.340] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:04:45.675] [INFO] default - [COMMAND] board end
+[2022-06-11T18:04:59.414] [INFO] default - New invite created - code [cqeB5sEs] from user id [790444131217440788]
+[2022-06-11T18:04:59.472] [INFO] default - Invite create [cqeB5sEs] -> DB updated
+[2022-06-11T18:05:35.235] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:05:35.737] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:05:43.716] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-11T18:05:44.151] [INFO] default - [TRIGGER] guildMemberad inviter [cqeB5sEs]
+[2022-06-11T18:05:44.207] [ERROR] default - User [780444307983302658] ID [Woodamy] filed/not necessary role update
+[2022-06-11T18:05:44.235] [INFO] default - User joined with inv. code [cqeB5sEs] -> DB updated
+[2022-06-11T18:05:44.272] [INFO] default - User joined with inv. code [cqeB5sEs] -> inviter point's fived
+[2022-06-11T18:05:44.272] [INFO] default -  [cqeB5sEs]
+[2022-06-11T18:05:44.274] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-11T18:06:07.911] [INFO] default - User [780444307983302658] ID [Woodamy] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-11T18:06:08.032] [ERROR] default - User [780444307983302658] ID [Woodamy] filed/not necessary role update
+[2022-06-11T18:06:12.352] [DEBUG] default - drdri just reacted to message id [985212149209108570]
+[2022-06-11T18:06:13.410] [DEBUG] default - drdri just reacted to message id [985212149209108570]
+[2022-06-11T18:06:20.157] [INFO] default - [COMMAND] account start - inpect 305678312741666816
+[2022-06-11T18:06:20.214] [INFO] default - [COMMAND] account end
+[2022-06-11T18:06:28.091] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:06:28.851] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:06:39.425] [DEBUG] default - 🔥Zero_Mood💧 just reacted to message id [985212149209108570]
+[2022-06-11T18:06:45.503] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:06:45.971] [INFO] default - [COMMAND] board end
+[2022-06-11T18:07:39.426] [DEBUG] default - bearpulas just reacted to message id [985212149209108570]
+[2022-06-11T18:08:20.102] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:20.634] [DEBUG] default - Finserz | ODA Clan just reacted to message id [985212149209108570]
+[2022-06-11T18:08:20.799] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:21.430] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:22.126] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:22.737] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:23.301] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:23.977] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:24.619] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:25.208] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:25.845] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:26.573] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:27.226] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:27.900] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:28.889] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:29.277] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:29.965] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:30.648] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:31.447] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:31.995] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:32.800] [DEBUG] default - Mayo just reacted to message id [985212149209108570]
+[2022-06-11T18:08:36.496] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:08:37.078] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:08:43.100] [INFO] default - [COMMAND] board start 
+[2022-06-11T18:08:43.530] [INFO] default - [COMMAND] board end
+[2022-06-11T18:09:08.320] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:09:12.283] [INFO] default - [COMMAND] account start - inpect 490134638338244620
+[2022-06-11T18:09:12.351] [INFO] default - [COMMAND] account end
+[2022-06-11T18:12:06.655] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
+[2022-06-11T18:12:08.179] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
+[2022-06-11T18:12:08.521] [INFO] default - [COMMAND] claimdaily start
+[2022-06-11T18:12:08.900] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
+[2022-06-11T18:12:09.117] [INFO] default - [COMMAND] claimdaily end
+[2022-06-11T18:12:10.305] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
+[2022-06-11T18:12:11.175] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]
+[2022-06-11T18:12:12.391] [DEBUG] default - ShalashaskaOG just reacted to message id [985212149209108570]

@@ -97,6 +97,7 @@ module.exports = {
 
 		allUsers.forEach(x => {
 			let curUser = json[x.user_id]
+			if(!curUser) return
 			x.points = curUser.points
 			x.consecutive_daily = curUser.consecutive_daily
 			x.monthly_invitation = curUser.monthly_invitation
