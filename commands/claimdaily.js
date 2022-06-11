@@ -5,6 +5,7 @@ const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
 const { DBSETTINGS } = require("../helper/databaseHelper")
 const logger = require("../helper/_logger")
+const { logOnServer } = require("../helper/mainHelper")
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -23,10 +24,11 @@ module.exports = {
 				const accountEmbed = new MessageEmbed()
 					.setTitle("ODA Clan | Claim Info")
 					.setDescription(`${outputString}`)
-				interaction.reply({
-					embeds: [accountEmbed],
-					ephemeral: true
-				})
+				if(interaction)
+					interaction.reply({
+						embeds: [accountEmbed],
+						ephemeral: true
+					})
 				logger.info("[COMMAND] claimdaily end")
 				return
 			}
@@ -45,38 +47,40 @@ module.exports = {
 					}
 				})
 
-			let msgOutput = res.modifiedCount > 0
-				? "Daily points claimed succesfully!"
-				: "Already claimed! Come claim tomorrow!"
+			let outpdateRow = res.modifiedCount
+			let msgOutput = outpdateRow > 0
+				? "✅ Congratulations! " + deservedPoints + " ODA points claimed succesfully! You are in a 3 days streak!"
+				: "❌ Already claimed! Come claim tomorrow!"
 			roleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(member._roles)
 			const claimEmbed = new MessageEmbed()
 				.setColor(roleSettings.color)
-				.setTitle("Daily claim")
+				.setTitle("Daily Claim")
 				.setDescription(msgOutput)
 			interaction.reply({
 				embeds: [claimEmbed],
 				ephemeral: true
 			})
-			if (res.modifiedCount > 0) {
-				const { logOnServer } = require("../helper/mainHelper")
+			if (outpdateRow > 0) {
 				logOnServer(interaction.client, `Daily claim done <@${member.id}> with **${deservedPoints}**`)
 				if (["daimyo", "tenno"].includes(roleSettings.command)) {
 					logger.info("[COMMAND] claimdaily end")
 					return
 				}
+				console.log("chat id " + roleSettings.chat_channel_id)
 				const chatChannel = interaction.client.channels.cache.get(roleSettings.chat_channel_id)
-				outputString = `<@${member.id}> just claimed **${deservedPoints}** daily points! `
-				outputString += `You are in a **${(currentUser.consecutive_daily + 1)}** days streak!`
+				outputString = `<@${member.id}> just claimed **${deservedPoints}** ODA points! `
+				outputString += `He is in a **${(currentUser.consecutive_daily + 1)}** days streak! 🚀`
 
 				const claimEmbed = new MessageEmbed()
 					.setColor(roleSettings.color)
-					.setTitle("Daily claim")
+					.setTitle("Daily Claim")
 					.setDescription(outputString)
 				await chatChannel.send({
 					embeds: [claimEmbed]
 				})//.then(async msg => { await msg.react('🔥') })
 				logger.info("[COMMAND] claimdaily end")
 			}
+			return
 
 		} catch (err) {
 			mainHelper.commonCatch(err, "claimdaily", logger)

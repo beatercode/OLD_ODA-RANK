@@ -154,7 +154,11 @@
         "971709981260931072",
         "978290279960420352",
         "961195429565988904",
-        "984546123408617533"
+        "984546123408617533",
+        "981253254908346388",
+        "981253299179253790",
+        "981252683132436520",
+        "981252611875426334"
       ],
       "ch_list_commands": [
         "979090565369040956"
@@ -165,7 +169,7 @@
       "ch_announcements": "961195506187505674",
       "ch_bot_feedback": "981207942655275068",
       "ch_feedback": "",
-      "ch_rank": "984559814539608165",
+      "ch_rank": "978286479778394123",
       "ch_moderazione": "984545926792224828",
       "ch_leaderboards": "984546123408617533",
       "ch_leaderboards_last_msg_id": "984560260180217957"
@@ -182,7 +186,7 @@
       "enabled_discount": false,
       "enabled_ds_log": true,
       "only_view": true,
-      "BOT_NAME": "ODA Clan Points Manager & Gameloop",
+      "BOT_NAME": "ODA Rank",
       "GUILD_ID": "961194963549429821",
       "ADMIN_NAMES": ["admin", "tenno", "daimyo"],
       "HIDDEN_COMMAND": ["setupdb", "setupmessages", "fetchinvites"],

@@ -15,10 +15,6 @@ module.exports = {
 			}
 
 			if (!interaction.isCommand()) return
-			if (interaction.channelId !== "980852571973484555") {
-				await interaction.reply({ content: "Hey kyodai! This feature is not yet enabled!", ephemeral: true })
-				return
-			}
 			const command = interaction.client.commands.get(interaction.commandName)
 			if (!command) return
 
@@ -33,6 +29,8 @@ module.exports = {
 				})
 			}
 		} catch (err) {
+			console.log("err --->")
+			console.log(err)
 			mainHalper.commonCatch(err, "interactionCreate", logger)
 			return
 		}

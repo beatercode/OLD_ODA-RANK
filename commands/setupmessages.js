@@ -58,21 +58,21 @@ module.exports = {
 			if (!isRankPresent) {
 				const row = new MessageActionRow()
 					.addComponents(
-						new MessageButton().setCustomId("leaderboard").setLabel("📈 LEADERBOARD").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("claimDaily").setLabel("✅ CLAIM DAILY").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("leaderboard").setLabel("📈 LEADERBOARD").setStyle("DANGER"),
+						new MessageButton().setCustomId("claimDaily").setLabel("✅ CLAIM DAILY").setStyle("SUCCESS"),
 						new MessageButton().setCustomId("account").setLabel("🙋‍♂️ ACCOUNT").setStyle("PRIMARY")
 					)
 
 				const embed = new MessageEmbed()
-					.setColor("#0099ff")
+					.setColor("#ffffff")
 					.setTitle("ODA Clan Points Manager")
+					.setThumbnail("https://i.imgur.com/JW8vPcb.png")
 					.setDescription("ODA Clan tool to check and keep track of members progress inside the ODA Clan world")
 					.addFields(
-						{ name: "LEADERBOARD", value: "Check leaderboard of your rank" },
-						{ name: "CLAIM DAILY", value: "Claim your daily point" },
-						{ name: "ACCOUNT", value: "Check your ODA Account" },
+						{ name: "📈 LEADERBOARD", value: "Check leaderboard of your rank" },
+						{ name: "✅ CLAIM DAILY", value: "Claim your daily point" },
+						{ name: "🙋‍♂️ ACCOUNT", value: "Check your ODA Account" },
 					)
-					.setFooter({ text: "ODA Clan bot management", iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 
 				await channelRank.send({ embeds: [embed], components: [row] })
 				contentOutput += "Default Rank message created\n"

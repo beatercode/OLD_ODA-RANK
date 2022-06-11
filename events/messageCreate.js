@@ -9,7 +9,7 @@ module.exports = {
 
 		const DB_SETTINGS = await DBSETTINGS()
 		const messageNoSlash = (message.content).replace("/", "")
-		if (DB_SETTINGS.HIDDEN_COMMAND.includes(messageNoSlash) && message.channelId === "980852571973484555") {
+		if (DB_SETTINGS.HIDDEN_COMMAND.includes(messageNoSlash)) {
 			switch (messageNoSlash) {
 			case "setupdb":
 				setupdb.execute(message)
