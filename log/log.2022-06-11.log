@@ -190,3 +190,19 @@
 [2022-06-11T12:13:03.945] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
 [2022-06-11T12:14:23.310] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
 [2022-06-11T12:14:44.508] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:15:38.077] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:21:19.889] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:21:22.525] [ERROR] default - Error in [board]
+[2022-06-11T12:21:22.525] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'getRole')
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/commands/board.js:22:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-11T12:22:02.920] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:22:07.777] [INFO] default - [COMMAND] board start 
+[2022-06-11T12:22:07.910] [INFO] default - [COMMAND] board end
+[2022-06-11T12:22:43.182] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-06-11T12:22:43.252] [INFO] default - [COMMAND] account end
+[2022-06-11T12:23:05.836] [INFO] default - ODA Clan Points Manager & Gameloop is online | ----> RUN
+[2022-06-11T12:23:09.933] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-06-11T12:23:10.001] [INFO] default - [COMMAND] account end
+[2022-06-11T12:23:14.684] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-06-11T12:23:14.754] [INFO] default - [COMMAND] account end

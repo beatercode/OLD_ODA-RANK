@@ -18,7 +18,7 @@ module.exports = {
 	async execute(interaction) {
 
 		try {
-			const inputUser = interaction.isButton() ? null : interaction.options.getUser("account")
+			const inputUser = interaction.isButton() || !interaction.options ? null : interaction.options.getUser("account")
 			const member = interaction.member
 			const targetUser = inputUser ? inputUser : member
 			const targetUserId = inputUser ? targetUser.id : targetUser.user.id

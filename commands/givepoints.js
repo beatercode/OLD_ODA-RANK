@@ -26,8 +26,8 @@ module.exports = {
 
 		try {
 			logger.info("[COMMAND] givepoints start "
-				+ (interaction.options.getUser("account") ? `[${interaction.options.getUser("account").id}]` : "")
-				+ (interaction.options.getInteger("points") ? `[${interaction.options.getInteger("points")}]` : ""))
+				+ (interaction.options && interaction.options.getUser("account") ? `[${interaction.options.getUser("account").id}]` : "")
+				+ (interaction.options && interaction.options.getInteger("points") ? `[${interaction.options.getInteger("points")}]` : ""))
 			const inPoints = interaction.options.getInteger("points")
 			const inUser = interaction.options.getUser("users")
 			const inMember = await mainHelper.getMemberFromId(interaction.client, inUser.id)

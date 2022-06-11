@@ -19,7 +19,7 @@ module.exports = {
 		try {
 			let { board, myId, roleName, roleColor } = await roleHelper.generateBoard(interaction)
 			logger.info("[COMMAND] board start "
-                + (interaction.options.getRole("role") ? `[${interaction.options.getRole("role").name}]` : ""))
+                + (interaction.options && interaction.options.getRole("role") ? `[${interaction.options.getRole("role").name}]` : ""))
 
 			if (!board) {
 				let finalDescription = "Unfortunately, you cannot access the requested board!"
