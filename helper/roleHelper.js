@@ -52,7 +52,7 @@ module.exports = {
 			let selectedRoleId = interaction.options.getRole("role").id
 			let myRoleSettings = await this.getHigherRoleByArrayOfRolesID(member._roles)
 			roleSettings = await this.getRoleSettingsByValue("id", selectedRoleId)
-			imTheRole = selectedRoleId == myRoleSettings.id
+			imTheRole = roleSettings ? selectedRoleId == myRoleSettings.id : null
 		}
 		let accessible = roleSettings && (roleSettings.lvl < 6 && roleSettings.lvl >= 2) || imTheRole
 		return accessible
@@ -60,17 +60,20 @@ module.exports = {
 			: {
 				board: null,
 				myId: member.user.id,
-				roleName: roleSettings.name,
-				roleColor: roleSettings.color
+				roleName: roleSettings ? roleSettings.name : "Other",
+				roleColor: roleSettings ? roleSettings.colo : "#FFFFFF",
 			}
 	},
 
 	async generateBoardInternal(member, imTheRole, roleSettings, searchLimit) {
 
 		const userId = member ? member.user.id : null
-		const roleColor = roleSettings.color
-		const roleName = roleSettings.name
-		let allUsersByRole = await Users.find({ role_id: roleSettings.id }).sort({ points: -1 })
+		const roleColor = roleSettings ? roleSettings.color : null
+		const roleName = roleSettings ? roleSettings.name : null
+		const roleId = roleSettings ? roleSettings.id : null
+		let allUsersByRole = roleSettings 
+			? await Users.find({ role_id: roleId }).sort({ points: -1 })
+			: await Users.find({}).sort({ points: -1 })
 		let topBoard = allUsersByRole.map(({ user_id, username, points }) => ({ user_id, username, points }))
 
 		// add position as property
@@ -116,11 +119,35 @@ module.exports = {
 			let newRow = ""
 			if (x.user_id == myId) {
 				newRow = (counter == 11 && board.length == 11) 
-					? `\n**${pos}.** <@${x.user_id}> with **${x.points}** ODA points`
-					: `**${pos}** <@${x.user_id}> with **${x.points}** ODA points\n`
+					? `\n${pos}. **<@${x.user_id}>** with **${x.points}** ODA points`
+					: `${pos} **<@${x.user_id}>** with **${x.points}** ODA points\n`
 			} else {
-				let atmUser = (x.username).includes("dummy") ? "@dummyUser" : "<@" + x.user_id + ">"
-				newRow = `**${pos}** ${atmUser} with **${x.points}** ODA points\n`
+				let atmUser = (x.username).includes("dummy") ? "@dummyUser" : x.username
+				newRow = `${pos} **${atmUser}** with **${x.points}** ODA points\n`
+			}
+			description += newRow
+			counter++
+		})
+		return description
+	},
+
+	async createBoardMessageWithRoles(board, myId) {
+		let description = ""
+		let counter = 1
+		let idList = board.map(x => x.user_id)
+		let userDb = await Users.find({ user_id: { $in : idList} }, "-_id user_id role role_id")
+		board.forEach(async x => {
+			if (!x) return
+			let pos = counter == x.position ? emojiRank[counter - 1] : x.position ? x.position : emojiRank[counter - 1]
+			let newRow = ""
+			let userRole = "<@&" + userDb.find(f => f.user_id == x.user_id).role_id + ">"
+			if (x.user_id == myId) {
+				newRow = (counter == 11 && board.length == 11)
+					? `\n**${pos}.** <@${x.user_id}> points **${x.points}** ${userRole}`
+					: `**${pos}** <@${x.user_id}> points **${x.points}** ${userRole}\n`
+			} else {
+				let atmUser = (x.username).includes("dummy") ? "@dummyUser" : " " + x.username
+				newRow = `${pos} **${atmUser}** points **${x.points}** ${userRole}\n`
 			}
 			description += newRow
 			counter++
@@ -180,6 +207,19 @@ module.exports = {
 		return await Users.find({ role_id: roleId }).sort({ points: mode ? 1 : -1 }).limit(fixed)
 	},
 
+	async getUserUpDownByFixedNumberAndDiff(roleName, fixed, mode) {
+		// mode 0 --> upgrade
+		// mode 1 --> downgrade
+
+		let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
+		let upDownUsers = await Users.find({ role_id: roleId }).sort({ points: mode ? 1 : -1 }).limit(fixed)
+		let threshold = upDownUsers.length > (fixed - 1) ? upDownUsers[fixed - 1].points : 0
+		return {
+			threshold: threshold,
+			returnable: upDownUsers
+		}
+	},
+
 	async getUserUpDownMyPosition(roleId, myId) {
 
 		let totalUsersOfRole = await Users.find({ role_id: roleId }).sort({ points: -1 })
@@ -188,7 +228,7 @@ module.exports = {
 
 		return {
 			//totalOfRole: totalUsersOfRoleLen,
-			//myTopPosition: (myIndex + 1),
+			myTopPosition: (myIndex + 1),
 			myTopPercentage: ((myIndex + 1) * 100 / totalUsersOfRoleLen)
 		}
 	},

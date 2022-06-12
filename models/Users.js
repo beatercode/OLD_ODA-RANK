@@ -14,7 +14,10 @@ const UserSchema = new mongoose.Schema({
 	oda_in_name: { type: Boolean, default: true },
 	oda_in_name_bonus: { type: Boolean, default: false },
 	consecutive_oda: { type: Number, default: 0 },
-	daily_starred: { type: String, default: "" },
+	daily_starred: { 
+		points: { type: Number, default: "" },
+		link: { type: String, default: "" },
+	},
 	invitedBy: {
 		inviterId: { type: String, default: "" },
 		inviterPoints: { type: Number, default: 0 },

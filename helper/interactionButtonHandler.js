@@ -6,7 +6,6 @@ const updateLeaderboard = require("../helper/updateLeaderboard")
 const databaseHelper = require("../helper/databaseHelper")
 const logger = require("../helper/_logger")
 const { DBCHANNELS, DBROLES, DBSETTINGS, DBUSERDUMMY } = require("../helper/databaseHelper")
-const dailyEvents = require("../custom/dailyEvents")
 
 module.exports = {
 
@@ -87,9 +86,6 @@ module.exports = {
 				await databaseHelper.checkDailyCount(interaction.client)
 				interaction.reply({ content: "Check [daily] done, view logs", ephemeral: true })
 				break
-			case "adjustStarred":
-				await dailyEvents.adjustStarred(interaction.client)
-				interaction.reply({ content: "[ADMIN]] adjust done - check channels / logs", ephemeral: true })
 			}
 		} catch (err) {
 			if (err) {

@@ -78,6 +78,34 @@ module.exports = {
 				logger.info("[COMMAND] givepoints end")
 				return
 			}
+			let sameUser = startingUser.user_id === finalUser.user_id
+			if (sameUser) {
+				let msgOutput = "You can't send points to yourself"
+				const claimEmbed = new MessageEmbed()
+					.setColor(roleSettings.color)
+					.setTitle("Give points")
+					.setDescription(msgOutput)
+				interaction.reply({
+					embeds: [claimEmbed],
+					ephemeral: true
+				})
+				logger.info("[COMMAND] givepoints end")
+				return
+			}
+
+			if (inPoints < 0) {
+				let msgOutput = "You should send more than **zero** ODA points"
+				const claimEmbed = new MessageEmbed()
+					.setColor(roleSettings.color)
+					.setTitle("Give points")
+					.setDescription(msgOutput)
+				interaction.reply({
+					embeds: [claimEmbed],
+					ephemeral: true
+				})
+				logger.info("[COMMAND] givepoints end")
+				return	
+			}
 
 			const DB_SETTINGS = await DBSETTINGS()
 			let finalUserPointsReceived = finalUser.monthly_points_received

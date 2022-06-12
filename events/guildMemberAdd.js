@@ -15,7 +15,12 @@ module.exports = {
 			if (!oldInvites) {
 				logger.log("Old invites not found ---> " + oldInvites)
 			}
-			const invite = newInvites.find(i => i.uses > oldInvites.find(x => x.code === i.code).amount)
+			let invite = null
+			try {
+				invite = newInvites.find(i => i.uses > oldInvites.find(x => x.code === i.code).amount)
+			} catch (err) {
+				logger.error("Let's check what happen to this user [" + member.id + "]")
+			}
 			const inviter = (invite != null && invite.inviter != null) ? invite.inviter : null
 
 			let inviterId = "", inviterPoints = 0
@@ -66,7 +71,7 @@ module.exports = {
 				monthly_points_received: 0,
 				oda_in_name: true,
 				oda_in_name_bonus: false,
-				daily_starred: "",
+				daily_starred: [],
 				consecutive_oda: 0,
 				invitedBy: {
 					inviterId: inviterId,

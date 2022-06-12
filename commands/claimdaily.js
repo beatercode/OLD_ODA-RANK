@@ -68,7 +68,7 @@ module.exports = {
 				}
 				const DB_CHANNELS = config.Channels.values
 				const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
-				outputString = `<@${member.id}> just claimed **${deservedPoints}** ODA points! `
+				outputString = `**${member.user.username}** just claimed **${deservedPoints}** ODA points! `
 				outputString += `He is in a **${(currentUser.consecutive_daily + 1)}** days streak! 🚀`
 
 				const claimEmbed = new MessageEmbed()

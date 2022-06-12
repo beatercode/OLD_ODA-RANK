@@ -33,6 +33,14 @@ module.exports = {
 
 			let finalEmbeds = []
 
+			finalEmbeds.push(
+				new MessageEmbed()
+					.setTitle("ODA Clan Leaderboards")
+					//.addField("\u200B", "sdfsdf")
+					.setColor("#FFFFFF")
+					.setDescription("Rankings are updated hourly")
+			)
+
 			if (samuraiFinalDescription) {
 				finalEmbeds.push(
 					new MessageEmbed()
