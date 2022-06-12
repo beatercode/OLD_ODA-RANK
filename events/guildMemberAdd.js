@@ -46,7 +46,7 @@ module.exports = {
 				let updatesUsr = await Users.updateMany({ user_id: inviter.id },
 					{ $inc: { points: inviterPoints, monthly_invitation: 1, total_invitation: 1 } })
 				if (updatesUsr.modifiedCount > 0) {
-					logger.info(`User joined with inv. code [${invitedWithCode}] -> inviter point's fived`)
+					logger.info(`User joined with inv. code [${invitedWithCode}] -> inviter point's gived`)
 				} else {
 					logger.error(`User joined with inv. code [${invitedWithCode}] -> can't update DB`)
 				}

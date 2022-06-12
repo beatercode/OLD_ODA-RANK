@@ -49,7 +49,7 @@ module.exports = {
 
 			let outpdateRow = res.modifiedCount
 			let msgOutput = outpdateRow > 0
-				? "✅ Congratulations! " + deservedPoints + " ODA points claimed succesfully! You are in a 3 days streak!"
+				? "✅ Congratulations! " + deservedPoints + " ODA points claimed succesfully! You are in a " + (currentUser.consecutive_daily + 1) + " days streak!"
 				: "❌ Already claimed! Come claim tomorrow!"
 			roleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(member._roles)
 			const claimEmbed = new MessageEmbed()

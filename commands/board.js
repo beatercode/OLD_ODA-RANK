@@ -24,7 +24,7 @@ module.exports = {
 			if (!board) {
 				let finalDescription = "Unfortunately, you cannot access the requested board!"
 				let finalEmbed = new MessageEmbed()
-					.setAuthor("ODA Clan Board | " + roleName, "https://i.imgur.com/1ED6ifg.jpeg")
+					.setAuthor({name: "ODA Clan Board | " + roleName, iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 					.setDescription(finalDescription)
 					.setColor(roleColor)
 
@@ -45,17 +45,19 @@ module.exports = {
 
 			let couldUpgrade = false
 			let couldDowngrade = false
+			let usersUpgradable = null
+			let usersDowngradable = null
 			if (percentageUp != null) {
-				let usersUpgradable = percentageUpFixed
-					? await roleHelper.getUserUpDownByRolePercentage(role.command, percentageUp, 0)
-					: await roleHelper.getUserUpDownByFixedNumber(role.command, percentageUpFixed, 0)
-				if (usersUpgradable) {
-					let filter = usersUpgradable.filter(x => x.user_id == myId)
+				usersUpgradable = percentageUpFixed
+					? await roleHelper.getUserUpDownByFixedNumber(role.command, percentageUp, 0)
+					: await roleHelper.getUserUpDownByRolePercentageAndDiff(role.command, percentageUp, 0)
+				if (usersUpgradable.returnable) {
+					let filter = usersUpgradable.returnable.filter(x => x.user_id == myId)
 					couldUpgrade = filter.length > 0
 				}
 			}
 			if (percentageDown != null) {
-				let usersDowngradable = await roleHelper
+				usersDowngradable = await roleHelper
 					.getUserUpDownByRolePercentage(role.command, percentageDown, 1)
 				if (usersDowngradable) {
 					let filter = usersDowngradable.filter(x => x.user_id == myId)
@@ -64,24 +66,26 @@ module.exports = {
 			}
 
 			if (isMyRole) {
+				let myPoints = (board.find(x => x.user_id === myId)).points
 				if (couldDowngrade && percentageDown != 0) {
-					finalDescription += "\n\n**Your commitment is not enough; "
-                        + "you are in the worst " + percentageDown + " of your role. Increase your ODA points or you "
-                        + "will be downgraded at the end of the month**"
+					finalDescription += "\n\nYour commitment is not enough; "
+                        + "you are in the **worst " + percentageDown + "** of your role. Increase your ODA points or you "
+                        + "will be downgraded at the end of the month. ⬇️"
 				} else if (couldUpgrade && percentageUp != 0) {
-					let topAmount = percentageUpFixed ? percentageUp : (percentageUp + "%")
-					finalDescription += "\n\n**You are doing a great job Kyodai! You are in the top " + topAmount + ", "
-                        + "keep it up and you will be promoted to the next rank at the end of the month!**"
+					const topAmount = percentageUpFixed ? percentageUp : (percentageUp + "%")
+					finalDescription += "\n\nYou are doing a great job Kyodai! You are in the **top " + topAmount + "**, "
+                        + "keep it up and you will be promoted to the next rank at the end of the month!  ⬆️"
+				} else {
+					const topAmount = percentageUpFixed ? percentageUp : (percentageUp + "%")
+					const missPoints = Math.round(usersUpgradable.threshold - myPoints)
+					finalDescription += `\n\nHey Kyodai! You are not in the top **${topAmount}%** of your role's board!`
+					finalDescription += `\nYou still need to earn **${missPoints}** points if you want to move up to the next level at the end of the month!  ↔️`
 				}
-				const { myTopPosition, myTopPercentage } = await roleHelper.getUserUpDownMyPosition(role.id, myId)
-				const formatterPercentage = Math.round(100 - myTopPercentage)
-				finalDescription += `\n\nYou are the ${myTopPosition}° in your role's board!`
-				finalDescription += `\nYou are better than ${formatterPercentage}% of your role's kyodai!`
 			}
 
 			finalDescription = finalDescription == "" ? "Hey Kyodai! Can't find any member at this level." : finalDescription
 			let finalEmbed = new MessageEmbed()
-				.setAuthor("ODA Clan Board | " + roleName, "https://i.imgur.com/1ED6ifg.jpeg")
+				.setAuthor({name: "ODA Clan Board | " + roleName, iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 				.setDescription(finalDescription)
 				.setColor(roleColor)
 

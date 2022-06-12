@@ -104,13 +104,6 @@ module.exports = {
 			x.oda_in_name = curUser.oda_in_name
 			x.consecutive_oda = curUser.consecutive_oda
 			x.invited_by = curUser.invited_by
-			/*
-            console.log(x.user_id + " points [" + x.points + "] daily [" + x.consecutive_daily + "]"
-                .concat("monthly_invitation [" + x.monthly_invitation + "] ")
-                .concat("oda_in_name [" + x.oda_in_name + "] ")
-                .concat("consecutive_oda [" + x.consecutive_oda + "] ")
-                .concat("invited_by [" + x.invited_by[0] + "][" + x.invited_by[1] + "]"))
-                */
 		})
 
 		var updates = []
@@ -142,16 +135,14 @@ module.exports = {
 		const guild = client.guilds.cache.get(DB_SETTINGS.GUILD_ID)
 		let members = await guild.members.fetch()
 		members.forEach(x => {
+			x.setNickname(null)
+			/*
 			if (x.premiumSince) {
-				console.log(x.user.username + " has a nitro account")
-				console.log("his nick ---> " + x.nickname)
 				if (!(!x.nickname || x.nickname.includes("| ODA Clan"))) {
 					x.setNickname(x.user.username + " | ODA Clan")
 				}
 			}
-			/* if (x.nickname != null && x.nickname != x.user.username) {
-                console.log("Nickname [" + x.nickname + "] Username [" + x.user.username + "]");
-            } */
+			*/
 		})
 	},
 

@@ -169,3 +169,289 @@
 [2022-06-12T00:37:17.099] [INFO] default - [COMMAND] board start 
 [2022-06-12T00:37:17.245] [INFO] default - [COMMAND] board end
 [2022-06-12T00:37:53.368] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:01:14.516] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:02:03.838] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:02:04.218] [INFO] default - [COMMAND] board end
+[2022-06-12T15:03:20.062] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:03:39.903] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:03:40.358] [INFO] default - [COMMAND] board end
+[2022-06-12T15:04:21.587] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:04:21.962] [INFO] default - [COMMAND] board end
+[2022-06-12T15:04:27.416] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:05:19.629] [ERROR] default - Error in [board]
+[2022-06-12T15:05:19.630] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'name')
+    at Object.generateBoard (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/helper/roleHelper.js:63:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/commands/board.js:20:47)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/events/interactionCreate.js:22:5)
+[2022-06-12T15:05:37.482] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:05:45.240] [INFO] default - [COMMAND] board start [Nōka 農家 - Lv.4]
+[2022-06-12T15:05:45.609] [INFO] default - [COMMAND] board end
+[2022-06-12T15:05:54.882] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:06:29.411] [INFO] default - [COMMAND] board start [Nōka 農家 - Lv.4]
+[2022-06-12T15:06:29.812] [INFO] default - [COMMAND] board end
+[2022-06-12T15:06:31.836] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:06:32.345] [INFO] default - [COMMAND] board end
+[2022-06-12T15:06:47.411] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:06:52.941] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:08:11.510] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:08:19.368] [INFO] default - [COMMAND] board start [Nōka 農家 - Lv.4]
+[2022-06-12T15:08:19.763] [INFO] default - [COMMAND] board end
+[2022-06-12T15:09:05.851] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:09:06.223] [INFO] default - [COMMAND] board end
+[2022-06-12T15:09:08.152] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:09:17.476] [INFO] default - [COMMAND] board start [Nōka 農家 - Lv.4]
+[2022-06-12T15:09:17.879] [INFO] default - [COMMAND] board end
+[2022-06-12T15:09:35.221] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:09:45.505] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:09:55.105] [INFO] default - [COMMAND] board start [Nōka 農家 - Lv.4]
+[2022-06-12T15:09:55.495] [INFO] default - [COMMAND] board end
+[2022-06-12T15:14:18.747] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:14:19.287] [INFO] default - [COMMAND] claimdaily end
+[2022-06-12T15:15:15.595] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:15:43.079] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:15:43.431] [INFO] default - [COMMAND] board end
+[2022-06-12T15:15:44.682] [INFO] default - [COMMAND] account start - inpect 980754561868386355
+[2022-06-12T15:15:44.753] [INFO] default - [COMMAND] account end
+[2022-06-12T15:19:47.187] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:19:50.959] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:19:51.326] [INFO] default - [COMMAND] board end
+[2022-06-12T15:21:03.894] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:21:08.924] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:21:09.270] [INFO] default - [COMMAND] board end
+[2022-06-12T15:21:32.689] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:21:36.396] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:21:36.772] [INFO] default - [COMMAND] board end
+[2022-06-12T15:22:34.277] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:22:38.644] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:22:38.929] [INFO] default - [COMMAND] board end
+[2022-06-12T15:24:05.258] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:25:03.086] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:25:09.003] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:25:09.281] [INFO] default - [COMMAND] board end
+[2022-06-12T15:27:37.219] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:28:27.798] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:28:28.312] [INFO] default - [COMMAND] claimdaily end
+[2022-06-12T15:28:44.731] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:28:45.328] [INFO] default - [COMMAND] board end
+[2022-06-12T15:30:49.860] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:30:50.469] [INFO] default - [COMMAND] board end
+[2022-06-12T15:31:59.957] [DEBUG] default - JO3L | ODA Clan just reacted to message id [985240625630810212]
+[2022-06-12T15:32:00.777] [DEBUG] default - JO3L | ODA Clan just reacted to message id [985240625630810212]
+[2022-06-12T15:32:25.886] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:32:30.259] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:32:30.793] [INFO] default - [COMMAND] board end
+[2022-06-12T15:32:40.168] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-12T15:32:40.573] [INFO] default - [TRIGGER] guildMemberad inviter [2tzn7h4u]
+[2022-06-12T15:32:40.619] [ERROR] default - User [55533316027195392] ID [Kaizen] filed/not necessary role update
+[2022-06-12T15:32:40.646] [INFO] default - User joined with inv. code [2tzn7h4u] -> DB updated
+[2022-06-12T15:32:40.684] [INFO] default - User joined with inv. code [2tzn7h4u] -> inviter point's fived
+[2022-06-12T15:32:40.685] [INFO] default -  [2tzn7h4u]
+[2022-06-12T15:32:40.687] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-12T15:32:46.525] [INFO] default - User [55533316027195392] ID [Kaizen] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T15:32:46.672] [ERROR] default - User [55533316027195392] ID [Kaizen] filed/not necessary role update
+[2022-06-12T15:32:50.877] [INFO] default - User [55533316027195392] ID [Kaizen] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T15:32:51.023] [ERROR] default - User [55533316027195392] ID [Kaizen] filed/not necessary role update
+[2022-06-12T15:32:53.204] [INFO] default - User [55533316027195392] ID [Kaizen] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T15:32:53.464] [ERROR] default - User [55533316027195392] ID [Kaizen] filed/not necessary role update
+[2022-06-12T15:32:57.657] [INFO] default - User [55533316027195392] ID [Kaizen] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T15:32:57.859] [ERROR] default - User [55533316027195392] ID [Kaizen] filed/not necessary role update
+[2022-06-12T15:34:31.602] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:34:38.751] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:34:39.431] [INFO] default - [COMMAND] board end
+[2022-06-12T15:34:52.200] [INFO] default - User [55533316027195392] ID [Kaizen] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-12T15:34:52.278] [ERROR] default - User [55533316027195392] ID [Kaizen] filed/not necessary role update
+[2022-06-12T15:43:08.627] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:43:53.575] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:43:54.207] [INFO] default - [COMMAND] board end
+[2022-06-12T15:45:40.891] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:45:48.922] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:45:49.499] [INFO] default - [COMMAND] board end
+[2022-06-12T15:46:39.996] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:46:45.352] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:46:45.842] [INFO] default - [COMMAND] board end
+[2022-06-12T15:48:14.963] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:48:35.176] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:48:35.734] [INFO] default - [COMMAND] board end
+[2022-06-12T15:49:14.171] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:49:59.530] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:50:07.070] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:50:07.655] [INFO] default - [COMMAND] board end
+[2022-06-12T15:54:22.353] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:54:25.648] [INFO] default - [COMMAND] account start - inpect 675010249769484328
+[2022-06-12T15:54:25.712] [INFO] default - [COMMAND] account end
+[2022-06-12T15:54:32.344] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:54:32.827] [INFO] default - [COMMAND] board end
+[2022-06-12T15:54:43.723] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:54:44.356] [INFO] default - [COMMAND] board end
+[2022-06-12T15:55:16.902] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T15:55:22.456] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:55:22.944] [INFO] default - [COMMAND] board end
+[2022-06-12T15:55:26.535] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:56:33.283] [INFO] default - [COMMAND] account start - inpect 591169733240422410
+[2022-06-12T15:56:33.344] [INFO] default - [COMMAND] account end
+[2022-06-12T15:56:41.684] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:56:42.686] [INFO] default - [COMMAND] claimdaily end
+[2022-06-12T15:56:47.468] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:56:54.905] [INFO] default - [COMMAND] account start - inpect 971340025520341032
+[2022-06-12T15:56:54.966] [INFO] default - [COMMAND] account end
+[2022-06-12T15:57:06.508] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:57:06.973] [INFO] default - [COMMAND] board end
+[2022-06-12T15:57:09.019] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T15:57:12.996] [INFO] default - [COMMAND] board start 
+[2022-06-12T15:57:13.117] [INFO] default - [COMMAND] board end
+[2022-06-12T15:57:27.015] [INFO] default - [COMMAND] account start - inpect 961363840891768922
+[2022-06-12T15:57:27.073] [INFO] default - [COMMAND] account end
+[2022-06-12T16:00:00.346] [INFO] default - [HOURLY] routine starts
+[2022-06-12T16:00:00.348] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-12T16:00:01.508] [INFO] default - [HOURLY] update!
+[2022-06-12T16:00:01.508] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-12T16:00:01.591] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-12T16:00:01.592] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-12T16:06:51.168] [INFO] default - New invite created - code [2pRWVAAc] from user id [659047167121555470]
+[2022-06-12T16:06:51.221] [INFO] default - Invite create [2pRWVAAc] -> DB updated
+[2022-06-12T16:07:12.101] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-12T16:07:12.819] [INFO] default - [TRIGGER] guildMemberad inviter [2pRWVAAc]
+[2022-06-12T16:07:12.880] [ERROR] default - User [725075160499224660] ID [Andrea Carletti] filed/not necessary role update
+[2022-06-12T16:07:12.910] [INFO] default - User joined with inv. code [2pRWVAAc] -> DB updated
+[2022-06-12T16:07:13.006] [INFO] default - User joined with inv. code [2pRWVAAc] -> inviter point's gived
+[2022-06-12T16:07:13.006] [INFO] default -  [2pRWVAAc]
+[2022-06-12T16:07:13.010] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-12T16:07:25.017] [INFO] default - User [725075160499224660] ID [Andrea Carletti] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:07:25.199] [ERROR] default - User [725075160499224660] ID [Andrea Carletti] filed/not necessary role update
+[2022-06-12T16:07:28.896] [INFO] default - User [725075160499224660] ID [Andrea Carletti] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:07:29.078] [ERROR] default - User [725075160499224660] ID [Andrea Carletti] filed/not necessary role update
+[2022-06-12T16:07:33.106] [INFO] default - User [725075160499224660] ID [Andrea Carletti] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:07:33.415] [ERROR] default - User [725075160499224660] ID [Andrea Carletti] filed/not necessary role update
+[2022-06-12T16:07:37.772] [INFO] default - User [725075160499224660] ID [Andrea Carletti] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:07:37.932] [ERROR] default - User [725075160499224660] ID [Andrea Carletti] filed/not necessary role update
+[2022-06-12T16:07:56.097] [INFO] default - User [725075160499224660] ID [Andrea Carletti] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-12T16:07:56.310] [ERROR] default - User [725075160499224660] ID [Andrea Carletti] filed/not necessary role update
+[2022-06-12T16:13:53.108] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:13:53.348] [INFO] default - [COMMAND] board end
+[2022-06-12T16:14:02.008] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:03.718] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:04.513] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:07.042] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:07.720] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:12.860] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:13.300] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:13.980] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:14.804] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:15.542] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:16.194] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:16.767] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:17.421] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:18.015] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:18.863] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:19.409] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:19.978] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:21.928] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:23.510] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:14:24.268] [DEBUG] default - HeisenBernik00 just reacted to message id [985240625630810212]
+[2022-06-12T16:16:40.692] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-12T16:16:41.033] [INFO] default - [TRIGGER] guildMemberad inviter [2pRWVAAc]
+[2022-06-12T16:16:41.112] [INFO] default - User joined with inv. code [2pRWVAAc] -> DB updated
+[2022-06-12T16:16:41.117] [ERROR] default - User [380806066407079936] ID [ilcarlino] filed/not necessary role update
+[2022-06-12T16:16:41.150] [INFO] default - User joined with inv. code [2pRWVAAc] -> inviter point's gived
+[2022-06-12T16:16:41.150] [INFO] default -  [2pRWVAAc]
+[2022-06-12T16:16:41.162] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-12T16:16:46.538] [INFO] default - User [380806066407079936] ID [ilcarlino] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:16:46.748] [ERROR] default - User [380806066407079936] ID [ilcarlino] filed/not necessary role update
+[2022-06-12T16:16:50.011] [INFO] default - User [380806066407079936] ID [ilcarlino] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:16:50.251] [ERROR] default - User [380806066407079936] ID [ilcarlino] filed/not necessary role update
+[2022-06-12T16:16:53.015] [INFO] default - User [380806066407079936] ID [ilcarlino] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:16:53.236] [ERROR] default - User [380806066407079936] ID [ilcarlino] filed/not necessary role update
+[2022-06-12T16:16:55.199] [INFO] default - User [380806066407079936] ID [ilcarlino] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T16:16:55.446] [ERROR] default - User [380806066407079936] ID [ilcarlino] filed/not necessary role update
+[2022-06-12T16:17:13.959] [INFO] default - User [380806066407079936] ID [ilcarlino] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-12T16:17:14.237] [ERROR] default - User [380806066407079936] ID [ilcarlino] filed/not necessary role update
+[2022-06-12T16:17:35.671] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:17:35.933] [INFO] default - [COMMAND] board end
+[2022-06-12T16:18:11.612] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:18:17.426] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:18:17.649] [ERROR] default - Error in [board]
+[2022-06-12T16:18:17.649] [ERROR] default - TypeError: usersUpgradable.filter is not a function
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/commands/board.js:56:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-12T16:18:43.177] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:19:18.613] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:19:21.190] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:19:21.726] [INFO] default - [COMMAND] board end
+[2022-06-12T16:22:34.774] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T16:22:35.227] [INFO] default - [COMMAND] claimdaily end
+[2022-06-12T16:25:56.189] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:26:00.221] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:26:00.677] [INFO] default - [COMMAND] board end
+[2022-06-12T16:26:28.398] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:26:31.201] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:26:31.612] [INFO] default - [COMMAND] board end
+[2022-06-12T16:26:52.676] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:26:56.746] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:26:57.113] [INFO] default - [COMMAND] board end
+[2022-06-12T16:27:11.575] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:27:15.917] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:27:16.477] [INFO] default - [COMMAND] board end
+[2022-06-12T16:27:39.107] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:27:41.760] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:27:42.213] [INFO] default - [COMMAND] board end
+[2022-06-12T16:27:47.966] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:27:51.067] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:27:51.524] [INFO] default - [COMMAND] board end
+[2022-06-12T16:28:26.880] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:28:35.325] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:28:38.302] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:28:38.673] [INFO] default - [COMMAND] board end
+[2022-06-12T16:29:00.177] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:29:00.593] [INFO] default - [COMMAND] board end
+[2022-06-12T16:29:25.206] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:29:25.870] [INFO] default - [COMMAND] board end
+[2022-06-12T16:34:21.171] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:38:38.129] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:38:44.746] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:38:45.158] [INFO] default - [COMMAND] board end
+[2022-06-12T16:39:06.307] [INFO] default - New invite created - code [UBpGr5yM] from user id [887052998222680144]
+[2022-06-12T16:39:06.349] [INFO] default - Invite create [UBpGr5yM] -> DB updated
+[2022-06-12T16:39:16.657] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:39:24.218] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:41:49.186] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:41:55.886] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:41:56.323] [ERROR] default - Error in [board]
+[2022-06-12T16:41:56.325] [ERROR] default - ReferenceError: embedInfo is not defined
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/Discord-JS-Points-Manager-OFFICIAL/commands/board.js:91:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-06-12T16:42:05.920] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T16:42:09.320] [INFO] default - [COMMAND] board start 
+[2022-06-12T16:42:09.771] [INFO] default - [COMMAND] board end
+[2022-06-12T16:42:25.515] [INFO] default - ODA Rank is online | ----> RUN
+[2022-06-12T17:03:01.622] [INFO] default - [COMMAND] account start - inpect 675010249769484328
+[2022-06-12T17:03:01.705] [INFO] default - [COMMAND] account end
+[2022-06-12T17:03:35.793] [DEBUG] default - Gabriele just reacted to message id [979084370788900874]
+[2022-06-12T17:03:36.766] [DEBUG] default - Gabriele just reacted to message id [979084370788900874]
+[2022-06-12T17:04:19.353] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T17:06:30.314] [INFO] default - [COMMAND] account start - inpect 675010249769484328
+[2022-06-12T17:06:30.381] [INFO] default - [COMMAND] account end
+[2022-06-12T17:16:57.539] [INFO] default - [COMMAND] board start 
+[2022-06-12T17:16:57.702] [INFO] default - [COMMAND] board end
+[2022-06-12T17:17:01.598] [INFO] default - [COMMAND] account start - inpect 446348134369591296
+[2022-06-12T17:17:01.665] [INFO] default - [COMMAND] account end
+[2022-06-12T17:17:05.266] [INFO] default - [COMMAND] board start 
+[2022-06-12T17:17:05.427] [INFO] default - [COMMAND] board end
+[2022-06-12T17:17:13.334] [INFO] default - [COMMAND] board start 
+[2022-06-12T17:17:13.623] [INFO] default - [COMMAND] board end
+[2022-06-12T17:17:36.563] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-12T17:17:37.016] [INFO] default - [TRIGGER] guildMemberad inviter [czbBPGuS]
+[2022-06-12T17:17:37.331] [ERROR] default - User [423867308524699648] ID [LD] filed/not necessary role update
+[2022-06-12T17:17:37.361] [INFO] default - User joined with inv. code [czbBPGuS] -> DB updated
+[2022-06-12T17:17:37.408] [INFO] default - User joined with inv. code [czbBPGuS] -> inviter point's gived
+[2022-06-12T17:17:37.409] [INFO] default -  [czbBPGuS]
+[2022-06-12T17:17:37.419] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-12T17:17:44.277] [INFO] default - User [423867308524699648] ID [LD] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-12T17:17:44.456] [ERROR] default - User [423867308524699648] ID [LD] filed/not necessary role update
+[2022-06-12T17:20:01.261] [INFO] default - [COMMAND] claimdaily start
+[2022-06-12T17:20:01.854] [INFO] default - [COMMAND] claimdaily end
+[2022-06-12T17:20:08.910] [INFO] default - [COMMAND] account start - inpect 204696812328583168
+[2022-06-12T17:20:08.976] [INFO] default - [COMMAND] account end
+[2022-06-12T17:20:19.714] [INFO] default - [COMMAND] board start 
+[2022-06-12T17:20:19.945] [INFO] default - [COMMAND] board end
+[2022-06-12T17:24:51.077] [INFO] default - ODA Rank is online | ----> RUN

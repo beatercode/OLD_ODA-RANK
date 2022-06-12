@@ -115,16 +115,14 @@ module.exports = {
 			let pos = counter == x.position ? emojiRank[counter - 1] : x.position ? x.position : emojiRank[counter - 1]
 			let newRow = ""
 			if (x.user_id == myId) {
-				newRow = `**${pos}** <@${x.user_id}> with **${x.points}** ODA points\n`
+				newRow = (counter == 11 && board.length == 11) 
+					? `\n**${pos}.** <@${x.user_id}> with **${x.points}** ODA points`
+					: `**${pos}** <@${x.user_id}> with **${x.points}** ODA points\n`
 			} else {
 				let atmUser = (x.username).includes("dummy") ? "@dummyUser" : "<@" + x.user_id + ">"
 				newRow = `**${pos}** ${atmUser} with **${x.points}** ODA points\n`
 			}
 			description += newRow
-			let space = "ㅤ"
-			description += counter == 10 && board.length == 11
-				? "__" + space.repeat((newRow.length) / 2) + "__\n"
-				: ""
 			counter++
 		})
 		return description
@@ -162,6 +160,18 @@ module.exports = {
 		}
 	},
 
+	async getUserUpDownByRolePercentageAndDiff(roleName, percentage, mode) {
+		// mode 0 --> upgrade
+		// mode 1 --> downgrade
+
+		if (mode == 0) {
+			return await this.getUsersUpgredableByRolePercentageAndDiff(roleName, percentage)
+		}
+		if (mode == 1) {
+			return await this.getUsersDowngredableByRolePercentageAndDiff(roleName, percentage)
+		}
+	},
+
 	async getUserUpDownByFixedNumber(roleName, fixed, mode) {
 		// mode 0 --> upgrade
 		// mode 1 --> downgrade
@@ -177,7 +187,8 @@ module.exports = {
 		let myIndex = totalUsersOfRole.map(object => object.user_id).indexOf(myId)
 
 		return {
-			myTopPosition: (myIndex + 1),
+			//totalOfRole: totalUsersOfRoleLen,
+			//myTopPosition: (myIndex + 1),
 			myTopPercentage: ((myIndex + 1) * 100 / totalUsersOfRoleLen)
 		}
 	},
@@ -203,8 +214,40 @@ module.exports = {
 			let position = fixer + toUpgrade
 			let fromToUpgradePoints = board.board[position].points
 			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
-			let returnable = await Users.find({ role_id: roleId, fromToUpgradePoints: { $gt: fromToUpgradePoints } })
+			let returnable = await Users.find({ role_id: roleId, points: { $gt: fromToUpgradePoints } })
 			return returnable
+		}
+	},
+
+	async getUsersDowngredableByRolePercentageAndDiff(roleName, percentageDown) {
+		const board = await this.getBoardByRoleName(0, roleName)
+		if (board.board.length > 0) {
+			let toDowngrade = Math.floor(board.board.length / 100 * percentageDown)
+			let fixer = toDowngrade > 0 ? 0 : 1
+			let position = board.board.length - toDowngrade - fixer
+			let fromToDeletePoints = board.board[position].points
+			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
+			let returnable = await Users.find({ role_id: roleId, points: { $lt: fromToDeletePoints } })
+			return {
+				threshold: fromToDeletePoints,
+				returnable: returnable
+			}
+		}
+	},
+
+	async getUsersUpgredableByRolePercentageAndDiff(roleName, percentageUp) {
+		const board = await this.getBoardByRoleName(0, roleName)
+		if (board.board.length > 0) {
+			let toUpgrade = Math.round(board.board.length / 100 * percentageUp)
+			let fixer = toUpgrade > 0 ? 1 : 0
+			let position = fixer + toUpgrade
+			let fromToUpgradePoints = board.board[position].points
+			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
+			let returnable = await Users.find({ role_id: roleId, points: { $gt: fromToUpgradePoints } })
+			return {
+				threshold: fromToUpgradePoints,
+				returnable: returnable
+			}
 		}
 	},
 

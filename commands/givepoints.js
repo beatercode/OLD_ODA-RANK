@@ -111,7 +111,7 @@ module.exports = {
 			let outputString = `<@${interaction.member.id}> just gave away ${inPoints} ODA points to <@${inUser.id}>!`
 			const claimEmbedPublic = new MessageEmbed()
 				.setColor(roleSettings.color)
-				.setTitle("Points gifted! 🚀")
+				.setTitle("Points Gifted! 🚀")
 				.setDescription(outputString)
 			await pointsEventsChannel.send({
 				embeds: [claimEmbedPublic]
