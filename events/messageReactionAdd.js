@@ -34,7 +34,7 @@ module.exports = {
 					let targetUserId = null
 					let fetched = await message.channel.messages.fetch(message.id)
 					targetUserId = fetched.author.id
-					let targetUsername = fetched.author.username
+					//let targetUsername = fetched.author.username
 					if(!targetUserId) {
 						logger.error("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "]")
 						return
@@ -54,7 +54,7 @@ module.exports = {
 						logger.debug("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "] - seems have already had a bonus")
 						return
 					} else {
-						let outputString = `**${targetUsername}** was rewarded with **${deservedPoints}** points as he brought value within the clan today! ${reactedEmoji}`
+						let outputString = `**<@&${targetUserId}>** was rewarded with **${deservedPoints}** points as he brought value within the clan today! ${reactedEmoji}`
 						outputString += `\n\nMessage reference [here](${targetMsgUrl})`
 						const pointsEventsChannel = reaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
 						const claimEmbed = new MessageEmbed()
