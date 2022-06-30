@@ -9,7 +9,6 @@ module.exports = {
 
 		try {
 			if (newMember.nickname !== oldMember.nickname || newMember.user.username != oldMember.user.username) {
-
 				/*
 				if (newMember.premiumSince || oldMember.premiumSince) {
 					logger.info(oldMember.nickname ? oldMember.nickname : oldMember.user.username 
@@ -20,10 +19,9 @@ module.exports = {
 					}
 				}
 				*/
-
 				let newNick = !newMember.nickname ? newMember.user.username : newMember.nickname
 				let updated = await Users.updateOne({ user_id: newMember.user.id }, { $set: { username: newNick } })
-				if (updated == 1) {
+				if (updated.modifiedCount == 1) {
 					logger.info(`User ${newMember.user.id} nickname updated! DB updated too.`)
 				} else {
 					logger.error(`User ${newMember.user.id} nickname updated! DB not updated! Go check what happen.`)

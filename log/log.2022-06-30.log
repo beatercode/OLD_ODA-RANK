@@ -1,0 +1,932 @@
+[2022-06-30T00:00:00.720] [INFO] default - [HOURLY] routine starts
+[2022-06-30T00:00:00.721] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T00:00:00.727] [INFO] default - [DAILY] routine starts
+[2022-06-30T00:00:00.728] [INFO] default - [DAILY] resetDaily start
+[2022-06-30T00:00:00.831] [INFO] default - DAILY CLAIM RESET DONE [9]
+[2022-06-30T00:00:00.831] [INFO] default - DAILY CLAIM RESET DONE [73]
+[2022-06-30T00:00:00.832] [INFO] default - STARRED USER RESET DONE [73]
+[2022-06-30T00:00:00.832] [INFO] default - [DAILY] resetDaily end
+[2022-06-30T00:00:00.833] [INFO] default - [DAILY] dailyAdjustOdaInName start
+[2022-06-30T00:00:00.872] [INFO] default - Daily adjust ODA IN NAME added ---> 0
+[2022-06-30T00:00:00.885] [INFO] default - Daily adjust ODA IN NAME removed ---> 0
+[2022-06-30T00:00:00.920] [INFO] default - Daily adjust ODA IN NAME removed ---> 432
+[2022-06-30T00:00:00.921] [INFO] default - [DAILY] dailyAdjustOdaInName end
+[2022-06-30T00:00:00.922] [INFO] default - [DAILY] clearNicknames end
+[2022-06-30T00:00:01.131] [INFO] default - [HOURLY] update!
+[2022-06-30T00:00:01.132] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T00:00:01.270] [INFO] default - Hourly check ODA IN NAME done ---> updated: 431
+[2022-06-30T00:00:01.270] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T00:00:01.537] [INFO] default - User 351480824266358784 nickname updated! DB updated too.
+[2022-06-30T00:00:01.744] [INFO] default - User 502589085588914176 nickname updated! DB updated too.
+[2022-06-30T00:00:01.996] [INFO] default - User 944280623999221791 nickname updated! DB updated too.
+[2022-06-30T00:51:42.829] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T00:51:43.281] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T00:51:45.043] [INFO] default - [COMMAND] board start 
+[2022-06-30T00:51:45.075] [INFO] default - [COMMAND] board end
+[2022-06-30T00:56:26.230] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:27.091] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:28.120] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:28.820] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:30.187] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:31.371] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:31.752] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:32.282] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:32.772] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:33.588] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:35.004] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:36.557] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:37.408] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:38.346] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:38.906] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:39.485] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:40.298] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:41.381] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:41.864] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:42.763] [DEBUG] default - KS Hyun- | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T00:56:46.508] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T00:56:46.926] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T01:00:00.314] [INFO] default - [HOURLY] routine starts
+[2022-06-30T01:00:00.315] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T01:00:00.572] [INFO] default - [HOURLY] update!
+[2022-06-30T01:00:00.573] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T01:00:00.591] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T01:00:00.591] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T01:58:17.153] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-30T01:58:17.400] [INFO] default - [TRIGGER] guildMemberad inviter [HKxx3MEb]
+[2022-06-30T01:58:17.419] [INFO] default - User joined with inv. code [HKxx3MEb] -> DB updated
+[2022-06-30T01:58:17.429] [INFO] default - User joined with inv. code [HKxx3MEb] -> inviter point's gived
+[2022-06-30T01:58:17.430] [INFO] default -  [HKxx3MEb]
+[2022-06-30T01:58:17.431] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-30T01:58:17.470] [INFO] default - User [825697210834092043] ID [R.C.] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T02:00:00.111] [INFO] default - [HOURLY] routine starts
+[2022-06-30T02:00:00.112] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T02:00:00.509] [INFO] default - [HOURLY] update!
+[2022-06-30T02:00:00.510] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T02:00:00.536] [INFO] default - Hourly check ODA IN NAME done ---> updated: 1
+[2022-06-30T02:00:00.536] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T02:42:11.803] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T02:42:12.530] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T02:42:15.268] [INFO] default - [COMMAND] board start 
+[2022-06-30T02:42:15.452] [INFO] default - [COMMAND] board end
+[2022-06-30T02:44:34.058] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T02:44:34.989] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T02:44:44.082] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T03:00:00.131] [INFO] default - [HOURLY] routine starts
+[2022-06-30T03:00:00.132] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T03:00:00.409] [INFO] default - [HOURLY] update!
+[2022-06-30T03:00:00.410] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T03:00:00.451] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T03:00:00.451] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T03:01:16.325] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T03:01:16.688] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T03:01:26.037] [INFO] default - [COMMAND] board start 
+[2022-06-30T03:01:26.205] [INFO] default - [COMMAND] board end
+[2022-06-30T03:08:05.542] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T03:08:05.832] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T03:08:51.136] [INFO] default - [COMMAND] board start 
+[2022-06-30T03:08:51.324] [INFO] default - [COMMAND] board end
+[2022-06-30T03:59:11.159] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T03:59:11.728] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T03:59:16.680] [INFO] default - [COMMAND] account start - inpect 965645202813513828
+[2022-06-30T03:59:16.686] [INFO] default - [COMMAND] account end
+[2022-06-30T03:59:23.882] [INFO] default - [COMMAND] board start 
+[2022-06-30T03:59:23.988] [INFO] default - [COMMAND] board end
+[2022-06-30T04:00:00.499] [INFO] default - [HOURLY] routine starts
+[2022-06-30T04:00:00.500] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T04:00:00.752] [INFO] default - [HOURLY] update!
+[2022-06-30T04:00:00.753] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T04:00:00.771] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T04:00:00.772] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T04:00:38.981] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T04:00:39.295] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T04:00:43.458] [INFO] default - [COMMAND] board start 
+[2022-06-30T04:00:43.484] [INFO] default - [COMMAND] board end
+[2022-06-30T04:03:45.552] [DEBUG] default - Giove | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:03:49.237] [DEBUG] default - Giove | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:03:52.405] [DEBUG] default - Giove | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:54.532] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:54.927] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:55.810] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:56.714] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:57.377] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:58.272] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:59.062] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:32:59.868] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:00.678] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:01.473] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:02.290] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:03.169] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:03.955] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:04.729] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:05.812] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:06.920] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:08.043] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:08.844] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:10.016] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:10.773] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T04:33:20.091] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T04:33:20.488] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T04:33:21.726] [INFO] default - [COMMAND] board start 
+[2022-06-30T04:33:21.895] [INFO] default - [COMMAND] board end
+[2022-06-30T04:33:22.997] [INFO] default - [COMMAND] account start - inpect 941791097229807637
+[2022-06-30T04:33:23.003] [INFO] default - [COMMAND] account end
+[2022-06-30T04:37:06.619] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T04:37:06.862] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T04:37:08.473] [INFO] default - [COMMAND] board start 
+[2022-06-30T04:37:08.573] [INFO] default - [COMMAND] board end
+[2022-06-30T04:38:40.583] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:41.159] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:41.874] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:42.403] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:43.536] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:44.327] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:46.131] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:47.376] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:48.133] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:50.453] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:52.889] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:53.495] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:54.282] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:55.571] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:56.134] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:56.756] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:57.377] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T04:38:58.328] [DEBUG] default - Alejandro Playaido | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T05:00:00.285] [INFO] default - [HOURLY] routine starts
+[2022-06-30T05:00:00.287] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T05:00:00.625] [INFO] default - [HOURLY] update!
+[2022-06-30T05:00:00.626] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T05:00:00.643] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T05:00:00.644] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T05:12:16.881] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T05:12:17.221] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T05:13:30.204] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T05:13:30.467] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T05:13:32.876] [INFO] default - [COMMAND] board start 
+[2022-06-30T05:13:32.903] [INFO] default - [COMMAND] board end
+[2022-06-30T05:22:34.559] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T05:22:34.811] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T05:22:38.354] [INFO] default - [COMMAND] board start 
+[2022-06-30T05:22:38.513] [INFO] default - [COMMAND] board end
+[2022-06-30T05:45:23.000] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T05:45:23.361] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T05:45:26.730] [INFO] default - [COMMAND] board start 
+[2022-06-30T05:45:26.891] [INFO] default - [COMMAND] board end
+[2022-06-30T05:46:57.792] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T05:46:58.029] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T05:47:03.807] [INFO] default - [COMMAND] board start 
+[2022-06-30T05:47:03.900] [INFO] default - [COMMAND] board end
+[2022-06-30T06:00:00.644] [INFO] default - [HOURLY] routine starts
+[2022-06-30T06:00:00.645] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T06:00:00.977] [INFO] default - [HOURLY] update!
+[2022-06-30T06:00:00.979] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T06:00:00.994] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T06:00:00.994] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T06:25:13.972] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:25:14.427] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:25:22.950] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:25:23.110] [INFO] default - [COMMAND] board end
+[2022-06-30T06:29:35.794] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:29:36.513] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:29:43.135] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:29:43.227] [INFO] default - [COMMAND] board end
+[2022-06-30T06:30:34.384] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:30:34.721] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:30:37.114] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:30:37.136] [INFO] default - [COMMAND] board end
+[2022-06-30T06:38:47.107] [INFO] default - [COMMAND] account start - inpect 675010249769484328
+[2022-06-30T06:38:47.113] [INFO] default - [COMMAND] account end
+[2022-06-30T06:38:48.934] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:38:49.186] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:38:52.879] [INFO] default - [COMMAND] account start - inpect 675010249769484328
+[2022-06-30T06:38:52.885] [INFO] default - [COMMAND] account end
+[2022-06-30T06:38:56.369] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:38:56.511] [INFO] default - [COMMAND] board end
+[2022-06-30T06:40:25.988] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:40:26.257] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:40:30.800] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:40:30.895] [INFO] default - [COMMAND] board end
+[2022-06-30T06:41:44.600] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:41:44.614] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:41:48.924] [INFO] default - [COMMAND] account start - inpect 546111431347666967
+[2022-06-30T06:41:48.931] [INFO] default - [COMMAND] account end
+[2022-06-30T06:41:52.268] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:41:52.286] [INFO] default - [COMMAND] board end
+[2022-06-30T06:42:31.275] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:32.392] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:33.439] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:34.165] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:34.823] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:35.469] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:36.097] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:37.043] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:38.047] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:39.800] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:39.915] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:40.590] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:41.379] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:42.082] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:42.843] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:43.510] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:44.378] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:45.264] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:45.790] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:46.442] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [987430932120232057]
+[2022-06-30T06:42:56.129] [INFO] default - [COMMAND] account start - inpect 546111431347666967
+[2022-06-30T06:42:56.136] [INFO] default - [COMMAND] account end
+[2022-06-30T06:43:14.922] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:15.506] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:16.528] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:17.219] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:17.917] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:19.184] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:19.304] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:21.089] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:21.990] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:22.621] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:24.023] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:25.559] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:26.368] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:27.248] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:27.949] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:29.185] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:29.431] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:30.459] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:32.245] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084370788900874]
+[2022-06-30T06:43:44.520] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:45.084] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:45.811] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:47.209] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:47.626] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:48.233] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:49.332] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:50.305] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:51.270] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:51.824] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:52.863] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:53.953] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:54.671] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:55.532] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:56.168] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:57.744] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:58.266] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:58.997] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:43:59.956] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:44:00.614] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [989967064515092480]
+[2022-06-30T06:44:07.927] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:08.555] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:09.349] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:09.885] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:10.593] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:11.375] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:11.983] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:12.717] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:13.412] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:14.200] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:14.904] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:16.264] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:16.927] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:17.872] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:18.379] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:19.992] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:20.697] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:21.552] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:22.352] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:23.499] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [990304229962969148]
+[2022-06-30T06:44:35.059] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:36.004] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:36.721] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:37.308] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:38.286] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:39.444] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:39.967] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:40.620] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:41.347] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:42.081] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:42.840] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:43.492] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:44.129] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:44.747] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:45.640] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:46.172] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:46.823] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:47.518] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:48.743] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:49.366] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [981597997840355398]
+[2022-06-30T06:44:53.915] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:54.515] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:55.128] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:55.789] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:56.522] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:57.117] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:57.867] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:58.419] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:58.983] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:44:59.671] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:00.503] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:00.873] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:01.950] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:02.496] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:03.352] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:03.848] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:04.638] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:05.130] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:05.701] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:06.274] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [983806799360720906]
+[2022-06-30T06:45:09.581] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:10.679] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:11.335] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:12.006] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:12.771] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:13.283] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:13.851] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:14.500] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:15.087] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:15.564] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:45:15.706] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:15.823] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:45:17.113] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:17.790] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:18.336] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:18.874] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:20.517] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:20.768] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:21.301] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:21.865] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:22.602] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:23.148] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [988848602233319475]
+[2022-06-30T06:45:27.106] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:27.654] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:28.335] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:28.901] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:29.462] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:29.999] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:30.583] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:31.195] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:31.894] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:32.597] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:33.136] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:33.808] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:34.260] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:34.953] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:35.886] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:36.653] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:37.171] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:37.932] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:38.840] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:39.493] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [991405873907900556]
+[2022-06-30T06:45:43.852] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:44.406] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:44.946] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:45.568] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:46.192] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:46.859] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:47.482] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:48.035] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:48.635] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:49.222] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:49.829] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:50.615] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:51.505] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:52.426] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:54.169] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:54.882] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:55.619] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:56.256] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:57.019] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:45:57.554] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979084812042252389]
+[2022-06-30T06:46:06.361] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:46:06.633] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T06:46:30.960] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:31.787] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:32.476] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:33.044] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:33.747] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:34.375] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:35.249] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:35.677] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:36.259] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:36.870] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:37.509] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:38.119] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:38.758] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:39.374] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:40.046] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:40.547] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:41.074] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:41.729] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:43.001] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:46:43.723] [DEBUG] default - TolGalen | ODA Clan just reacted to message id [979086129242443786]
+[2022-06-30T06:48:25.075] [INFO] default - [COMMAND] account start - inpect 546111431347666967
+[2022-06-30T06:48:25.082] [INFO] default - [COMMAND] account end
+[2022-06-30T06:48:31.646] [INFO] default - [COMMAND] board start 
+[2022-06-30T06:48:31.665] [INFO] default - [COMMAND] board end
+[2022-06-30T06:55:55.773] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T06:55:56.234] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T07:00:00.236] [INFO] default - [HOURLY] routine starts
+[2022-06-30T07:00:00.237] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T07:00:00.501] [INFO] default - [HOURLY] update!
+[2022-06-30T07:00:00.502] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T07:00:00.518] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T07:00:00.518] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T07:10:15.922] [DEBUG] default - luckydamico just reacted to message id [990169718704963664]
+[2022-06-30T07:10:18.144] [DEBUG] default - luckydamico just removed reaction to message id [990169718704963664]
+[2022-06-30T07:14:08.892] [INFO] default - [TRIGGER] guildMemberRemove start
+[2022-06-30T07:14:08.903] [INFO] default - User id [981126400620789780] quit the guild. Inviter id was [351480824266358784]. Points removed from DB
+[2022-06-30T07:14:08.922] [INFO] default - User id [981126400620789780] quit the guild. Delete from DB
+[2022-06-30T07:14:08.923] [INFO] default - [TRIGGER] guildMemberRemove end
+[2022-06-30T07:27:38.189] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T07:27:38.478] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T07:27:40.956] [INFO] default - [COMMAND] board start 
+[2022-06-30T07:27:41.119] [INFO] default - [COMMAND] board end
+[2022-06-30T07:34:33.801] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T07:34:34.091] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T07:38:07.065] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:07.742] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:08.394] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:09.449] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:10.350] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:11.435] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:11.942] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:12.572] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:13.197] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:14.120] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:14.719] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:15.238] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:15.812] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:16.424] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:16.951] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:18.153] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:18.797] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:19.314] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:21.597] [DEBUG] default - Valerix | ODA Clan just reacted to message id [979088316580384768]
+[2022-06-30T07:38:28.187] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T07:38:28.494] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T07:44:34.303] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T07:44:34.668] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T07:46:25.972] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T07:46:26.295] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:00:00.396] [INFO] default - [HOURLY] routine starts
+[2022-06-30T08:00:00.398] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T08:00:00.707] [INFO] default - [HOURLY] update!
+[2022-06-30T08:00:00.708] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T08:00:00.723] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T08:00:00.724] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T08:03:56.893] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:03:57.157] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:09:40.508] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:09:40.788] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:09:43.918] [INFO] default - [COMMAND] board start 
+[2022-06-30T08:09:44.064] [INFO] default - [COMMAND] board end
+[2022-06-30T08:09:46.761] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:09:46.775] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:34:09.533] [DEBUG] default - Isbrindy just reacted to message id [988145805514919977]
+[2022-06-30T08:34:16.723] [DEBUG] default - Isbrindy just reacted to message id [989933721165631498]
+[2022-06-30T08:34:25.961] [DEBUG] default - Isbrindy just reacted to message id [990549479751028746]
+[2022-06-30T08:34:36.895] [DEBUG] default - Isbrindy just reacted to message id [990923816400211992]
+[2022-06-30T08:38:48.844] [INFO] default - [COMMAND] account start - inpect 842490708719829012
+[2022-06-30T08:38:48.851] [INFO] default - [COMMAND] account end
+[2022-06-30T08:38:53.886] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:38:54.205] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:38:58.655] [INFO] default - [COMMAND] account start - inpect 842490708719829012
+[2022-06-30T08:38:58.662] [INFO] default - [COMMAND] account end
+[2022-06-30T08:44:07.141] [INFO] default - [COMMAND] board start 
+[2022-06-30T08:44:07.320] [INFO] default - [COMMAND] board end
+[2022-06-30T08:45:38.997] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:45:39.279] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:47:10.576] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:47:10.864] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:52:26.171] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T08:52:26.495] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T08:52:29.313] [INFO] default - [COMMAND] board start 
+[2022-06-30T08:52:29.481] [INFO] default - [COMMAND] board end
+[2022-06-30T08:55:41.653] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:00:00.426] [INFO] default - [HOURLY] routine starts
+[2022-06-30T09:00:00.427] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T09:00:00.773] [INFO] default - [HOURLY] update!
+[2022-06-30T09:00:00.774] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T09:00:00.819] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T09:00:00.819] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T09:07:21.938] [INFO] default - [COMMAND] account start - inpect 385376364737462283
+[2022-06-30T09:07:21.947] [INFO] default - [COMMAND] account end
+[2022-06-30T09:07:25.328] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:07:25.646] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T09:14:48.698] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:14:49.044] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T09:14:53.447] [INFO] default - [COMMAND] board start 
+[2022-06-30T09:14:53.469] [INFO] default - [COMMAND] board end
+[2022-06-30T09:15:03.823] [INFO] default - [COMMAND] account start - inpect 659047167121555470
+[2022-06-30T09:15:03.830] [INFO] default - [COMMAND] account end
+[2022-06-30T09:30:56.744] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:30:57.940] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T09:32:19.472] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:32:19.724] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T09:33:19.876] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:33:20.136] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T09:33:22.940] [INFO] default - [COMMAND] board start 
+[2022-06-30T09:33:23.041] [INFO] default - [COMMAND] board end
+[2022-06-30T09:33:57.752] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:33:58.387] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:33:59.066] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:33:59.760] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:00.287] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:01.336] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:01.496] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:02.107] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:02.734] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:03.403] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:04.047] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:04.771] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:05.390] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:34:06.062] [DEBUG] default - Thomas | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T09:45:48.250] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T09:45:48.642] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T10:00:00.757] [INFO] default - [HOURLY] routine starts
+[2022-06-30T10:00:00.758] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T10:00:01.096] [INFO] default - [HOURLY] update!
+[2022-06-30T10:00:01.097] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T10:00:01.115] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T10:00:01.115] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T10:13:19.293] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T10:13:19.689] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T10:28:13.454] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T10:28:13.990] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T11:00:00.392] [INFO] default - [HOURLY] routine starts
+[2022-06-30T11:00:00.394] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T11:00:00.824] [INFO] default - [HOURLY] update!
+[2022-06-30T11:00:00.825] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T11:00:00.841] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T11:00:00.841] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T11:15:53.269] [INFO] default - [COMMAND] board start 
+[2022-06-30T11:15:53.453] [INFO] default - [COMMAND] board end
+[2022-06-30T11:15:57.158] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T11:15:57.671] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T11:17:49.753] [INFO] default - [COMMAND] board start 
+[2022-06-30T11:17:49.774] [INFO] default - [COMMAND] board end
+[2022-06-30T11:17:53.195] [INFO] default - [COMMAND] account start - inpect 659047167121555470
+[2022-06-30T11:17:53.202] [INFO] default - [COMMAND] account end
+[2022-06-30T11:18:05.756] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:00:00.700] [INFO] default - [HOURLY] routine starts
+[2022-06-30T12:00:00.700] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T12:00:00.996] [INFO] default - [HOURLY] update!
+[2022-06-30T12:00:00.997] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T12:00:01.012] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T12:00:01.013] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T12:05:22.047] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:05:22.609] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T12:05:29.717] [INFO] default - [COMMAND] board start 
+[2022-06-30T12:05:29.895] [INFO] default - [COMMAND] board end
+[2022-06-30T12:09:21.051] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:09:21.388] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T12:09:25.223] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:26.128] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:27.928] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:28.485] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:29.938] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:30.667] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:31.318] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:31.931] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:32.908] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:33.515] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:34.243] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:34.843] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:35.420] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:37.246] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:38.632] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:39.246] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:39.947] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:40.456] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:41.195] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:09:41.799] [DEBUG] default - Paeseee_ just reacted to message id [980954810545209402]
+[2022-06-30T12:20:04.593] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:20:07.532] [INFO] default - [COMMAND] board start 
+[2022-06-30T12:20:07.745] [INFO] default - [COMMAND] board end
+[2022-06-30T12:36:27.284] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:36:27.666] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T12:43:33.053] [INFO] default - [COMMAND] board start 
+[2022-06-30T12:43:33.239] [INFO] default - [COMMAND] board end
+[2022-06-30T12:46:41.998] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:46:42.839] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T12:46:45.847] [INFO] default - [COMMAND] board start 
+[2022-06-30T12:46:45.953] [INFO] default - [COMMAND] board end
+[2022-06-30T12:52:20.658] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T12:52:20.957] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T13:00:00.052] [INFO] default - [HOURLY] routine starts
+[2022-06-30T13:00:00.053] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T13:00:00.331] [INFO] default - [HOURLY] update!
+[2022-06-30T13:00:00.332] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T13:00:00.349] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T13:00:00.350] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T13:19:52.878] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T13:19:53.601] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T13:19:55.379] [INFO] default - [COMMAND] board start 
+[2022-06-30T13:19:55.547] [INFO] default - [COMMAND] board end
+[2022-06-30T13:20:23.185] [DEBUG] default - superivo just reacted to message id [991758989052358756]
+[2022-06-30T13:23:48.888] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T13:23:49.270] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T13:33:02.074] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T13:33:05.074] [INFO] default - [COMMAND] account start - inpect 385376364737462283
+[2022-06-30T13:33:05.081] [INFO] default - [COMMAND] account end
+[2022-06-30T13:38:12.577] [DEBUG] default - giugno96 just reacted to message id [991405201615507536]
+[2022-06-30T13:40:22.265] [INFO] default - User 591169733240422410 nickname updated! DB updated too.
+[2022-06-30T13:41:29.740] [INFO] default - User 332893268314554368 nickname updated! DB updated too.
+[2022-06-30T13:42:04.361] [INFO] default - User 591169733240422410 nickname updated! DB updated too.
+[2022-06-30T13:46:54.129] [DEBUG] default - Zen | ODA clan just reacted to message id [980952920046571610]
+[2022-06-30T13:46:54.888] [DEBUG] default - Zen | ODA clan just reacted to message id [980952920046571610]
+[2022-06-30T13:46:55.414] [DEBUG] default - Zen | ODA clan just reacted to message id [980952920046571610]
+[2022-06-30T13:47:00.577] [INFO] default - [COMMAND] board start 
+[2022-06-30T13:47:00.748] [INFO] default - [COMMAND] board end
+[2022-06-30T14:00:00.525] [INFO] default - [HOURLY] routine starts
+[2022-06-30T14:00:00.526] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T14:00:01.462] [INFO] default - [HOURLY] update!
+[2022-06-30T14:00:01.463] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T14:00:01.482] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T14:00:01.483] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T14:25:07.705] [INFO] default - [COMMAND] account start - inpect 332893268314554368
+[2022-06-30T14:25:07.714] [INFO] default - [COMMAND] account end
+[2022-06-30T14:25:16.212] [INFO] default - [COMMAND] board start 
+[2022-06-30T14:25:16.369] [INFO] default - [COMMAND] board end
+[2022-06-30T14:33:51.616] [INFO] default - User 591169733240422410 nickname updated! DB updated too.
+[2022-06-30T14:33:58.221] [INFO] default - User 332893268314554368 nickname updated! DB updated too.
+[2022-06-30T14:35:11.095] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T14:35:11.592] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T14:37:59.806] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T14:37:59.821] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T14:38:01.828] [INFO] default - [COMMAND] board start 
+[2022-06-30T14:38:01.847] [INFO] default - [COMMAND] board end
+[2022-06-30T14:38:41.426] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T14:50:01.554] [INFO] default - [COMMAND] account start - inpect 842490708719829012
+[2022-06-30T14:50:01.561] [INFO] default - [COMMAND] account end
+[2022-06-30T15:00:00.268] [INFO] default - [HOURLY] routine starts
+[2022-06-30T15:00:00.269] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T15:00:00.655] [INFO] default - [HOURLY] update!
+[2022-06-30T15:00:00.656] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T15:00:00.673] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T15:00:00.674] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T15:07:44.244] [INFO] default - New invite created - code [3rR2YNDT] from user id [857699893849096202]
+[2022-06-30T15:07:44.260] [INFO] default - Invite create [3rR2YNDT] -> DB updated
+[2022-06-30T15:08:18.870] [INFO] default - New invite created - code [UtCqypRu] from user id [857699893849096202]
+[2022-06-30T15:08:18.881] [INFO] default - Invite create [UtCqypRu] -> DB updated
+[2022-06-30T15:10:12.477] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T15:26:17.288] [INFO] default - [TRIGGER] guildMemberRemove start
+[2022-06-30T15:26:17.301] [INFO] default - User id [890849983820079184] quit the guild. Inviter id was [659047167121555470]. Points removed from DB
+[2022-06-30T15:26:17.322] [INFO] default - User id [890849983820079184] quit the guild. Delete from DB
+[2022-06-30T15:26:17.323] [INFO] default - [TRIGGER] guildMemberRemove end
+[2022-06-30T15:47:38.171] [INFO] default - [COMMAND] board start 
+[2022-06-30T15:47:38.204] [INFO] default - [COMMAND] board end
+[2022-06-30T16:00:00.684] [INFO] default - [HOURLY] routine starts
+[2022-06-30T16:00:00.685] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T16:00:01.150] [INFO] default - [HOURLY] update!
+[2022-06-30T16:00:01.151] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T16:00:01.178] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T16:00:01.178] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T16:07:37.969] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T16:07:38.444] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T16:07:59.349] [INFO] default - [COMMAND] board start 
+[2022-06-30T16:07:59.584] [INFO] default - [COMMAND] board end
+[2022-06-30T16:21:29.660] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T16:21:30.316] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T16:41:21.499] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T16:41:21.952] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T16:41:22.931] [INFO] default - [COMMAND] board start 
+[2022-06-30T16:41:23.041] [INFO] default - [COMMAND] board end
+[2022-06-30T16:41:24.899] [INFO] default - [COMMAND] account start - inpect 399263912148860929
+[2022-06-30T16:41:24.906] [INFO] default - [COMMAND] account end
+[2022-06-30T17:00:00.461] [INFO] default - [HOURLY] routine starts
+[2022-06-30T17:00:00.462] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T17:00:00.899] [INFO] default - [HOURLY] update!
+[2022-06-30T17:00:00.900] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T17:00:00.917] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T17:00:00.918] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T17:03:39.169] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T17:03:39.497] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T17:03:48.994] [INFO] default - [COMMAND] board start 
+[2022-06-30T17:03:49.020] [INFO] default - [COMMAND] board end
+[2022-06-30T17:04:07.646] [INFO] default - [COMMAND] account start - inpect 925854603990401065
+[2022-06-30T17:04:07.653] [INFO] default - [COMMAND] account end
+[2022-06-30T17:09:18.525] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T17:09:21.249] [INFO] default - [COMMAND] board start 
+[2022-06-30T17:09:21.404] [INFO] default - [COMMAND] board end
+[2022-06-30T17:38:28.445] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T17:38:29.007] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T18:00:00.522] [INFO] default - [HOURLY] routine starts
+[2022-06-30T18:00:00.524] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T18:00:00.924] [INFO] default - [HOURLY] update!
+[2022-06-30T18:00:00.925] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T18:00:00.944] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T18:00:00.945] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T18:09:48.411] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T18:51:35.184] [INFO] default - [COMMAND] board start 
+[2022-06-30T18:51:35.353] [INFO] default - [COMMAND] board end
+[2022-06-30T19:00:00.290] [INFO] default - [HOURLY] routine starts
+[2022-06-30T19:00:00.292] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T19:00:00.649] [INFO] default - [HOURLY] update!
+[2022-06-30T19:00:00.650] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T19:00:00.674] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T19:00:00.675] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T19:00:32.891] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:00:33.355] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T19:01:12.289] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:01:15.875] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:01:16.045] [INFO] default - [COMMAND] board end
+[2022-06-30T19:04:36.052] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:04:36.375] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T19:08:16.093] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:08:16.192] [INFO] default - [COMMAND] board end
+[2022-06-30T19:08:59.752] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:14:32.902] [INFO] default - [TRIGGER] guildMemberRemove start
+[2022-06-30T19:14:32.914] [INFO] default - User id [971758900493844501] quit the guild. Inviter id was [385376364737462283]. Points removed from DB
+[2022-06-30T19:14:32.935] [INFO] default - User id [971758900493844501] quit the guild. Delete from DB
+[2022-06-30T19:14:32.936] [INFO] default - [TRIGGER] guildMemberRemove end
+[2022-06-30T19:16:46.293] [INFO] default - New invite created - code [aEsAtbT6] from user id [481124414969085952]
+[2022-06-30T19:16:46.306] [INFO] default - Invite create [aEsAtbT6] -> DB updated
+[2022-06-30T19:17:12.540] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-30T19:17:12.788] [INFO] default - [TRIGGER] guildMemberad inviter [8M7fQbjAGf]
+[2022-06-30T19:17:12.801] [INFO] default - User joined with inv. code [8M7fQbjAGf] -> DB updated
+[2022-06-30T19:17:12.811] [INFO] default - User joined with inv. code [8M7fQbjAGf] -> inviter point's gived
+[2022-06-30T19:17:12.812] [INFO] default -  [8M7fQbjAGf]
+[2022-06-30T19:17:12.813] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-30T19:17:13.180] [INFO] default - User [990232643020918805] ID [guyade15] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:17:14.808] [INFO] default - User [990232643020918805] ID [guyade15] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:17:15.010] [ERROR] default - User [990232643020918805] ID [guyade15] filed/not necessary role update
+[2022-06-30T19:17:18.377] [INFO] default - User [990232643020918805] ID [guyade15] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:17:18.538] [ERROR] default - User [990232643020918805] ID [guyade15] filed/not necessary role update
+[2022-06-30T19:17:22.430] [INFO] default - User [990232643020918805] ID [guyade15] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:17:22.578] [ERROR] default - User [990232643020918805] ID [guyade15] filed/not necessary role update
+[2022-06-30T19:17:24.980] [INFO] default - User [990232643020918805] ID [guyade15] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:17:25.132] [ERROR] default - User [990232643020918805] ID [guyade15] filed/not necessary role update
+[2022-06-30T19:17:36.180] [INFO] default - User [990232643020918805] ID [guyade15] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-30T19:17:36.361] [ERROR] default - User [990232643020918805] ID [guyade15] filed/not necessary role update
+[2022-06-30T19:17:55.792] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:17:55.818] [INFO] default - [COMMAND] board end
+[2022-06-30T19:19:55.369] [INFO] default - New invite created - code [9rEacWCB] from user id [975799423483400202]
+[2022-06-30T19:19:55.377] [INFO] default - Invite create [9rEacWCB] -> DB updated
+[2022-06-30T19:21:29.956] [INFO] default - [TRIGGER] guildMemberad start
+[2022-06-30T19:21:30.240] [INFO] default - [TRIGGER] guildMemberad inviter [8M7fQbjAGf]
+[2022-06-30T19:21:30.253] [INFO] default - User joined with inv. code [8M7fQbjAGf] -> DB updated
+[2022-06-30T19:21:30.263] [INFO] default - User joined with inv. code [8M7fQbjAGf] -> inviter point's gived
+[2022-06-30T19:21:30.264] [INFO] default -  [8M7fQbjAGf]
+[2022-06-30T19:21:30.265] [INFO] default - [TRIGGER] guildMemberad end
+[2022-06-30T19:21:30.284] [INFO] default - User [992147119563604038] ID [lawolf] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:21:32.052] [INFO] default - User [992147119563604038] ID [lawolf] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:21:32.199] [ERROR] default - User [992147119563604038] ID [lawolf] filed/not necessary role update
+[2022-06-30T19:21:34.622] [INFO] default - User [992147119563604038] ID [lawolf] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:21:34.738] [ERROR] default - User [992147119563604038] ID [lawolf] filed/not necessary role update
+[2022-06-30T19:21:36.142] [INFO] default - User [992147119563604038] ID [lawolf] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:21:36.246] [ERROR] default - User [992147119563604038] ID [lawolf] filed/not necessary role update
+[2022-06-30T19:21:38.457] [INFO] default - User [992147119563604038] ID [lawolf] role updated to [Hinin 非人 - Lvl.1]
+[2022-06-30T19:21:38.549] [ERROR] default - User [992147119563604038] ID [lawolf] filed/not necessary role update
+[2022-06-30T19:21:45.686] [INFO] default - User [992147119563604038] ID [lawolf] role updated to [Shokunin 職人 - Lvl.3]
+[2022-06-30T19:21:45.772] [ERROR] default - User [992147119563604038] ID [lawolf] filed/not necessary role update
+[2022-06-30T19:22:04.322] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:22:04.355] [INFO] default - [COMMAND] board end
+[2022-06-30T19:27:39.237] [INFO] default - New invite created - code [CQTWWemsM6] from user id [276816888263081985]
+[2022-06-30T19:27:39.245] [INFO] default - Invite create [CQTWWemsM6] -> DB updated
+[2022-06-30T19:29:50.740] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:29:51.122] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T19:32:41.464] [INFO] default - User 332893268314554368 nickname updated! DB updated too.
+[2022-06-30T19:32:46.476] [INFO] default - User 941791097229807637 nickname updated! DB updated too.
+[2022-06-30T19:33:07.697] [INFO] default - User 706083631940239390 nickname updated! DB updated too.
+[2022-06-30T19:46:18.209] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:46:18.400] [INFO] default - [COMMAND] board end
+[2022-06-30T19:46:31.339] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:46:31.443] [INFO] default - [COMMAND] board end
+[2022-06-30T19:51:07.707] [DEBUG] default - Stecco just reacted to message id [990684795430391868]
+[2022-06-30T19:51:09.383] [DEBUG] default - Stecco just reacted to message id [990684795430391868]
+[2022-06-30T19:53:27.276] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:53:27.456] [INFO] default - [COMMAND] board end
+[2022-06-30T19:55:22.492] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:23.988] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:25.346] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:26.165] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:27.026] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:27.828] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:28.524] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:29.339] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:30.382] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:31.512] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:32.099] [DEBUG] default - TheTokenTaster | ODA Clan just removed reaction to message id [991758989052358756]
+[2022-06-30T19:55:33.262] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:34.203] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:35.165] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:36.036] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:37.050] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:39.257] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:40.462] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:41.468] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:42.715] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:43.883] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:45.445] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [991758989052358756]
+[2022-06-30T19:55:53.715] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:55:56.776] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:55:56.927] [INFO] default - [COMMAND] board end
+[2022-06-30T19:56:03.575] [INFO] default - [COMMAND] account start - inpect 359052566149201931
+[2022-06-30T19:56:03.599] [INFO] default - [COMMAND] account end
+[2022-06-30T19:57:19.978] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:20.947] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:21.753] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:22.950] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:23.287] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:24.191] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:24.897] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:26.336] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:27.456] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:28.420] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:29.332] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:30.352] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:31.065] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:31.739] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:33.570] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:34.527] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:35.286] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:36.047] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:36.836] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:37.649] [DEBUG] default - TheTokenTaster | ODA Clan just reacted to message id [980954810545209402]
+[2022-06-30T19:57:39.265] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T19:57:39.603] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T19:57:48.636] [INFO] default - [COMMAND] board start 
+[2022-06-30T19:57:48.741] [INFO] default - [COMMAND] board end
+[2022-06-30T20:00:00.710] [INFO] default - [HOURLY] routine starts
+[2022-06-30T20:00:00.711] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T20:00:01.126] [INFO] default - [HOURLY] update!
+[2022-06-30T20:00:01.127] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T20:00:01.148] [INFO] default - Hourly check ODA IN NAME done ---> updated: 2
+[2022-06-30T20:00:01.149] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T20:00:34.607] [INFO] default - [COMMAND] board start 
+[2022-06-30T20:00:34.629] [INFO] default - [COMMAND] board end
+[2022-06-30T20:00:53.289] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T20:00:53.598] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T20:00:56.430] [INFO] default - [COMMAND] board start 
+[2022-06-30T20:00:56.598] [INFO] default - [COMMAND] board end
+[2022-06-30T20:11:01.683] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T20:11:02.086] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T21:00:00.134] [INFO] default - [HOURLY] routine starts
+[2022-06-30T21:00:00.135] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T21:00:00.506] [INFO] default - [HOURLY] update!
+[2022-06-30T21:00:00.507] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T21:00:00.524] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T21:00:00.524] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T21:17:16.786] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T21:17:17.281] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T21:17:20.438] [INFO] default - [COMMAND] account start - inpect 779114006702718986
+[2022-06-30T21:17:20.445] [INFO] default - [COMMAND] account end
+[2022-06-30T21:20:58.414] [DEBUG] default - nopanic just reacted to message id [991758989052358756]
+[2022-06-30T21:34:40.598] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T21:34:43.233] [INFO] default - [COMMAND] account start - inpect 975799423483400202
+[2022-06-30T21:34:43.240] [INFO] default - [COMMAND] account end
+[2022-06-30T21:59:23.224] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T21:59:23.949] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T22:00:00.637] [INFO] default - [HOURLY] routine starts
+[2022-06-30T22:00:00.638] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T22:00:00.930] [INFO] default - [HOURLY] update!
+[2022-06-30T22:00:00.931] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T22:00:00.948] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T22:00:00.949] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T22:06:59.262] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:07:02.444] [INFO] default - [COMMAND] board start 
+[2022-06-30T22:07:02.618] [INFO] default - [COMMAND] board end
+[2022-06-30T22:14:30.936] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:14:31.285] [INFO] default - [COMMAND] claimdaily end
+[2022-06-30T22:14:36.355] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:15:45.237] [INFO] default - New invite created - code [2wjHMMBN] from user id [757694511173337238]
+[2022-06-30T22:15:45.254] [INFO] default - Invite create [2wjHMMBN] -> DB updated
+[2022-06-30T22:17:37.341] [DEBUG] default - giacomobuc just reacted to message id [979088316580384768]
+[2022-06-30T22:25:04.467] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:25:06.741] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:25:08.218] [INFO] default - [COMMAND] board start 
+[2022-06-30T22:25:08.258] [INFO] default - [COMMAND] board end
+[2022-06-30T22:25:39.413] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:40.069] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:40.906] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:41.947] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:42.505] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:43.035] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:43.715] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:44.474] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:45.165] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:45.841] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:46.625] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:47.170] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:47.930] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:48.798] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:49.721] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:50.962] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:51.862] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:52.454] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:53.184] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:25:54.677] [DEBUG] default - Xand3r | ODA Clan just reacted to message id [991405201615507536]
+[2022-06-30T22:42:13.900] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:53:00.031] [INFO] default - [COMMAND] account start - inpect 675010249769484328
+[2022-06-30T22:53:00.038] [INFO] default - [COMMAND] account end
+[2022-06-30T22:53:02.386] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:53:05.406] [INFO] default - [COMMAND] board start 
+[2022-06-30T22:53:05.599] [INFO] default - [COMMAND] board end
+[2022-06-30T22:58:31.243] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T22:58:47.855] [INFO] default - [COMMAND] board start 
+[2022-06-30T22:58:47.958] [INFO] default - [COMMAND] board end
+[2022-06-30T23:00:00.929] [INFO] default - [HOURLY] routine starts
+[2022-06-30T23:00:00.930] [INFO] default - [HOURLY] update leaderboard launched!
+[2022-06-30T23:00:01.226] [INFO] default - [HOURLY] update!
+[2022-06-30T23:00:01.227] [INFO] default - [HOURLY] checkOdaInName starts
+[2022-06-30T23:00:01.246] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
+[2022-06-30T23:00:01.247] [INFO] default - [HOURLY] checkOdaInName end

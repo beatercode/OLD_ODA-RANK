@@ -4,6 +4,7 @@ const setupmessages = require("../commands/setupmessages")
 const setupdb = require("../commands/setupdb")
 const updateLeaderboard = require("../helper/updateLeaderboard")
 const databaseHelper = require("../helper/databaseHelper")
+const dailyEvents = require("../custom/dailyEvents")
 const logger = require("../helper/_logger")
 const { DBCHANNELS, DBROLES, DBSETTINGS, DBUSERDUMMY } = require("../helper/databaseHelper")
 
@@ -85,6 +86,10 @@ module.exports = {
 			case "checkDailyCount":
 				await databaseHelper.checkDailyCount(interaction.client)
 				interaction.reply({ content: "Check [daily] done, view logs", ephemeral: true })
+				break
+			case "clearNicknames":
+				await dailyEvents.clearNicknames(interaction.client)
+				interaction.reply({ content: "Nickname cleared, view logs", ephemeral: true })
 				break
 			}
 		} catch (err) {

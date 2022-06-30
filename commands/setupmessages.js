@@ -89,7 +89,7 @@ module.exports = {
 				const row2 = new MessageActionRow()
 					.addComponents(
 						new MessageButton().setCustomId("updateLeaderboard").setLabel("🔴 UPDATE LEADERBOARD").setStyle("PRIMARY"),
-						//new MessageButton().setCustomId("mvUserData").setLabel("⚪️ MV USR. DATA").setStyle("DANGER"),
+						new MessageButton().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("DANGER"),
 						new MessageButton().setCustomId("odaNameDiffChekc").setLabel("🔴 ODA NAME CHECK").setStyle("PRIMARY"),
 						//new MessageButton().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
 					)

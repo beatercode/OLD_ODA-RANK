@@ -23,7 +23,8 @@ module.exports = {
 		for (const x of mapped) {
 			let usr = await getMemberFromId(client, x.user_id)
 			if (usr) {
-				x.oda_in_name = (usr.user.username).includes("ODA Clan") ? true : false
+				let username = (usr.user.username).toLowerCase()
+				x.oda_in_name = username.includes("oda clan") ? true : false
 			} else { x.oda_in_name = false }
 		}
 		let notOdaInNameArray = (mapped.filter(x => !x.oda_in_name && x.user_id != "00000000")).map(x => x.user_id)

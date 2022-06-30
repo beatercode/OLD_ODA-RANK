@@ -41,6 +41,7 @@ module.exports = {
 				{ user_id: member.id, daily: false },
 				{
 					daily: true,
+					username: member.user.username,
 					$inc: {
 						consecutive_daily: 1,
 						points: deservedPoints

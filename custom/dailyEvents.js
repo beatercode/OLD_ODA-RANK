@@ -1,6 +1,7 @@
 const Users = require("../models/Users")
 const logger = require("../helper/_logger")
 const mainHelper = require("../helper/mainHelper")
+const config = require("../backup/config.json")
 
 module.exports = {
 
@@ -10,7 +11,24 @@ module.exports = {
 		logger.info("[DAILY] routine starts")
 		await this.resetDaily(client)
 		await this.dailyAdjustOdaInName(client)
+		await this.clearNicknames(client)
 
+	},
+	
+	async clearNicknames(client) {
+		mainHelper.logOnServer(client, "[DAILY] clearNicknames start")
+		const DB_SETTINGS = config.Settings.values
+		const guild = client.guilds.cache.get(DB_SETTINGS.GUILD_ID);
+		guild.members.fetch().then(members => {
+			members.forEach(member => {
+				let currNick = member.nickname
+				if(member.nickname != null && !["Invite", "Ticket"].some(r => currNick.includes(r))) {
+					console.log(currNick)
+					member.setNickname(member.user.username)
+				}
+			});
+		});
+		logger.info("[DAILY] clearNicknames end")
 	},
 
 	async resetDaily(client) {
@@ -57,6 +75,10 @@ module.exports = {
 			{ oda_in_name: false, oda_in_name_bonus: true },
 			{ $set: { oda_in_name_bonus: false, consecutive_oda: 0 } })
 		logger.info("Daily adjust ODA IN NAME removed ---> " + toRemoveBonusRows.modifiedCount)
+		let toResetBonusRows = await Users.updateMany(
+			{ oda_in_name: false },
+			{ $set: { oda_in_name: true } })
+		logger.info("Daily adjust ODA IN NAME removed ---> " + toResetBonusRows.modifiedCount)
 		logger.info("[DAILY] dailyAdjustOdaInName end")
 	},
 

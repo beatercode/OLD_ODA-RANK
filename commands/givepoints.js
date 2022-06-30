@@ -46,6 +46,18 @@ module.exports = {
 					embeds: [claimEmbed],
 					ephemeral: true
 				})
+				
+				const DB_CHANNELS = config.Channels.values
+				const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
+				let outputString = `**ODA Clan** just gave away ${inPoints} ODA points to <@${inUser.id}>!`
+				const claimEmbedPublic = new MessageEmbed()
+					.setColor(roleSettings.color)
+					.setTitle("Points Gifted! 🚀")
+					.setDescription(outputString)
+				await pointsEventsChannel.send({
+					embeds: [claimEmbedPublic]
+				})
+				
 				mainHelper.logOnServer(interaction.client, msgOutput)
 				logger.info("[COMMAND] givepoints end")
 				return

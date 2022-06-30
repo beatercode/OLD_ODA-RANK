@@ -47,6 +47,9 @@ module.exports = {
 					const memberRoles = member._roles
 					if(!memberRoles.some(r=> DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
+					const memberTarget = guild.members.cache.get(targetUserId)
+					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username
+					let toAdd =  memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
 					let updated = await Users.updateOne(
 						{ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, 
 						{ $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl }})
@@ -54,6 +57,7 @@ module.exports = {
 						logger.debug("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "] - seems have already had a bonus")
 						return
 					} else {
+						memberTarget.setNickname(baseName + toAdd)
 						let outputString = `**<@${targetUserId}>** was rewarded with **${deservedPoints}** points as he brought value within the clan today! ${reactedEmoji}`
 						outputString += `\n\nMessage reference [here](${targetMsgUrl})`
 						const pointsEventsChannel = reaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
@@ -66,7 +70,48 @@ module.exports = {
 						})
 						return
 					}
+				} else if(reaction.emoji.name == '🔥') {
+					const guild = reaction.message.guild
+					const member = guild.members.cache.get(user.id)
+					const memberRoles = member._roles
+					if(!memberRoles.some(r=> DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
+					let message = reaction.message
+					let targetUserId = null
+					let fetched = await message.channel.messages.fetch(message.id)
+					targetUserId = fetched.author.id
+					//let targetUsername = fetched.author.username
+					if(!targetUserId) {
+						logger.error("[ADD ACTIVE BONUS ERROR] check msg id [" + reaction.message.id + "]")
+						return
+					}
+					let deservedPoints = 50
+					let deservedColor = '#FFFFFF'
+					let reactedEmoji = reaction.emoji.name
+					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
+					const memberTarget = guild.members.cache.get(targetUserId)
+					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username
+					let toAdd =  memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
+					let updated = await Users.updateOne(
+						{ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, 
+						{ $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl }})
+					if (updated.modifiedCount == 0) {
+						logger.debug("[ADD ACTIVE BONUS ERROR] check msg id [" + reaction.message.id + "] - seems have already had that bonus")
+						return
+					} else {
+						memberTarget.setNickname(baseName + toAdd)
+						let outputString = `**<@${targetUserId}>** was rewarded with **${deservedPoints}** points as he has been very active! ${reactedEmoji}`
+						const pointsEventsChannel = reaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
+						const claimEmbed = new MessageEmbed()
+							.setColor(deservedColor)
+							.setTitle("Clan Activity Rewards")
+							.setDescription(outputString)
+						await pointsEventsChannel.send({
+							embeds: [claimEmbed]
+						})
+						return
+					}
 				}
+				console.log(reaction._emoji.id)
 			}
 		} catch (err) {
 			mainHelper.commonCatch(err, "messageReactionAdd", logger)
