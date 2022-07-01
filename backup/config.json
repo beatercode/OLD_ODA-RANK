@@ -165,19 +165,19 @@
         "985488929253896252"
       ],
       "ch_list_commands": [
-        "979090565369040956"
+        "992242990405918760"
       ],
       "ch_commands_daimyo": "978285132207255700",
       "ch_commands_tenno": "978285455923622000",
       "ch_list_surveys": "978286479778394123",
       "ch_announcements": "961195506187505674",
-      "ch_bot_feedback": "981207942655275068",
+      "ch_bot_feedback": "992242992427573328",
       "ch_feedback": "",
-      "ch_rank": "978287858773282876",
-      "ch_moderazione": "984545926792224828",
-      "ch_points_events": "985247666231459850",
-      "ch_leaderboards": "984546123408617533",
-      "ch_leaderboards_last_msg_id": "984560260180217957"
+      "ch_rank": "992242921845837906",
+      "ch_moderazione": "992242988656898178",
+      "ch_points_events": "992242926363086849",
+      "ch_leaderboards": "992242925092212847",
+      "ch_leaderboards_last_msg_id": ""
     }
   },
   "Settings": {
@@ -196,7 +196,7 @@
       "ADMIN_NAMES": ["admin", "tenno", "daimyo"],
       "MOD_ROLE_IDS": ["973833462891032597", "961197439979761723", "980853319419453491", "971728564984635442"],
       "HIDDEN_COMMAND": ["setupdb", "setupmessages", "fetchinvites"],
-      "TEXT_OPEN_A_TICK": "\n```You have any problem? [Open a ticket](https://discord.com/channels/961194963549429821/961207655085506560/981244368126103632)```",
+      "TEXT_OPEN_A_TICK": "\n```You have any problem? [Open a ticket](https://discord.com/channels/961194963549429821/992242964292173935)```",
       "EVERYONE_ID": "961194963549429821",
       "REACTION_POINTS": 10,
       "DAILY_POINTS": 200,

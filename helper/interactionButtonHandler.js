@@ -6,6 +6,7 @@ const updateLeaderboard = require("../helper/updateLeaderboard")
 const databaseHelper = require("../helper/databaseHelper")
 const dailyEvents = require("../custom/dailyEvents")
 const logger = require("../helper/_logger")
+const monthlyEvents = require("../custom/monthlyEvents")
 const { DBCHANNELS, DBROLES, DBSETTINGS, DBUSERDUMMY } = require("../helper/databaseHelper")
 
 module.exports = {
@@ -90,6 +91,12 @@ module.exports = {
 			case "clearNicknames":
 				await dailyEvents.clearNicknames(interaction.client)
 				interaction.reply({ content: "Nickname cleared, view logs", ephemeral: true })
+				break
+			case "monthUpgradeDowngrade":
+				monthlyEvents.monthlyAdjustRole(interaction.client)
+				break
+			case "monthReset":
+				monthlyEvents.defaultMonthlyResets()
 				break
 			}
 		} catch (err) {

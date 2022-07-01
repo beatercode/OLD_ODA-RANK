@@ -29,6 +29,7 @@ module.exports = {
 			const channelRankID = DB_CHANNELS.ch_rank
 			const channelDebugID = DB_CHANNELS.ch_moderazione
 			const channelRank = client.channels.cache.get(channelRankID)
+			console.log(channelRankID)
 			const channelDebug = client.channels.cache.get(channelDebugID)
 
 			let isRankPresent = false
@@ -90,6 +91,8 @@ module.exports = {
 					.addComponents(
 						new MessageButton().setCustomId("updateLeaderboard").setLabel("🔴 UPDATE LEADERBOARD").setStyle("PRIMARY"),
 						new MessageButton().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("DANGER"),
+						new MessageButton().setCustomId("monthUpgradeDowngrade").setLabel("🟢 DO MONTH SHIT").setStyle("DANGER"),
+						new MessageButton().setCustomId("monthReset").setLabel("🟢 DO MONTH SHIT").setStyle("DANGER"),
 						new MessageButton().setCustomId("odaNameDiffChekc").setLabel("🔴 ODA NAME CHECK").setStyle("PRIMARY"),
 						//new MessageButton().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
 					)
