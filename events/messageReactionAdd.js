@@ -29,13 +29,13 @@ module.exports = {
 			}
 
 			if (!reactionChannels.includes(reactedChannel) && !user.bot) {
-				if(["🥇", "🥈", "🥉"].some(r => r == reaction.emoji.name)) {
+				if (["🥇", "🥈", "🥉"].some(r => r == reaction.emoji.name)) {
 					let message = reaction.message
 					let targetUserId = null
 					let fetched = await message.channel.messages.fetch(message.id)
 					targetUserId = fetched.author.id
 					//let targetUsername = fetched.author.username
-					if(!targetUserId) {
+					if (!targetUserId) {
 						logger.error("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "]")
 						return
 					}
@@ -45,14 +45,12 @@ module.exports = {
 					const guild = reaction.message.guild
 					const member = guild.members.cache.get(user.id)
 					const memberRoles = member._roles
-					if(!memberRoles.some(r=> DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
+					if (!memberRoles.some(r => DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
 					const memberTarget = guild.members.cache.get(targetUserId)
 					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username
-					let toAdd =  memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
-					let updated = await Users.updateOne(
-						{ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, 
-						{ $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl }})
+					let toAdd = memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
+					let updated = await Users.updateOne({ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, { $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl } })
 					if (updated.modifiedCount == 0) {
 						logger.debug("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "] - seems have already had a bonus")
 						return
@@ -70,17 +68,17 @@ module.exports = {
 						})
 						return
 					}
-				} else if(reaction.emoji.name == '🔥') {
+				} else if (reaction.emoji.name == '🔥') {
 					const guild = reaction.message.guild
 					const member = guild.members.cache.get(user.id)
 					const memberRoles = member._roles
-					if(!memberRoles.some(r=> DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
+					if (!memberRoles.some(r => DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
 					let message = reaction.message
 					let targetUserId = null
 					let fetched = await message.channel.messages.fetch(message.id)
 					targetUserId = fetched.author.id
 					//let targetUsername = fetched.author.username
-					if(!targetUserId) {
+					if (!targetUserId) {
 						logger.error("[ADD ACTIVE BONUS ERROR] check msg id [" + reaction.message.id + "]")
 						return
 					}
@@ -90,10 +88,8 @@ module.exports = {
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
 					const memberTarget = guild.members.cache.get(targetUserId)
 					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username
-					let toAdd =  memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
-					let updated = await Users.updateOne(
-						{ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, 
-						{ $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl }})
+					let toAdd = memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
+					let updated = await Users.updateOne({ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, { $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl } })
 					if (updated.modifiedCount == 0) {
 						logger.debug("[ADD ACTIVE BONUS ERROR] check msg id [" + reaction.message.id + "] - seems have already had that bonus")
 						return

@@ -930,3 +930,11 @@
 [2022-06-30T23:00:01.227] [INFO] default - [HOURLY] checkOdaInName starts
 [2022-06-30T23:00:01.246] [INFO] default - Hourly check ODA IN NAME done ---> updated: 0
 [2022-06-30T23:00:01.247] [INFO] default - [HOURLY] checkOdaInName end
+[2022-06-30T23:04:39.475] [INFO] default - New invite created - code [7eVUxCU2] from user id [692009072060268667]
+[2022-06-30T23:04:39.485] [INFO] default - Invite create [7eVUxCU2] -> DB updated
+[2022-06-30T23:07:13.433] [INFO] default - [COMMAND] board start 
+[2022-06-30T23:07:13.457] [INFO] default - [COMMAND] board end
+[2022-06-30T23:07:18.576] [INFO] default - [COMMAND] claimdaily start
+[2022-06-30T23:07:20.386] [INFO] default - [COMMAND] account start - inpect 659047167121555470
+[2022-06-30T23:07:20.394] [INFO] default - [COMMAND] account end
+[2022-06-30T23:19:29.490] [INFO] default - ODA Rank is online | ----> RUN
