@@ -621,3 +621,5 @@
 [2022-07-03T09:30:54.372] [ERROR] default - User [202500951230119936] ID [BeaterFit | ODA Clan] filed/not necessary role update
 [2022-07-03T09:30:57.455] [ERROR] default - User [202500951230119936] ID [BeaterFit | ODA Clan] filed/not necessary role update
 [2022-07-03T09:30:57.563] [INFO] default - User [202500951230119936] ID [BeaterFit | ODA Clan] role updated to [Daimyō 大名 - Lvl.6]
+[2022-07-03T09:37:56.219] [INFO] default - [COMMAND] claimdaily start
+[2022-07-03T09:37:56.527] [INFO] default - [COMMAND] claimdaily end
