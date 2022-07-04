@@ -79,7 +79,7 @@ module.exports = {
 				let myPoints = (board.find(x => x.user_id === myId)).points
 				if (couldDowngrade && percentageDown != 0) {
 					finalDescription += "\n\nYour commitment is not enough; "
-                        + "you are in the **worst " + percentageDown + "** of your role. Increase your ODA points or you "
+                        + "you are in the **worst " + percentageDown + "%** of your role. Increase your ODA points or you "
                         + "will be downgraded at the end of the month. ⬇️"
 				} else if (couldUpgrade && percentageUp != 0) {
 					const topAmount = percentageUpFixed ? percentageUp : (percentageUp + "%")

@@ -1,13 +1,17 @@
+/* eslint-disable no-case-declarations */
 const fs = require("fs")
 const Users = require("../models/Users")
 const setupmessages = require("../commands/setupmessages")
 const setupdb = require("../commands/setupdb")
 const updateLeaderboard = require("../helper/updateLeaderboard")
 const databaseHelper = require("../helper/databaseHelper")
-const dailyEvents = require("../custom/dailyEvents")
 const logger = require("../helper/_logger")
+const hourlyEvents = require("../custom/hourlyEvents")
+const dailyEvents = require("../custom/dailyEvents")
 const monthlyEvents = require("../custom/monthlyEvents")
 const { DBCHANNELS, DBROLES, DBSETTINGS, DBUSERDUMMY } = require("../helper/databaseHelper")
+const roleHelper = require("./roleHelper")
+const mainHelper = require("./mainHelper")
 
 module.exports = {
 
@@ -65,6 +69,11 @@ module.exports = {
 			case "setupdb":
 				await setupdb.execute(interaction)
 				break
+			case "setupdbMissingUser":
+				let missingList = await mainHelper.setupdbMissingUser(interaction.client)
+				let retString = `${missingList}\nMissing DB User from Discord completed`
+				interaction.reply({ content: retString, ephemeral: true })
+				break
 			case "setupmessages":
 				await setupmessages.execute(interaction)
 				break
@@ -93,10 +102,24 @@ module.exports = {
 				interaction.reply({ content: "Nickname cleared, view logs", ephemeral: true })
 				break
 			case "monthUpgradeDowngrade":
-				monthlyEvents.monthlyAdjustRole(interaction.client)
+				await monthlyEvents.monthlyAdjustRole(interaction.client)
+				interaction.reply({ content: "Monthly role adjust done", ephemeral: true })
 				break
 			case "monthReset":
-				monthlyEvents.defaultMonthlyResets()
+				await monthlyEvents.defaultMonthlyResets()
+				interaction.reply({ content: "Default montly reset done", ephemeral: true })
+				break
+			case "shokuninZeroDowngrade":
+				await roleHelper.downgradeZeroShokunin(interaction.client)
+				interaction.reply({ content: "Shokunin Zero points Downgrade done ( If not, check code or talk with Beater )", ephemeral: true })
+				break
+			case "hourlyCheck":
+				await hourlyEvents.hourlyChecks(interaction.client)
+				interaction.reply({ content: "Hourly check done", ephemeral: true })
+				break
+			case "dailyCheck":
+				await dailyEvents.dailyChecks(interaction.client)
+				interaction.reply({ content: "Daily check done", ephemeral: true })
 				break
 			}
 		} catch (err) {

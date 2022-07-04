@@ -35,7 +35,7 @@ module.exports = {
 			let isRankPresent = false
 			await channelRank.messages.fetch({ limit: 1 }).then(messages => {
 				if (messages.first() != undefined && (messages.first()).embeds[0] != undefined
-                    && (messages.first()).embeds[0].title != undefined) {
+					&& (messages.first()).embeds[0].title != undefined) {
 					let lastMsgTitle = (messages.first()).embeds[0].title
 					if (lastMsgTitle === "ODA Clan Points Manager") {
 						isRankPresent = true
@@ -46,7 +46,7 @@ module.exports = {
 			let isModPresent = false
 			await channelDebug.messages.fetch({ limit: 1 }).then(messages => {
 				if (messages.first() != undefined && (messages.first()).embeds[0] != undefined
-                    && (messages.first()).embeds[0].title != undefined) {
+					&& (messages.first()).embeds[0].title != undefined) {
 					let lastMsgTitle = (messages.first()).embeds[0].title
 					if (lastMsgTitle === "ODA Clan Mod Manager") {
 						isModPresent = true
@@ -86,21 +86,29 @@ module.exports = {
 					.addComponents(
 						new MessageButton().setCustomId("backupUsers").setLabel("🔴 USER DB TO LOCAL").setStyle("PRIMARY"),
 						new MessageButton().setCustomId("backupSettings").setLabel("🔴 SETT. DB TO LOCAL").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle("PRIMARY"),
 					)
 				const row2 = new MessageActionRow()
 					.addComponents(
-						new MessageButton().setCustomId("updateLeaderboard").setLabel("🔴 UPDATE LEADERBOARD").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("DANGER"),
-						new MessageButton().setCustomId("monthUpgradeDowngrade").setLabel("🟢 DO MONTH SHIT").setStyle("DANGER"),
-						new MessageButton().setCustomId("monthReset").setLabel("🟢 DO MONTH SHIT").setStyle("DANGER"),
-						new MessageButton().setCustomId("odaNameDiffChekc").setLabel("🔴 ODA NAME CHECK").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("updateLeaderboard").setLabel("🟢 UPDATE LEADERBOARD").setStyle("SECONDARY"),
+						new MessageButton().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("SECONDARY"),
+						new MessageButton().setCustomId("odaNameDiffChekc").setLabel("🟢 ODA NAME CHECK").setStyle("SECONDARY"),
 						//new MessageButton().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
 					)
 				const row3 = new MessageActionRow()
 					.addComponents(
-						new MessageButton().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("dailyCheck").setLabel("⏰ DAILY CHECK").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("hourlyCheck").setLabel("⏰ HOURLY CHECK").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("monthUpgradeDowngrade").setLabel("⏰ MONTH ADJUST ROLES").setStyle("PRIMARY"),
+						new MessageButton().setCustomId("monthReset").setLabel("⏰ MONTH RESET").setStyle("PRIMARY"),
+						//new MessageButton().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
+					)
+				const row4 = new MessageActionRow()
+					.addComponents(
+						new MessageButton().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("DANGER"),
+						new MessageButton().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("DANGER"),
 						new MessageButton().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle("DANGER"),
+						new MessageButton().setCustomId("setupdbMissingUser").setLabel("🔵 USR DISCORD MISS. TO DB").setStyle("DANGER"),
 						new MessageButton().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
 					)
 
@@ -116,7 +124,7 @@ module.exports = {
 					)
 					.setFooter({ text: "ODA Clan bot management", iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 
-				await channelDebug.send({ embeds: [embed], components: [row1, row2, row3] })
+				await channelDebug.send({ embeds: [embed], components: [row1, row2, row3, row4] })
 				contentOutput += "Default Moderation message created"
 			} else {
 				contentOutput += "Default Moderation message exist. Delete it and launch the command again"

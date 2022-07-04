@@ -23,6 +23,7 @@ const UserSchema = new mongoose.Schema({
 		inviterPoints: { type: Number, default: 0 },
 		invitedWithCode: { type: String, default: "" },
 	},
+	total_daily: { type: Number, default: 0 },
 })
 
 module.exports = mongoose.model("Users", UserSchema)

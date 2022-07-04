@@ -50,21 +50,21 @@ module.exports = {
 				? `He is a **${targetUserDb.role}** with **${targetUserDb.points}** ODA points! He invited **${targetUserDb.total_invitation} kyodai** in the Clan!`
 				: `You are a **${targetUserDb.role}** with **${targetUserDb.points}** ODA points! You invited **${targetUserDb.total_invitation} kyodai** in the Clan!`
 				
-			let emojiDailyClaim = targetUserDb.daily ? '✅' : '❌'
-			let textDailyClaim = targetUserDb.daily ? 'Done' : 'To do'
+			let emojiDailyClaim = targetUserDb.daily ? "✅" : "❌"
+			let textDailyClaim = targetUserDb.daily ? "Done" : "To do"
 			let textRole = targetUserDb.role
-			let level = textRole.substring(textRole.indexOf('Lvl.') + 4, textRole.length)
+			let level = textRole.substring(textRole.indexOf("Lvl.") + 4, textRole.length)
 			try {
 				level = parseInt(level)
-			} catch (err) { logger.error('Error in taking INT lvl from role text') }
+			} catch (err) { logger.error("Error in taking INT lvl from role text") }
 			
 			const lvlEmoji =  level == 2 
-				? '<:LV2:987264729967910942>' : level == 3 
-				? '<:LV3:987264729967910942>' : level == 4 
-				? '<:LV4:987264732744540210>' : level == 5 
-				? '<:LV5:987264734942330911>' : level == 6 
-				? '<:LV6:987264736976588811>' : level == 7 
-				? '<:LV7:987264738322960454>' : ''
+				? "<:LV2:987264729967910942>" : level == 3 
+					? "<:LV3:987264729967910942>" : level == 4 
+						? "<:LV4:987264732744540210>" : level == 5 
+							? "<:LV5:987264734942330911>" : level == 6 
+								? "<:LV6:987264736976588811>" : level == 7 
+									? "<:LV7:987264738322960454>" : ""
 			
 			outputString =  `🥋 **Account**: <@${targetUserId}>\n\n`
 			outputString += `${lvlEmoji} **Level**: <@&${targetUserDb.role_id}>\n\n`

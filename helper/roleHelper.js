@@ -1,5 +1,8 @@
+/* eslint-disable no-unreachable */
 const Users = require("../models/Users")
+const logger = require("../helper/_logger")
 const { DBROLES } = require("../helper/databaseHelper")
+const { DBSETTINGS } = require("../helper/databaseHelper")
 
 const emojiRank = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
 
@@ -17,6 +20,13 @@ module.exports = {
 			shokunin: shokunin,
 			shonin: shonin
 		}
+	},
+
+	async getRoleDiscordObjectById(client, id) {
+		const settings = await DBSETTINGS()
+		const guild = client.guilds.cache.get(settings.GUILD_ID)
+		const selectedRole = guild.roles.cache.find(r => r.id === id)
+		return selectedRole
 	},
 
 	async getRoleSettingsByValue(property, value) {
@@ -71,7 +81,7 @@ module.exports = {
 		const roleColor = roleSettings ? roleSettings.color : null
 		const roleName = roleSettings ? roleSettings.name : null
 		const roleId = roleSettings ? roleSettings.id : null
-		let allUsersByRole = roleSettings 
+		let allUsersByRole = roleSettings
 			? await Users.find({ role_id: roleId }).sort({ points: -1 })
 			: await Users.find({}).sort({ points: -1 })
 		let topBoard = allUsersByRole.map(({ user_id, username, points }) => ({ user_id, username, points }))
@@ -118,7 +128,7 @@ module.exports = {
 			let pos = counter == x.position ? emojiRank[counter - 1] : x.position ? x.position : emojiRank[counter - 1]
 			let newRow = ""
 			if (x.user_id == myId) {
-				newRow = (counter == 11 && board.length == 11) 
+				newRow = (counter == 11 && board.length == 11)
 					? `\n${pos}. **<@${x.user_id}>** with **${x.points}** ODA points`
 					: `${pos} **<@${x.user_id}>** with **${x.points}** ODA points\n`
 			} else {
@@ -135,7 +145,7 @@ module.exports = {
 		let description = ""
 		let counter = 1
 		let idList = board.map(x => x.user_id)
-		let userDb = await Users.find({ user_id: { $in : idList} }, "-_id user_id role role_id")
+		let userDb = await Users.find({ user_id: { $in: idList } }, "-_id user_id role role_id")
 		board.forEach(async x => {
 			if (!x) return
 			let pos = counter == x.position ? emojiRank[counter - 1] : x.position ? x.position : emojiRank[counter - 1]
@@ -241,20 +251,24 @@ module.exports = {
 			let position = board.board.length - toDowngrade - fixer
 			let fromToDeletePoints = board.board[position].points
 			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
-			let returnable = await Users.find({ role_id: roleId, points: { $lt: fromToDeletePoints } })
+			let returnable = await Users.find({ role_id: roleId, points: { $lte: fromToDeletePoints } })
 			return returnable
 		}
 	},
 
 	async getUsersUpgredableByRolePercentage(roleName, percentageUp) {
 		const board = await this.getBoardByRoleName(0, roleName)
+		//console.log("RoleName [" + roleName + "] - PercUp [" + percentageUp + "]")
 		if (board.board.length > 0) {
 			let toUpgrade = Math.round(board.board.length / 100 * percentageUp)
-			let fixer = toUpgrade > 0 ? 1 : 0
+			//console.log("To Upgrade [" + toUpgrade + "]")
+			let fixer = 0//toUpgrade > 0 ? 1 : 0
 			let position = fixer + toUpgrade
+			//console.log("Position [" + position + "]")
 			let fromToUpgradePoints = board.board[position].points
+			//console.log("fromToUpgradePoints [" + fromToUpgradePoints + "]")
 			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
-			let returnable = await Users.find({ role_id: roleId, points: { $gt: fromToUpgradePoints } })
+			let returnable = await Users.find({ role_id: roleId, points: { $gt: fromToUpgradePoints } }).sort({ points: -1 })
 			return returnable
 		}
 	},
@@ -290,5 +304,29 @@ module.exports = {
 			}
 		}
 	},
+
+	async getMemberFromId(client, id) {
+		const DB_SETTINGS = await DBSETTINGS()
+		let guild = client.guilds.cache.get(DB_SETTINGS.GUILD_ID)
+		let member = guild.members.cache.get(id)
+		return member
+	},
+
+	async downgradeZeroShokunin(client) {
+		const roles = await DBROLES()
+		const shokuninRoleObject = await this.getRoleDiscordObjectById(client, roles.shokunin.id)
+		const zeroPointsShokunin = await Users.find({ points: 0, role_id: roles.shokunin.id })
+
+		const isZeroPointsShokunin = zeroPointsShokunin != null && zeroPointsShokunin.length != 0
+		logger.info("\nShokunin Zero Points LEN: \nzeroPointsShokunin[" + zeroPointsShokunin.length + "]")
+		logger.info("\nShokunin Zero Points BOOL: \nzeroPointsShokunin[" + isZeroPointsShokunin + "]")
+		
+		return
+
+		for (let x of zeroPointsShokunin) {
+			let member = await this.getMemberFromId(client, x.user_id)
+			member.roles.remove(shokuninRoleObject)
+		}
+	}
 
 }
