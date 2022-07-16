@@ -51,7 +51,7 @@ module.exports = {
 
 			let outpdateRow = res.modifiedCount
 			let msgOutput = outpdateRow > 0
-				? "✅ Congratulations! " + deservedPoints + " ODA points claimed succesfully! You are in a " + (currentUser.consecutive_daily + 1) + " days streak!"
+				? "✅ Congratulations! " + deservedPoints + " ODA points claimed succesfully! 🚀 You are in a " + (currentUser.consecutive_daily + 1) + " days streak! ⛳️ Total daily **" + currentUser.total_daily + "**"
 				: "❌ Already claimed! Come claim tomorrow!"
 			roleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(member._roles)
 			const claimEmbed = new MessageEmbed()
@@ -70,8 +70,9 @@ module.exports = {
 				}
 				const DB_CHANNELS = config.Channels.values
 				const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
-				outputString = `**${member.user.username}** just claimed **${deservedPoints}** ODA points! `
-				outputString += `He is in a **${(currentUser.consecutive_daily + 1)}** days streak! 🚀`
+				outputString = `**${member.user.username}** just claimed **${deservedPoints}** ODA points! 🚀 `
+				outputString += `Actual days streak **${(currentUser.consecutive_daily + 1)}!** `
+				outputString += `⛳️ Total daily **${currentUser.total_daily}!** `
 
 				const claimEmbed = new MessageEmbed()
 					.setColor(roleSettings.color)

@@ -46,6 +46,11 @@ module.exports = {
 				interaction.reply({ content: "[ADMIN] - Your daily claim flag is now FALSE", ephemeral: true })
 				break
 			}
+			case "dailyFalseAll": {
+				await Users.updateMany({}, { daily: false })
+				interaction.reply({ content: "[ADMIN] - All daily claim flag is now FALSE", ephemeral: true })
+				break
+			}
 			case "backupUsers": {
 				let usersDump = await Users.find({})
 				usersDump = JSON.stringify(usersDump)

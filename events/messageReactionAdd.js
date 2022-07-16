@@ -29,11 +29,19 @@ module.exports = {
 			}
 
 			if (!reactionChannels.includes(reactedChannel) && !user.bot) {
+				
+				let message = reaction.message
+				let fetched = await message.channel.messages.fetch(message.id)
+				let targetUserId = fetched.author.id
+				const guild = reaction.message.guild
+				const member = guild.members.cache.get(user.id)
+				const memberRoles = member._roles
+				const memberTarget = guild.members.cache.get(targetUserId)
+				const memberTargetRoles = memberTarget._roles
+				
+				if (memberTargetRoles.some(r => DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
+				
 				if (["🥇", "🥈", "🥉"].some(r => r == reaction.emoji.name)) {
-					let message = reaction.message
-					let targetUserId = null
-					let fetched = await message.channel.messages.fetch(message.id)
-					targetUserId = fetched.author.id
 					//let targetUsername = fetched.author.username
 					if (!targetUserId) {
 						logger.error("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "]")
@@ -42,12 +50,8 @@ module.exports = {
 					let reactedEmoji = reaction.emoji.name
 					let deservedPoints = reactedEmoji == "🥉" ? 200 : reactedEmoji == "🥈" ? 400 : 600
 					let deservedColor = reactedEmoji == "🥉" ? "#CD7F32" : reactedEmoji == "🥈" ? "#C0C0C0" : "#FFD700"
-					const guild = reaction.message.guild
-					const member = guild.members.cache.get(user.id)
-					const memberRoles = member._roles
 					if (!memberRoles.some(r => DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
-					const memberTarget = guild.members.cache.get(targetUserId)
 					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username
 					let toAdd = memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
 					let updated = await Users.updateOne({ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, { $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl } })
@@ -69,14 +73,7 @@ module.exports = {
 						return
 					}
 				} else if (reaction.emoji.name == '🔥') {
-					const guild = reaction.message.guild
-					const member = guild.members.cache.get(user.id)
-					const memberRoles = member._roles
 					if (!memberRoles.some(r => DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
-					let message = reaction.message
-					let targetUserId = null
-					let fetched = await message.channel.messages.fetch(message.id)
-					targetUserId = fetched.author.id
 					//let targetUsername = fetched.author.username
 					if (!targetUserId) {
 						logger.error("[ADD ACTIVE BONUS ERROR] check msg id [" + reaction.message.id + "]")
@@ -86,7 +83,6 @@ module.exports = {
 					let deservedColor = '#FFFFFF'
 					let reactedEmoji = reaction.emoji.name
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
-					const memberTarget = guild.members.cache.get(targetUserId)
 					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username
 					let toAdd = memberTarget.nickname ? reactedEmoji : " " + reactedEmoji
 					let updated = await Users.updateOne({ user_id: targetUserId, daily_starred: { $ne: targetMsgUrl } }, { $inc: { points: deservedPoints }, $push: { daily_starred: targetMsgUrl } })

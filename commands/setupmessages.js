@@ -8,8 +8,7 @@ const { DBCHANNELS } = require("../helper/databaseHelper")
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("setupmessages")
-		.setDescription("[ADMIN] Setup & Refactor default messages / box")
-	,
+		.setDescription("[ADMIN] Setup & Refactor default messages / box"),
 	async execute(interaction) {
 
 		try {
@@ -34,8 +33,8 @@ module.exports = {
 
 			let isRankPresent = false
 			await channelRank.messages.fetch({ limit: 1 }).then(messages => {
-				if (messages.first() != undefined && (messages.first()).embeds[0] != undefined
-					&& (messages.first()).embeds[0].title != undefined) {
+				if (messages.first() != undefined && (messages.first()).embeds[0] != undefined &&
+					(messages.first()).embeds[0].title != undefined) {
 					let lastMsgTitle = (messages.first()).embeds[0].title
 					if (lastMsgTitle === "ODA Clan Points Manager") {
 						isRankPresent = true
@@ -45,8 +44,8 @@ module.exports = {
 
 			let isModPresent = false
 			await channelDebug.messages.fetch({ limit: 1 }).then(messages => {
-				if (messages.first() != undefined && (messages.first()).embeds[0] != undefined
-					&& (messages.first()).embeds[0].title != undefined) {
+				if (messages.first() != undefined && (messages.first()).embeds[0] != undefined &&
+					(messages.first()).embeds[0].title != undefined) {
 					let lastMsgTitle = (messages.first()).embeds[0].title
 					if (lastMsgTitle === "ODA Clan Mod Manager") {
 						isModPresent = true
@@ -69,11 +68,7 @@ module.exports = {
 					.setTitle("ODA Clan Points Manager")
 					.setThumbnail("https://i.imgur.com/JW8vPcb.png")
 					.setDescription("ODA Clan tool to check and keep track of members progress inside the ODA Clan world")
-					.addFields(
-						{ name: "📈 LEADERBOARD", value: "Check leaderboard of your rank" },
-						{ name: "✅ CLAIM DAILY", value: "Claim your daily point" },
-						{ name: "🙋‍♂️ ACCOUNT", value: "Check your ODA Account" },
-					)
+					.addFields({ name: "📈 LEADERBOARD", value: "Check leaderboard of your rank" }, { name: "✅ CLAIM DAILY", value: "Claim your daily point" }, { name: "🙋‍♂️ ACCOUNT", value: "Check your ODA Account" }, )
 
 				await channelRank.send({ embeds: [embed], components: [row] })
 				contentOutput += "Default Rank message created\n"
@@ -107,6 +102,10 @@ module.exports = {
 					.addComponents(
 						new MessageButton().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("DANGER"),
 						new MessageButton().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("DANGER"),
+						new MessageButton().setCustomId("dailyFalseAll").setLabel("📍 D. FALSE ALL").setStyle("DANGER"),
+					)
+				const row5 = new MessageActionRow()
+					.addComponents(
 						new MessageButton().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle("DANGER"),
 						new MessageButton().setCustomId("setupdbMissingUser").setLabel("🔵 USR DISCORD MISS. TO DB").setStyle("DANGER"),
 						new MessageButton().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
@@ -116,15 +115,10 @@ module.exports = {
 					.setColor("#0099ff")
 					.setTitle("ODA Clan Mod Manager")
 					.setDescription("ODA Clan tool moderate the server in several ways")
-					.addFields(
-						{ name: "BACKUP USER", value: "Dump user table to backup json file" },
-						{ name: "BACKUP SETTINGS", value: "Dump settings table to backup json file" },
-						{ name: "D. TRUE", value: "Set ALLs daily claim to true" },
-						{ name: "D. FALSE", value: "Set ALLs daily claim to false" },
-					)
+					.addFields({ name: "BACKUP USER", value: "Dump user table to backup json file" }, { name: "BACKUP SETTINGS", value: "Dump settings table to backup json file" }, { name: "D. TRUE", value: "Set ALLs daily claim to true" }, { name: "D. FALSE", value: "Set ALLs daily claim to false" }, )
 					.setFooter({ text: "ODA Clan bot management", iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 
-				await channelDebug.send({ embeds: [embed], components: [row1, row2, row3, row4] })
+				await channelDebug.send({ embeds: [embed], components: [row1, row2, row3, row4, row5] })
 				contentOutput += "Default Moderation message created"
 			} else {
 				contentOutput += "Default Moderation message exist. Delete it and launch the command again"

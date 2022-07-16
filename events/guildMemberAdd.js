@@ -26,7 +26,7 @@ module.exports = {
 			let inviterId = "", inviterPoints = 0
 			let invitedWithCode = ""
 			const DB_SETTINGS = await DBSETTINGS()
-			if (inviter && invite.code) {
+			if (inviter && invite && invite.code) {
 				logger.info("[TRIGGER] guildMemberad inviter [" + invite.code + "]")
 				invitedWithCode = invite.code
 				let updatesInv = await Invites.updateMany({ code: invitedWithCode }, { $inc: { valid: 1, amount: 1 } })
