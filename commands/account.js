@@ -71,6 +71,7 @@ module.exports = {
 			outputString += `📈 **Points**: ${targetUserDb.points}\n\n`
 			outputString += `${emojiDailyClaim} **Today claim**: ${textDailyClaim}\n\n`
 			outputString += `🚀 **Daily streak**: ${targetUserDb.consecutive_daily}\n\n`
+			outputString += `⛳️ **Total Daily**: ${targetUserDb.total_daily}\n\n`
 			outputString += `🎯 **Monthly invitation**: ${targetUserDb.monthly_invitation}\n\n`
 			outputString += `💯 **Total invitation**: ${targetUserDb.total_invitation}\n\n`
 

@@ -31,7 +31,7 @@ module.exports = {
 			if (!reactionChannels.includes(reactedChannel) && !user.bot) {
 				
 				let message = reaction.message
-				let fetched = await message.channel.messages.fetch(message.id)
+				let fetched = await message.channel.messages.fetch({ message: message.id })
 				let targetUserId = fetched.author.id
 				const guild = reaction.message.guild
 				const member = guild.members.cache.get(user.id)
@@ -72,7 +72,7 @@ module.exports = {
 						})
 						return
 					}
-				} else if (reaction.emoji.name == '🔥') {
+				} else if (reaction.emoji.name == "🔥") {
 					if (!memberRoles.some(r => DB_SETTINGS.MOD_ROLE_IDS.includes(r))) return
 					//let targetUsername = fetched.author.username
 					if (!targetUserId) {
@@ -80,7 +80,7 @@ module.exports = {
 						return
 					}
 					let deservedPoints = 50
-					let deservedColor = '#FFFFFF'
+					let deservedColor = "#FFFFFF"
 					let reactedEmoji = reaction.emoji.name
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
 					let baseName = memberTarget.nickname ? memberTarget.nickname : memberTarget.user.username

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js")
+const { ActionRowBuilder, ButtonBuilder, MessageEmbed } = require("discord.js")
 const mainHelper = require("../helper/mainHelper")
 const updateLeaderboard = require("../helper/updateLeaderboard")
 const logger = require("../helper/_logger")
@@ -56,11 +56,11 @@ module.exports = {
 			let contentOutput = ""
 
 			if (!isRankPresent) {
-				const row = new MessageActionRow()
+				const row = new ActionRowBuilder()
 					.addComponents(
-						new MessageButton().setCustomId("leaderboard").setLabel("📈 LEADERBOARD").setStyle("DANGER"),
-						new MessageButton().setCustomId("claimDaily").setLabel("✅ CLAIM DAILY").setStyle("SUCCESS"),
-						new MessageButton().setCustomId("account").setLabel("🙋‍♂️ ACCOUNT").setStyle("PRIMARY")
+						new ButtonBuilder().setCustomId("leaderboard").setLabel("📈 LEADERBOARD").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("claimDaily").setLabel("✅ CLAIM DAILY").setStyle("SUCCESS"),
+						new ButtonBuilder().setCustomId("account").setLabel("🙋‍♂️ ACCOUNT").setStyle("PRIMARY")
 					)
 
 				const embed = new MessageEmbed()
@@ -77,38 +77,38 @@ module.exports = {
 			}
 
 			if (!isModPresent) {
-				const row1 = new MessageActionRow()
+				const row1 = new ActionRowBuilder()
 					.addComponents(
-						new MessageButton().setCustomId("backupUsers").setLabel("🔴 USER DB TO LOCAL").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("backupSettings").setLabel("🔴 SETT. DB TO LOCAL").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("backupUsers").setLabel("🔴 USER DB TO LOCAL").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("backupSettings").setLabel("🔴 SETT. DB TO LOCAL").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle("PRIMARY"),
 					)
-				const row2 = new MessageActionRow()
+				const row2 = new ActionRowBuilder()
 					.addComponents(
-						new MessageButton().setCustomId("updateLeaderboard").setLabel("🟢 UPDATE LEADERBOARD").setStyle("SECONDARY"),
-						new MessageButton().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("SECONDARY"),
-						new MessageButton().setCustomId("odaNameDiffChekc").setLabel("🟢 ODA NAME CHECK").setStyle("SECONDARY"),
-						//new MessageButton().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("updateLeaderboard").setLabel("🟢 UPDATE LEADERBOARD").setStyle("SECONDARY"),
+						new ButtonBuilder().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("SECONDARY"),
+						new ButtonBuilder().setCustomId("odaNameDiffChekc").setLabel("🟢 ODA NAME CHECK").setStyle("SECONDARY"),
+						//new ButtonBuilder().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
 					)
-				const row3 = new MessageActionRow()
+				const row3 = new ActionRowBuilder()
 					.addComponents(
-						new MessageButton().setCustomId("dailyCheck").setLabel("⏰ DAILY CHECK").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("hourlyCheck").setLabel("⏰ HOURLY CHECK").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("monthUpgradeDowngrade").setLabel("⏰ MONTH ADJUST ROLES").setStyle("PRIMARY"),
-						new MessageButton().setCustomId("monthReset").setLabel("⏰ MONTH RESET").setStyle("PRIMARY"),
-						//new MessageButton().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("dailyCheck").setLabel("⏰ DAILY CHECK").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("hourlyCheck").setLabel("⏰ HOURLY CHECK").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("monthUpgradeDowngrade").setLabel("⏰ MONTH ADJUST ROLES").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("monthReset").setLabel("⏰ MONTH RESET").setStyle("PRIMARY"),
+						//new ButtonBuilder().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
 					)
-				const row4 = new MessageActionRow()
+				const row4 = new ActionRowBuilder()
 					.addComponents(
-						new MessageButton().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("DANGER"),
-						new MessageButton().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("DANGER"),
-						new MessageButton().setCustomId("dailyFalseAll").setLabel("📍 D. FALSE ALL").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("dailyFalseAll").setLabel("📍 D. FALSE ALL").setStyle("DANGER"),
 					)
-				const row5 = new MessageActionRow()
+				const row5 = new ActionRowBuilder()
 					.addComponents(
-						new MessageButton().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle("DANGER"),
-						new MessageButton().setCustomId("setupdbMissingUser").setLabel("🔵 USR DISCORD MISS. TO DB").setStyle("DANGER"),
-						new MessageButton().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("setupdbMissingUser").setLabel("🔵 USR DISCORD MISS. TO DB").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
 					)
 
 				const embed = new MessageEmbed()

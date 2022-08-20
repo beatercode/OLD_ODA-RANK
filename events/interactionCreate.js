@@ -1,6 +1,7 @@
 const interactionHandler = require("../helper/interactionButtonHandler")
 const mainHalper = require("../helper/mainHelper")
 const logger = require("../helper/_logger")
+const { InteractionType } = require("discord.js")
 
 module.exports = {
 	name: "interactionCreate",
@@ -14,7 +15,7 @@ module.exports = {
 				}
 			}
 
-			if (!interaction.isCommand()) return
+			if (!interaction.type === InteractionType.ApplicationCommand) return
 			const command = interaction.client.commands.get(interaction.commandName)
 			if (!command) return
 

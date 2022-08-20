@@ -31,7 +31,7 @@ module.exports = {
 					let message = reaction.message
 					let targetMsgUrl = "https://discord.com/channels/" + reaction.message.guild + "/" + reaction.message.channel + "/" + reaction.message.id
 					let targetUserId = null
-					let fetched = await message.channel.messages.fetch(message.id)
+					let fetched = await message.channel.messages.fetch({ message: message.id })
 					targetUserId = fetched.author.id
 					if (!targetUserId) {
 						logger.error("[ADD STARRED ERROR] check msg id [" + reaction.message.id + "]")

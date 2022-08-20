@@ -27,7 +27,7 @@ module.exports = {
 			let toEditMessage = null
 
 			let currentLastMsgId = DB_CHANNELS.ch_leaderboards_last_msg_id
-			await channelLeaderboards.messages.fetch(currentLastMsgId).then(message => {
+			await channelLeaderboards.messages.fetch({ message: currentLastMsgId }).then(message => {
 				toEditMessage = message ? message : null
 			}).catch(() => { toEditMessage = null })
 

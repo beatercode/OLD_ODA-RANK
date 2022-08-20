@@ -12,10 +12,14 @@ const monthlyEvents = require("../custom/monthlyEvents")
 const { DBCHANNELS, DBROLES, DBSETTINGS, DBUSERDUMMY } = require("../helper/databaseHelper")
 const roleHelper = require("./roleHelper")
 const mainHelper = require("./mainHelper")
+const surveyHelper = require("../helper/surveyHelper")
+
 
 module.exports = {
 
 	async handlePointSystemButton(interaction) {
+		logger.info("int");
+		logger.info(interaction);
 		try {
 			const member = interaction.member
 			const customId = interaction.customId
@@ -125,6 +129,9 @@ module.exports = {
 			case "dailyCheck":
 				await dailyEvents.dailyChecks(interaction.client)
 				interaction.reply({ content: "Daily check done", ephemeral: true })
+				break
+			case "listSurveys":
+				await surveyHelper.sendSurveyList(interaction);
 				break
 			}
 		} catch (err) {

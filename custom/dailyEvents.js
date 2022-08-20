@@ -18,7 +18,7 @@ module.exports = {
 	async clearNicknames(client) {
 		mainHelper.logOnServer(client, "[DAILY] clearNicknames start")
 		const DB_SETTINGS = config.Settings.values
-		const guild = client.guilds.cache.get(DB_SETTINGS.GUILD_ID);
+		const guild = client.guilds.cache.get(DB_SETTINGS.GUILD_ID)
 		guild.members.fetch().then(members => {
 			members.forEach(member => {
 				let currNick = member.nickname
@@ -26,8 +26,8 @@ module.exports = {
 					console.log(currNick)
 					member.setNickname(member.user.username)
 				}
-			});
-		});
+			})
+		})
 		logger.info("[DAILY] clearNicknames end")
 	},
 

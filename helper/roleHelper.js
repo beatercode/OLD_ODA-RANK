@@ -247,6 +247,7 @@ module.exports = {
 		const board = await this.getBoardByRoleName(0, roleName)
 		if (board.board.length > 0) {
 			let toDowngrade = Math.floor(board.board.length / 100 * percentageDown)
+			console.log("BOARD [" + roleName + "] LEN [" + board.board.length + "] - PERC. [" + percentageDown + "]")
 			let fixer = toDowngrade > 0 ? 0 : 1
 			let position = board.board.length - toDowngrade - fixer
 			let fromToDeletePoints = board.board[position].points
@@ -261,6 +262,7 @@ module.exports = {
 		//console.log("RoleName [" + roleName + "] - PercUp [" + percentageUp + "]")
 		if (board.board.length > 0) {
 			let toUpgrade = Math.round(board.board.length / 100 * percentageUp)
+			console.log("BOARD [" + roleName + "] LEN [" + board.board.length + "] - PERC. [" + percentageUp + "]")
 			//console.log("To Upgrade [" + toUpgrade + "]")
 			let fixer = 0//toUpgrade > 0 ? 1 : 0
 			let position = fixer + toUpgrade
@@ -268,7 +270,7 @@ module.exports = {
 			let fromToUpgradePoints = board.board[position].points
 			//console.log("fromToUpgradePoints [" + fromToUpgradePoints + "]")
 			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
-			let returnable = await Users.find({ role_id: roleId, points: { $gt: fromToUpgradePoints } }).sort({ points: -1 })
+			let returnable = await Users.find({ role_id: roleId, points: { $gte: fromToUpgradePoints } }).sort({ points: -1 })
 			return returnable
 		}
 	},
@@ -277,11 +279,12 @@ module.exports = {
 		const board = await this.getBoardByRoleName(0, roleName)
 		if (board.board.length > 0) {
 			let toDowngrade = Math.floor(board.board.length / 100 * percentageDown)
+			console.log("BOARD [" + roleName + "] LEN [" + board.board.length + "] - PERC. [" + percentageUp + "]")
 			let fixer = toDowngrade > 0 ? 0 : 1
 			let position = board.board.length - toDowngrade - fixer
 			let fromToDeletePoints = board.board[position].points
 			let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
-			let returnable = await Users.find({ role_id: roleId, points: { $lt: fromToDeletePoints } })
+			let returnable = await Users.find({ role_id: roleId, points: { $lte: fromToDeletePoints } })
 			return {
 				threshold: fromToDeletePoints,
 				returnable: returnable

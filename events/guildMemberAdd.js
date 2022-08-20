@@ -57,7 +57,7 @@ module.exports = {
 				}
 			}
 			logger.info("[TRIGGER] guildMemberad "
-				+ (inviter && invite.code) ? " [" + invite.code + "]" : " no inviter")
+				+ ((inviter && inviter != null && invite.code && invite.code != null) ? " [" + invite.code + "]" : " no inviter"))
 
 			let newUser = new Users({
 				user_id: member.user.id,

@@ -33,8 +33,8 @@ module.exports = {
 		const searchLimit = 0
 		const samuraiBoard = await roleHelper.getBoardByRoleName(searchLimit, "samurai")
 		const nokaBoard = await roleHelper.getBoardByRoleName(searchLimit, "noka")
-		//const shokuninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shokunin");
-		//const shoninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shonin");
+		const shokuninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shokunin");
+		const shoninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shonin");
 
 		const DB_ROLES = await DBROLES()
 		const DB_CHANNELS = await DBCHANNELS()
@@ -45,7 +45,7 @@ module.exports = {
 		const nokaObjectRole = await roleHelper.getRoleDiscordObjectById(client, DB_ROLES.noka.id)
 		const samuraiObjectRole = await roleHelper.getRoleDiscordObjectById(client, DB_ROLES.samurai.id)
 
-		//const shoninPercentage_up = DB_ROLES.shonin.role_percentage[0]
+		const shoninPercentage_up = DB_ROLES.shonin.role_percentage[0]
 		//const shoninPercentage_down = DB_ROLES.shonin.role_percentage[1]
 		const shokuninPercentage_up = DB_ROLES.shokunin.role_percentage[0]
 		const shokuninPercentage_down = DB_ROLES.shokunin.role_percentage[1]
@@ -103,37 +103,54 @@ module.exports = {
 		// mode 0 --> upgrade
 		// mode 1 --> downgrade
 		//let nokaToUpgrade = await roleHelper.
-		//	getUserUpDownByFixedNumber("noka", nokaFixed_up, 0)
+		//	.getUserUpDownByFixedNumber("noka", nokaFixed_up, 0)
 		let nokaToUpgrade = []
 		let nokaToDowngrade = await roleHelper
 			.getUserUpDownByRolePercentage("noka", nokaPercentage_down, 1)
 		let shokuninToUpgrade = await roleHelper
-			//.getUserUpDownByRolePercentage("shokunin", shokuninPercentage_up, 0)
-			.getUserUpDownByFixedNumber("shokunin", 58, 0)
-		//let shokuninToDowngrade = await roleHelper
-		//	.getUserUpDownByRolePercentage("shokunin", shokuninPercentage_down, 1)
-		//let shoninToUpgrade = await roleHelper
-		//	.getUserUpDownByRolePercentage("shonin", shoninPercentage_up, 0)
+			.getUserUpDownByRolePercentage("shokunin", shokuninPercentage_up, 0)
+		let shokuninToDowngrade = await roleHelper
+			.getUserUpDownByRolePercentage("shokunin", shokuninPercentage_down, 1)
+		let shoninToUpgrade = await roleHelper
+			.getUserUpDownByRolePercentage("shonin", shoninPercentage_up, 0)
 		//let shoninToDowngrade = await roleHelper
 		//	.getUserUpDownByRolePercentage("shonin", shoninPercentage_down, 1)
-		let shokuninToDowngrade = []
-		let shoninToUpgrade = []
 		let shoninToDowngrade = []
-
+		
+		const channelAnnouncementsID = DB_CHANNELS.ch_announcements
+		const channelAnnouncements = client.channels.cache.get(channelAnnouncementsID)
+		const channelStaffID = DB_CHANNELS.ch_staff
+		const channelStaff = client.channels.cache.get(channelStaffID)
+		const channelChatShokunin = client.channels.cache.get(DB_ROLES.shokunin.chat_channel_id)
+		const channelChatNoka = client.channels.cache.get(DB_ROLES.noka.chat_channel_id)
+		const channelChatSamurai = client.channels.cache.get(DB_ROLES.samurai.chat_channel_id)
+		
 		const isNokaToUpgrade = nokaToUpgrade != null && nokaToUpgrade.length != 0
 		const isNokaToDowngrade = nokaToDowngrade != null && nokaToDowngrade.length != 0
 		const isShokuninToUpgrade = shokuninToUpgrade != null && shokuninToUpgrade.length != 0
 		const isShokuninToDowngrade = shokuninToDowngrade != null && shokuninToDowngrade.length != 0
 		const isShoninToUpgrade = shoninToUpgrade != null && shoninToUpgrade.length != 0
 		const isShoninToDowngrade = shoninToDowngrade != null && shoninToDowngrade.length != 0
-
+		
 		const isNokaUpToTextChat = false
-		const isShokuninUpToTextChat = true
-		const isShoninUpToTextChat = false
-
+		const isShokuninUpToTextChat = false
+		const isShoninUpToTextChat = false		
+		
 		const isTodoDB = false
 		const isTodoDiscord = false
 		const isTodoRecapmessage = false
+		
+		// NOKA RECAP
+		let embedStaffNokaTop10 = []
+		embedStaffNokaTop10.push(new MessageEmbed().setTitle("Kiyosu Festival Top 10 NOKA!").setColor("#FFFFFF"))
+		let top10Noka = await roleHelper.getUserUpDownByFixedNumber("noka", 10, 0);
+		let top10NokaRow = "";
+		top10Noka.forEach(async x => {top10NokaRow += `➡️ ${x.username}> - ${x.points} ODA Points\n`})
+		let tempTop10NokaMsg = new MessageEmbed()
+			.addField("\u200B", top10NokaRow)
+			.setDescription("<@&" + DB_ROLES.noka.id + ">  TOP 10")
+		embedStaffNokaTop10.push(tempTop10NokaMsg)
+		await channelStaff.send({ embeds: embedStaffNokaTop10 })
 
 		logger.info("\nBoards LEN: \nnokaToUpgrade[" + nokaToUpgrade.length + "] \n"
 			+ "nokaToDowngrade[" + nokaToDowngrade.length + "] \n"
@@ -148,10 +165,18 @@ module.exports = {
 			+ "shoninToUpgrade[" + isShoninToUpgrade + "] \n"
 			+ "shoninToDowngrade[" + isShoninToDowngrade + "]")
 
+		logger.info("nokaToUpgrade IDs:")
+		logger.info(nokaToUpgrade.map(x => x.user_id))
 		logger.info("nokaToDowngrade IDs:")
 		logger.info(nokaToDowngrade.map(x => x.user_id))
 		logger.info("shokuninToUpgrade IDs:")
 		logger.info(shokuninToUpgrade.map(x => x.user_id))
+		logger.info("shokuninToDowngrade IDs:")
+		logger.info(shokuninToDowngrade.map(x => x.user_id))
+		logger.info("shoninToUpgrade IDs:")
+		logger.info(shoninToUpgrade.map(x => x.user_id))
+		logger.info("shoninToDowngrade IDs:")
+		logger.info(shoninToDowngrade.map(x => x.user_id))
 		logger.info("END - Retriving boards")
 
 		/* ------------------------ [END] BOARDS SECTION ------------------------ */
@@ -160,33 +185,26 @@ module.exports = {
 			logger.info("INIZIO - Aggiornamento DATABASE UP/DOWN")
 
 			// ⬇️ NOKA to SHOKUNIN
-			if (isNokaToUpgrade) {
+			if (isNokaToDowngrade) {
 				let downgradedNokaCount = 0
-				//downgradedNokaCount = await Users.find({ user_id: { $in: nokaToDowngrade.map(x => x.user_id) } })
-				//console.log(downgradedNokaCount)
 				downgradedNokaCount = await Users.updateMany({ user_id: { $in: nokaToDowngrade.map(x => x.user_id) } }, { $set: { role_id: DB_ROLES.shokunin.id, role: DB_ROLES.shokunin.name } })
 				logger.info(`END OF MONTH - NOKA DOWNGRADED TO SHOKUNIN [${downgradedNokaCount.modifiedCount}]`)
-				//logger.info(`END OF MONTH - NOKA DOWNGRADED TO SHOKUNIN [${downgradedNokaCount.length}]`)
 				logger.info(nokaToDowngrade.map(x => x.username))
 			}
 
 			// ⬇️ SHOKUNIN to SHONIN
 			if (isShokuninToDowngrade) {
 				let downgradedShokuninCount = 0
-				//downgradedShokuninCount = await Users.find({ user_id: { $in: shokuninToDowngrade.map(x => x.user_id) } })
 				downgradedShokuninCount = await Users.updateMany({ user_id: { $in: shokuninToDowngrade.map(x => x.user_id) } }, { $set: { role_id: DB_ROLES.shonin.id, role: DB_ROLES.shonin.name } })
 				logger.info(`END OF MONTH - SHOKUNIN DOWNGRADED TO SHONIN [${downgradedShokuninCount.modifiedCount}]`)
-				//logger.info(`END OF MONTH - SHOKUNIN DOWNGRADED TO SHONIN [${downgradedShokuninCount.length}]`)
 				logger.info(shokuninToDowngrade.map(x => x.username))
 			}
 
 			// ⬇️ SHONIN to HININ
 			if (isShoninToDowngrade) {
 				let downgradedShoninCount = 0
-				//downgradedShoninCount = await Users.find({ user_id: { $in: shoninToDowngrade.map(x => x.user_id) } })
 				downgradedShoninCount = await Users.updateMany({ user_id: { $in: shoninToDowngrade.map(x => x.user_id) } }, { $set: { role_id: DB_ROLES.hinin.id, role: DB_ROLES.hinin.name } })
 				logger.info(`END OF MONTH - SHONIN DOWNGRADED TO HININ [${downgradedShoninCount.modifiedCount}]`)
-				//logger.info(`END OF MONTH - SHONIN DOWNGRADED TO HININ [${downgradedShoninCount.length}]`)
 				logger.info(shoninToDowngrade.map(x => x.username))
 			}
 
@@ -203,20 +221,16 @@ module.exports = {
 			// ⬆️ SHOKUNIN to NOKA
 			if (isShokuninToUpgrade) {
 				let upgradedShokuninCount = 0
-				//upgradedShokuninCount = await Users.find({ user_id: { $in: shokuninToUpgrade.map(x => x.user_id) } })
 				upgradedShokuninCount = await Users.updateMany({ user_id: { $in: shokuninToUpgrade.map(x => x.user_id) } }, { $set: { role_id: DB_ROLES.noka.id, role: DB_ROLES.noka.name } })
 				logger.info(`END OF MONTH - SHOKUNIN UPGRADED TO NOKA [${upgradedShokuninCount.modifiedCount}]`)
-				//logger.info(`END OF MONTH - SHOKUNIN UPGRADED TO NOKA [${upgradedShokuninCount.length}]`)
 				logger.info(shokuninToUpgrade.map(x => x.username))
 			}
 
 			// ⬆️ SHONIN to SHOKUNIN
 			if (isShoninToUpgrade) {
 				let upgradedShoninCount = 0
-				//upgradedShoninCount = await Users.find({ user_id: { $in: shoninToUpgrade.map(x => x.user_id) } })
 				upgradedShoninCount = await Users.updateMany({ user_id: { $in: shoninToUpgrade.map(x => x.user_id) } }, { $set: { role_id: DB_ROLES.shokunin.id, role: DB_ROLES.shokunin.name } })
 				logger.info(`END OF MONTH - SHONIN UPGRADED TO SHOKUNIN [${upgradedShoninCount.modifiedCount}]`)
-				//logger.info(`END OF MONTH - SHONIN UPGRADED TO SHOKUNIN [${upgradedShoninCount.length}]`)
 				logger.info(shoninToUpgrade.map(x => x.username))
 			}
 
@@ -357,14 +371,6 @@ module.exports = {
 			console.log("ON - role_upgrade_welcomemsg")
 		}
 		/* ------------------------ [END] DISCORD SECTION ------------------------ */
-
-		const channelAnnouncementsID = DB_CHANNELS.ch_announcements
-		const channelAnnouncements = client.channels.cache.get(channelAnnouncementsID)
-		const channelStaffID = DB_CHANNELS.ch_staff
-		const channelStaff = client.channels.cache.get(channelStaffID)
-		const channelChatShokunin = client.channels.cache.get(DB_ROLES.shokunin.chat_channel_id)
-		const channelChatNoka = client.channels.cache.get(DB_ROLES.noka.chat_channel_id)
-		const channelChatSamurai = client.channels.cache.get(DB_ROLES.samurai.chat_channel_id)
 
 		if (isTodoRecapmessage) {
 			if (finalEmbedsUp != null && finalEmbedsUp.length != 0) {
