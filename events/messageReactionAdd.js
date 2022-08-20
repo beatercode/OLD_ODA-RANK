@@ -1,7 +1,7 @@
 const Users = require("../models/Users")
 const logger = require("../helper/_logger")
 const { DBCHANNELS, DBSETTINGS } = require("../helper/databaseHelper")
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const mainHelper = require("../helper/mainHelper")
 
 module.exports = {
@@ -63,7 +63,7 @@ module.exports = {
 						let outputString = `**<@${targetUserId}>** was rewarded with **${deservedPoints}** points as he brought value within the clan today! ${reactedEmoji}`
 						outputString += `\n\nMessage reference [here](${targetMsgUrl})`
 						const pointsEventsChannel = reaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
-						const claimEmbed = new MessageEmbed()
+						const claimEmbed = new EmbedBuilder()
 							.setColor(deservedColor)
 							.setTitle("Clan Value Rewards")
 							.setDescription(outputString)
@@ -93,7 +93,7 @@ module.exports = {
 						memberTarget.setNickname(baseName + toAdd)
 						let outputString = `**<@${targetUserId}>** was rewarded with **${deservedPoints}** points as he has been very active! ${reactedEmoji}`
 						const pointsEventsChannel = reaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
-						const claimEmbed = new MessageEmbed()
+						const claimEmbed = new EmbedBuilder()
 							.setColor(deservedColor)
 							.setTitle("Clan Activity Rewards")
 							.setDescription(outputString)

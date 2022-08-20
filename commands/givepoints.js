@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const Users = require("../models/Users")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
@@ -38,7 +38,7 @@ module.exports = {
 			if (isAdmin) {
 				await Users.updateMany({ user_id: inUser.id }, { $inc: { points: inPoints } })
 				let msgOutput = `Points were sent correctly to <@${inUser.id}>`
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Give points")
 					.setDescription(msgOutput)
@@ -50,7 +50,7 @@ module.exports = {
 				const DB_CHANNELS = config.Channels.values
 				const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
 				let outputString = `**ODA Clan** just gave away ${inPoints} ODA points to <@${inUser.id}>!`
-				const claimEmbedPublic = new MessageEmbed()
+				const claimEmbedPublic = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Points Gifted! 🚀")
 					.setDescription(outputString)
@@ -65,7 +65,7 @@ module.exports = {
 			let startingUser = await Users.findOne({ user_id: interaction.user.id, points: { $gte: inPoints } })
 			if (!startingUser) {
 				let msgOutput = `You can't send ${inPoints} ODA points to <@${inUser.id}> as you don't have enough`
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Give points")
 					.setDescription(msgOutput)
@@ -79,7 +79,7 @@ module.exports = {
 			let finalUser = await Users.findOne({ user_id: inUser.id })
 			if (!finalUser) {
 				let msgOutput = `You can't send ${inPoints} ODA points to <@${inUser.id}> as this user is not valid`
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Give points")
 					.setDescription(msgOutput)
@@ -93,7 +93,7 @@ module.exports = {
 			let sameUser = startingUser.user_id === finalUser.user_id
 			if (sameUser) {
 				let msgOutput = "You can't send points to yourself"
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Give points")
 					.setDescription(msgOutput)
@@ -107,7 +107,7 @@ module.exports = {
 
 			if (inPoints < 0) {
 				let msgOutput = "You should send more than **zero** ODA points"
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Give points")
 					.setDescription(msgOutput)
@@ -123,7 +123,7 @@ module.exports = {
 			let finalUserPointsReceived = finalUser.monthly_points_received
 			if ((finalUserPointsReceived + inPoints) > DB_SETTINGS.MONTHLY_POINTS_RECEIVED_LIMIT) {
 				let msgOutput = `You can't send ${inPoints} ODA points to <@${inUser.id}> as this user would exceed the monthly limit of points achievable via gift`
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Give points")
 					.setDescription(msgOutput)
@@ -138,7 +138,7 @@ module.exports = {
 			await Users.updateMany({ user_id: inUser.id }, { $inc: { points: inPoints, monthly_points_received: inPoints } })
 			await Users.updateMany({ user_id: interaction.user.id }, { $inc: { points: -inPoints } })
 			let msgOutput = `Points were sent correctly to <@${inUser.id}>`
-			const claimEmbed = new MessageEmbed()
+			const claimEmbed = new EmbedBuilder()
 				.setColor(roleSettings.color)
 				.setTitle("Give points")
 				.setDescription(msgOutput)
@@ -149,7 +149,7 @@ module.exports = {
 			const DB_CHANNELS = config.Channels.values
 			const pointsEventsChannel = interaction.client.channels.cache.get(DB_CHANNELS.ch_points_events)
 			let outputString = `<@${interaction.member.id}> just gave away ${inPoints} ODA points to <@${inUser.id}>!`
-			const claimEmbedPublic = new MessageEmbed()
+			const claimEmbedPublic = new EmbedBuilder()
 				.setColor(roleSettings.color)
 				.setTitle("Points Gifted! 🚀")
 				.setDescription(outputString)

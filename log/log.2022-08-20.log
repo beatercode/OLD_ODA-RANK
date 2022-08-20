@@ -1,0 +1,198 @@
+[2022-08-20T19:51:21.361] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T19:52:02.867] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T19:52:50.839] [INFO] default - [COMMAND] surveys start
+[2022-08-20T19:52:50.901] [ERROR] default - Error in [survey]
+[2022-08-20T19:52:50.901] [ERROR] default - TypeError: EmbedBuilder is not a constructor
+    at Object.sendSurveyList (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/helper/surveyHelper.js:10:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/commands/surveys.js:65:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/events/interactionCreate.js:23:5)
+[2022-08-20T19:53:25.065] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T19:53:29.693] [INFO] default - [COMMAND] surveys start
+[2022-08-20T19:53:29.754] [ERROR] default - Error in [survey]
+[2022-08-20T19:53:29.754] [ERROR] default - TypeError: EmbedBuilder is not a constructor
+    at Object.sendSurveyList (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/helper/surveyHelper.js:11:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/commands/surveys.js:65:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/events/interactionCreate.js:23:5)
+[2022-08-20T19:54:16.486] [INFO] default - [COMMAND] claimdaily start
+[2022-08-20T19:54:16.668] [ERROR] default - Error in [claimdaily]
+[2022-08-20T19:54:16.668] [ERROR] default - TypeError: EmbedBuilder is not a constructor
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/commands/claimdaily.js:57:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/events/interactionCreate.js:23:5)
+[2022-08-20T19:54:43.560] [INFO] default - [COMMAND] claimdaily start
+[2022-08-20T19:54:43.715] [ERROR] default - Error in [claimdaily]
+[2022-08-20T19:54:43.715] [ERROR] default - TypeError: EmbedBuilder is not a constructor
+    at Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/commands/claimdaily.js:57:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.execute (/Users/beater/Documents/dev/dao_alpha/ODA_Bots_2022/ODA_RANK/events/interactionCreate.js:23:5)
+[2022-08-20T19:54:52.753] [INFO] default - int
+[2022-08-20T19:54:52.753] [INFO] default - ButtonInteraction {
+  type: 3,
+  id: '1010607871483977828',
+  applicationId: '984542932436676618',
+  channelId: '992242990405918760',
+  guildId: '961194963549429821',
+  user: User {
+    id: '202500951230119936',
+    bot: false,
+    system: false,
+    flags: UserFlagsBitField { bitfield: 0 },
+    username: 'BeaterFit | ODA Clan',
+    discriminator: '8433',
+    avatar: '31e7d01749d17f94bcf3298d97e44ad4',
+    banner: undefined,
+    accentColor: undefined
+  },
+  member: GuildMember {
+    guild: Guild {
+      id: '961194963549429821',
+      name: 'ODA Clan',
+      icon: 'a99801f43ad73f9ed20205e4cf2aff90',
+      features: [Array],
+      commands: [GuildApplicationCommandManager],
+      members: [GuildMemberManager],
+      channels: [GuildChannelManager],
+      bans: [GuildBanManager],
+      roles: [RoleManager],
+      presences: PresenceManager {},
+      voiceStates: [VoiceStateManager],
+      stageInstances: [StageInstanceManager],
+      invites: [GuildInviteManager],
+      scheduledEvents: [GuildScheduledEventManager],
+      available: true,
+      shardId: 0,
+      splash: 'cf867fff24e641039f6d1bd1243f3ed8',
+      banner: 'e7b0275ea3ebb2b9a610545c29973b29',
+      description: null,
+      verificationLevel: 4,
+      vanityURLCode: 'odaclan',
+      nsfwLevel: 0,
+      premiumSubscriptionCount: 19,
+      discoverySplash: null,
+      memberCount: 649,
+      large: true,
+      premiumProgressBarEnabled: true,
+      applicationId: null,
+      afkTimeout: 300,
+      afkChannelId: null,
+      systemChannelId: '992242985586667551',
+      premiumTier: 3,
+      explicitContentFilter: 2,
+      mfaLevel: 1,
+      joinedTimestamp: 1654805079092,
+      defaultMessageNotifications: 1,
+      systemChannelFlags: [SystemChannelFlagsBitField],
+      maximumMembers: 500000,
+      maximumPresences: null,
+      maxVideoChannelUsers: 25,
+      approximateMemberCount: null,
+      approximatePresenceCount: null,
+      vanityURLUses: null,
+      rulesChannelId: '961195520032919552',
+      publicUpdatesChannelId: '992242985586667551',
+      preferredLocale: 'en-US',
+      ownerId: '978264494474162199',
+      emojis: [GuildEmojiManager],
+      stickers: [GuildStickerManager]
+    },
+    joinedTimestamp: 1651068593030,
+    premiumSinceTimestamp: null,
+    nickname: null,
+    pending: false,
+    communicationDisabledUntilTimestamp: null,
+    _roles: [ '971728564984635442', '973833462891032597' ],
+    user: User {
+      id: '202500951230119936',
+      bot: false,
+      system: false,
+      flags: [UserFlagsBitField],
+      username: 'BeaterFit | ODA Clan',
+      discriminator: '8433',
+      avatar: '31e7d01749d17f94bcf3298d97e44ad4',
+      banner: undefined,
+      accentColor: undefined
+    },
+    avatar: null
+  },
+  version: 1,
+  appPermissions: PermissionsBitField { bitfield: 4398046511103n },
+  memberPermissions: PermissionsBitField { bitfield: 4398046511103n },
+  locale: 'en-US',
+  guildLocale: 'en-US',
+  message: <ref *1> Message {
+    channelId: '992242990405918760',
+    guildId: '961194963549429821',
+    id: '997774430241574952',
+    createdTimestamp: 1657958361922,
+    type: 0,
+    system: false,
+    content: '',
+    author: ClientUser {
+      id: '984542932436676618',
+      bot: true,
+      system: false,
+      flags: [UserFlagsBitField],
+      username: 'ODA Rank',
+      discriminator: '4007',
+      avatar: '2008647c218f1c53f8d79bed4b130a0d',
+      banner: undefined,
+      accentColor: undefined,
+      verified: true,
+      mfaEnabled: true
+    },
+    pinned: false,
+    tts: false,
+    nonce: null,
+    embeds: [ [Embed] ],
+    components: [ [ActionRow], [ActionRow], [ActionRow], [ActionRow], [ActionRow] ],
+    attachments: Collection(0) [Map] {},
+    stickers: Collection(0) [Map] {},
+    editedTimestamp: null,
+    reactions: ReactionManager { message: [Circular *1] },
+    mentions: MessageMentions {
+      everyone: false,
+      users: Collection(0) [Map] {},
+      roles: Collection(0) [Map] {},
+      _members: null,
+      _channels: null,
+      _parsedUsers: null,
+      crosspostedChannels: Collection(0) [Map] {},
+      repliedUser: null
+    },
+    webhookId: null,
+    groupActivityApplication: null,
+    applicationId: null,
+    activity: null,
+    flags: MessageFlagsBitField { bitfield: 0 },
+    reference: null,
+    interaction: null
+  },
+  customId: 'dailyFalse',
+  componentType: 2,
+  deferred: false,
+  ephemeral: null,
+  replied: false,
+  webhook: InteractionWebhook { id: '984542932436676618' }
+}
+[2022-08-20T20:00:47.575] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T20:00:54.978] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-08-20T20:00:55.077] [INFO] default - [COMMAND] account end
+[2022-08-20T20:01:33.163] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T20:01:36.871] [INFO] default - [COMMAND] account start - inpect 202500951230119936
+[2022-08-20T20:01:36.988] [INFO] default - [COMMAND] account end
+[2022-08-20T20:01:47.956] [INFO] default - [COMMAND] surveys start
+[2022-08-20T20:01:47.959] [INFO] default - [COMMAND] surveys end
+[2022-08-20T20:05:04.321] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T20:05:13.238] [INFO] default - [COMMAND] surveys start
+[2022-08-20T20:05:13.516] [INFO] default - [COMMAND] surveys end
+[2022-08-20T20:05:26.860] [INFO] default - [COMMAND] surveys start
+[2022-08-20T20:05:27.963] [INFO] default - [COMMAND] surveys end
+[2022-08-20T20:08:35.894] [INFO] default - ODA Rank is online | ----> RUN
+[2022-08-20T20:08:40.851] [INFO] default - [COMMAND] surveys start
+[2022-08-20T20:08:41.175] [INFO] default - [COMMAND] surveys end
+[2022-08-20T20:10:27.129] [INFO] default - [COMMAND] surveys start
+[2022-08-20T20:10:27.420] [INFO] default - [COMMAND] surveys end
+[2022-08-20T20:11:36.231] [INFO] default - [COMMAND] surveys start
+[2022-08-20T20:11:36.336] [INFO] default - [COMMAND] surveys end

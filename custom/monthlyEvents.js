@@ -1,6 +1,6 @@
 /* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const logger = require("../helper/_logger")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
@@ -33,8 +33,8 @@ module.exports = {
 		const searchLimit = 0
 		const samuraiBoard = await roleHelper.getBoardByRoleName(searchLimit, "samurai")
 		const nokaBoard = await roleHelper.getBoardByRoleName(searchLimit, "noka")
-		const shokuninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shokunin");
-		const shoninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shonin");
+		const shokuninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shokunin")
+		const shoninBoard = await roleHelper.getBoardByRoleName(searchLimit, "shonin")
 
 		const DB_ROLES = await DBROLES()
 		const DB_CHANNELS = await DBCHANNELS()
@@ -142,12 +142,12 @@ module.exports = {
 		
 		// NOKA RECAP
 		let embedStaffNokaTop10 = []
-		embedStaffNokaTop10.push(new MessageEmbed().setTitle("Kiyosu Festival Top 10 NOKA!").setColor("#FFFFFF"))
-		let top10Noka = await roleHelper.getUserUpDownByFixedNumber("noka", 10, 0);
-		let top10NokaRow = "";
+		embedStaffNokaTop10.push(new EmbedBuilder().setTitle("Kiyosu Festival Top 10 NOKA!").setColor("#FFFFFF"))
+		let top10Noka = await roleHelper.getUserUpDownByFixedNumber("noka", 10, 0)
+		let top10NokaRow = ""
 		top10Noka.forEach(async x => {top10NokaRow += `➡️ ${x.username}> - ${x.points} ODA Points\n`})
-		let tempTop10NokaMsg = new MessageEmbed()
-			.addField("\u200B", top10NokaRow)
+		let tempTop10NokaMsg = new EmbedBuilder()
+			.addFields({ name: "\u200B", value: top10NokaRow})
 			.setDescription("<@&" + DB_ROLES.noka.id + ">  TOP 10")
 		embedStaffNokaTop10.push(tempTop10NokaMsg)
 		await channelStaff.send({ embeds: embedStaffNokaTop10 })
@@ -239,7 +239,7 @@ module.exports = {
 		/* ------------------------ [END] DATABASE SECTION ------------------------ */
 
 		let finalEmbedsUp = []
-		let headEmbed = new MessageEmbed().setTitle("Kiyosu Festival Top 10!").setColor("#FFFFFF")
+		let headEmbed = new EmbedBuilder().setTitle("Kiyosu Festival Top 10!").setColor("#FFFFFF")
 		finalEmbedsUp.push(headEmbed)
 		let finalEmbedsDown = []
 
@@ -262,8 +262,8 @@ module.exports = {
 					let member = await mainHelper.getMemberFromId(client, x.user_id)
 					member.roles.remove(nokaObjectRole)
 				})
-				let embed = new MessageEmbed()
-					.addField("\u200B", downgradedNokaField)
+				let embed = new EmbedBuilder()
+					.addFields({ name: "\u200B", value: downgradedNokaField})
 					.setDescription("<@&" + DB_ROLES.noka.id + "> downgraded to <@&" + DB_ROLES.shokunin.id + ">")
 				finalEmbedsDown.push(embed)
 				logger.info("NOKA DOWNGRADE completi")
@@ -281,8 +281,8 @@ module.exports = {
 					let member = await mainHelper.getMemberFromId(client, x.user_id)
 					member.roles.remove(shokuninObjectRole)
 				})
-				let embed = new MessageEmbed()
-					.addField("\u200B", downgradedShokuninField)
+				let embed = new EmbedBuilder()
+					.addFields({ name: "\u200B", value: downgradedShokuninField})
 					.setDescription("<@&" + DB_ROLES.shokunin.id + "> downgraded to <@&" + DB_ROLES.shonin.id + ">")
 				finalEmbedsDown.push(embed)
 				logger.info("SHOKUNIN DOWNGRADE completi")
@@ -300,8 +300,8 @@ module.exports = {
 					let member = await mainHelper.getMemberFromId(client, x.user_id)
 					member.roles.remove(shoninObjectRole)
 				})
-				let embed = new MessageEmbed()
-					.addField("\u200B", downgradedShoninField)
+				let embed = new EmbedBuilder()
+					.addFields({ name: "\u200B", value: downgradedShoninField})
 					.setDescription("<@&" + DB_ROLES.shonin.id + "> downgraded to <@&" + DB_ROLES.hinin.id + ">")
 				finalEmbedsDown.push(embed)
 				logger.info("SHONIN DOWNGRADE completi")
@@ -319,8 +319,8 @@ module.exports = {
 					let member = await mainHelper.getMemberFromId(client, x.user_id)
 					member.roles.add(samuraiObjectRole)
 				})
-				let embed = new MessageEmbed()
-					.addField("\u200B", upgradedNokaField)
+				let embed = new EmbedBuilder()
+					.addFields({ name: "\u200B", value: upgradedNokaField})
 					.setDescription("<@&" + DB_ROLES.noka.id + "> upgraded to <@&" + DB_ROLES.samurai.id + ">")
 					.setColor(DB_ROLES.samurai.color)
 				finalEmbedsUp.push(embed)
@@ -339,8 +339,8 @@ module.exports = {
 					let member = await mainHelper.getMemberFromId(client, x.user_id)
 					member.roles.add(nokaObjectRole)
 				})
-				let embed = new MessageEmbed()
-					.addField("\u200B", upgradedShokuninField)
+				let embed = new EmbedBuilder()
+					.addFields({ name: "\u200B",  value: upgradedShokuninField})
 					.setDescription("<@&" + DB_ROLES.shokunin.id + "> upgraded to <@&" + DB_ROLES.noka.id + ">")
 					.setColor(DB_ROLES.noka.color)
 				finalEmbedsUp.push(embed)
@@ -359,8 +359,8 @@ module.exports = {
 					let member = await mainHelper.getMemberFromId(client, x.user_id)
 					member.roles.add(shokuninObjectRole)
 				})
-				let embed = new MessageEmbed()
-					.addField("\u200B", upgradedShoninField)
+				let embed = new EmbedBuilder()
+					.addFields({ name: "\u200B",  value: upgradedShoninField})
 					.setDescription("<@&" + DB_ROLES.shonin.id + "> upgraded to <@&" + DB_ROLES.shokunin.id + ">")
 					.setColor(DB_ROLES.shokunin.color)
 				finalEmbedsUp.push(embed)
@@ -393,7 +393,7 @@ module.exports = {
 			welcomeMsg += "**New Kyodais** just reached **Lv.3 - Shokunin 職人** 🥋 \n\n"
 			welcomeMsg += "Congratulations on your well-deserved promotion, you have proved your worth by bringing value to the clan."
 			roleEmoji = "<:LV3:987264729967910942>"
-			roleEmbed = new MessageEmbed()
+			roleEmbed = new EmbedBuilder()
 				.setTitle(defTitle)
 				.setDescription(welcomeMsg)
 				.setColor(DB_ROLES.shokunin.color)
@@ -410,7 +410,7 @@ module.exports = {
 			welcomeMsg += "**New Kyodais** just reached **Lv.4 - Nōka 農家** 🥋 \n\n"
 			welcomeMsg += "Congratulations on your well-deserved promotion, **Kyodai**, you are now an essential part of our community, thank you for your dedication."
 			roleEmoji = "<:LV4:987264732744540210>"
-			roleEmbed = new MessageEmbed()
+			roleEmbed = new EmbedBuilder()
 				.setTitle(defTitle)
 				.setDescription(welcomeMsg)
 				.setColor(DB_ROLES.noka.color)
@@ -427,7 +427,7 @@ module.exports = {
 			welcomeMsg += "**New Kyodais** just reached **Lv.5 - Samurai 武士** 🥋 \n\n"
 			welcomeMsg += "Congratulations on becoming the true pillar of our community, **Kyodai**, you now have access to all the benefits and advantages that a true warrior deserves."
 			roleEmoji = "<:LV5:987264734942330911>"
-			roleEmbed = new MessageEmbed()
+			roleEmbed = new EmbedBuilder()
 				.setTitle(defTitle)
 				.setDescription(welcomeMsg)
 				.setColor(DB_ROLES.samurai.color)

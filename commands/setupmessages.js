@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { ActionRowBuilder, ButtonBuilder, MessageEmbed } = require("discord.js")
+const { ActionRowBuilder, ButtonBuilder, EmbedBuilder } = require("discord.js")
 const mainHelper = require("../helper/mainHelper")
 const updateLeaderboard = require("../helper/updateLeaderboard")
 const logger = require("../helper/_logger")
@@ -63,7 +63,7 @@ module.exports = {
 						new ButtonBuilder().setCustomId("account").setLabel("🙋‍♂️ ACCOUNT").setStyle("PRIMARY")
 					)
 
-				const embed = new MessageEmbed()
+				const embed = new EmbedBuilder()
 					.setColor("#ffffff")
 					.setTitle("ODA Clan Points Manager")
 					.setThumbnail("https://i.imgur.com/JW8vPcb.png")
@@ -111,7 +111,7 @@ module.exports = {
 						new ButtonBuilder().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
 					)
 
-				const embed = new MessageEmbed()
+				const embed = new EmbedBuilder()
 					.setColor("#0099ff")
 					.setTitle("ODA Clan Mod Manager")
 					.setDescription("ODA Clan tool moderate the server in several ways")

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const Users = require("../models/Users")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
@@ -21,7 +21,7 @@ module.exports = {
 			let currentUser = await Users.findOne({ user_id: member.id })
 			if (!currentUser) {
 				outputString = "I don't know you Kyodai 😥 Go open a ticket"
-				const accountEmbed = new MessageEmbed()
+				const accountEmbed = new EmbedBuilder()
 					.setTitle("ODA Clan | Claim Info")
 					.setDescription(`${outputString}`)
 				if(interaction)
@@ -54,7 +54,7 @@ module.exports = {
 				? "✅ Congratulations! **" + deservedPoints + "** ODA points claimed succesfully!\n 🚀 You are in a **" + (currentUser.consecutive_daily + 1) + "** days streak!\n ⛳️ Total daily **" + currentUser.total_daily + "**!"
 				: "❌ Already claimed! Come claim tomorrow!"
 			roleSettings = await roleHelper.getHigherRoleByArrayOfRolesID(member._roles)
-			const claimEmbed = new MessageEmbed()
+			const claimEmbed = new EmbedBuilder()
 				.setColor(roleSettings.color)
 				.setTitle("Daily Claim")
 				.setDescription(msgOutput)
@@ -74,7 +74,7 @@ module.exports = {
 				outputString += `Actual days streak **${(currentUser.consecutive_daily + 1)}**!\n `
 				outputString += `⛳️ Total daily **${currentUser.total_daily}**! `
 
-				const claimEmbed = new MessageEmbed()
+				const claimEmbed = new EmbedBuilder()
 					.setColor(roleSettings.color)
 					.setTitle("Daily Claim")
 					.setDescription(outputString)

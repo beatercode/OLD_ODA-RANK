@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const logger = require("../helper/_logger")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
@@ -34,17 +34,16 @@ module.exports = {
 			let finalEmbeds = []
 
 			finalEmbeds.push(
-				new MessageEmbed()
+				new EmbedBuilder()
 					.setTitle("ODA Clan Leaderboards")
-					//.addField("\u200B", "sdfsdf")
 					.setColor("#FFFFFF")
 					.setDescription("Rankings are updated hourly")
 			)
 
 			if (samuraiFinalDescription) {
 				finalEmbeds.push(
-					new MessageEmbed()
-						.addField("\u200B", samuraiFinalDescription)
+					new EmbedBuilder()
+						.addFields({ name: "\u200B", value: samuraiFinalDescription})
 						.setColor(samurai.color)
 						.setDescription("<@&" + samurai.id + ">")
 				)
@@ -52,8 +51,8 @@ module.exports = {
 
 			if (nokaFinalDescription) {
 				finalEmbeds.push(
-					new MessageEmbed()
-						.addField("\u200B", nokaFinalDescription)
+					new EmbedBuilder()
+						.addFields({ name: "\u200B", value: nokaFinalDescription })
 						.setColor(noka.color)
 						.setDescription("<@&" + noka.id + ">")
 				)
@@ -61,8 +60,8 @@ module.exports = {
 
 			if (shokuninFinalDescription) {
 				finalEmbeds.push(
-					new MessageEmbed()
-						.addField("\u200B", shokuninFinalDescription)
+					new EmbedBuilder()
+						.addFields({ name: "\u200B", value: shokuninFinalDescription })
 						.setColor(shokunin.color)
 						.setDescription("<@&" + shokunin.id + ">")
 				)
@@ -70,8 +69,8 @@ module.exports = {
 
 			if (shoninFinalDescription) {
 				finalEmbeds.push(
-					new MessageEmbed()
-						.addField("\u200B", shoninFinalDescription)
+					new EmbedBuilder()
+						.addFields({ name: "\u200B", value: shoninFinalDescription })
 						.setColor(shonin.color)
 						.setDescription("<@&" + shonin.id + ">")
 				)

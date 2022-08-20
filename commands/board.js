@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
 const logger = require("../helper/_logger")
@@ -24,7 +24,7 @@ module.exports = {
 			let author = "ODA Clan Board | " + roleName
 			if (!board) {
 				let finalDescription = "Unfortunately, you cannot access the requested board!"
-				let finalEmbed = new MessageEmbed()
+				let finalEmbed = new EmbedBuilder()
 					.setAuthor({name: author, iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 					.setDescription(finalDescription)
 					.setColor(roleColor)
@@ -106,7 +106,7 @@ module.exports = {
 			}
 
 			finalDescription = finalDescription == "" ? "Hey Kyodai! Can't find any member at this level." : finalDescription
-			let finalEmbed = new MessageEmbed()
+			let finalEmbed = new EmbedBuilder()
 				.setAuthor({name: author, iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 				.setDescription(finalDescription)
 				.setColor(roleColor)

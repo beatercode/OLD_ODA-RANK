@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 const Users = require("../models/Users")
 const logger = require("../helper/_logger")
 const mainHelper = require("../helper/mainHelper")
@@ -33,7 +33,7 @@ module.exports = {
 					const roleColor = roleSettings.color
 					outputString = `He is a **${targetUserDb.role}**!`
 					outputString += "You cannot have information of a clan member higher than the Samurai level "
-					const accountEmbed = new MessageEmbed()
+					const accountEmbed = new EmbedBuilder()
 						.setColor(roleColor)
 						.setTitle("ODA Clan | Account Info")
 						.setDescription(`<@${targetUserId}>\n${outputString}`)
@@ -76,7 +76,7 @@ module.exports = {
 			outputString += `💯 **Total invitation**: ${targetUserDb.total_invitation}\n\n`
 
 			const roleColor = roleSettings.color
-			const accountEmbed = new MessageEmbed()
+			const accountEmbed = new EmbedBuilder()
 				.setColor(roleColor)
 				.setTitle("ODA Clan | Account Info")
 				.setDescription(`${outputString}`)
