@@ -18,9 +18,7 @@ const surveyHelper = require("../helper/surveyHelper")
 module.exports = {
 
 	async handleOdaSystemButton(interaction) {
-		logger.info("int")
-		logger.info(interaction)
-		console.log(interaction)
+		// logger.info(interaction)
 		try {
 			const member = interaction.member
 			const customId = interaction.customId
@@ -133,6 +131,14 @@ module.exports = {
 				break
 			case "listSurveys":
 				await surveyHelper.sendSurveyList(interaction)
+				break
+			case "upgradeMe":
+				let upgradeUser = await Users.find({ user_id: interaction.member.user.id })
+				await upgradeUser.upgrade()
+				break
+			case "downgradeMe":
+				let downgradeUser = await Users.find({ user_id: interaction.member.user.id })
+				await downgradeUser.upgrade()
 				break
 			}
 		} catch (err) {

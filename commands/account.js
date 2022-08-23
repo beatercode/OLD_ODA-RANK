@@ -50,8 +50,12 @@ module.exports = {
 				? `He is a **${targetUserDb.role}** with **${targetUserDb.points}** ODA points! He invited **${targetUserDb.total_invitation} kyodai** in the Clan!`
 				: `You are a **${targetUserDb.role}** with **${targetUserDb.points}** ODA points! You invited **${targetUserDb.total_invitation} kyodai** in the Clan!`
 				
+			let haveOneInvThisMonth = targetUserDb.monthly_invitation > 0
+
 			let emojiDailyClaim = targetUserDb.daily ? "✅" : "❌"
 			let textDailyClaim = targetUserDb.daily ? "Done" : "To do"
+			let emojiMonthInvCheck = haveOneInvThisMonth ? "✅" : "❌"
+			let textMonthInvCheck = haveOneInvThisMonth ? "Done" : "To do"
 			let textRole = targetUserDb.role
 			let level = textRole.substring(textRole.indexOf("Lvl.") + 4, textRole.length)
 			try {
@@ -70,6 +74,7 @@ module.exports = {
 			outputString += `${lvlEmoji} **Level**: <@&${targetUserDb.role_id}>\n\n`
 			outputString += `📈 **Points**: ${targetUserDb.points}\n\n`
 			outputString += `${emojiDailyClaim} **Today claim**: ${textDailyClaim}\n\n`
+			outputString += `${emojiMonthInvCheck} **Monthly Invitation**: ${textMonthInvCheck}\n\n`
 			outputString += `🚀 **Daily streak**: ${targetUserDb.consecutive_daily}\n\n`
 			outputString += `⛳️ **Total Daily**: ${targetUserDb.total_daily}\n\n`
 			outputString += `🎯 **Monthly invitation**: ${targetUserDb.monthly_invitation}\n\n`

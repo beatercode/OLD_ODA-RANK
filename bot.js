@@ -6,7 +6,7 @@ const Database = require("./config/Database")
 const db = new Database()
 db.connect()
 
-const { Client, Collection, GatewayIntentBits, Partials } = require("discord.js");
+const { Client, Collection, GatewayIntentBits, Partials } = require("discord.js")
 const client = new Client({
 	intents: [
 		GatewayIntentBits.Guilds,
@@ -14,7 +14,8 @@ const client = new Client({
 		GatewayIntentBits.GuildPresences,
 		GatewayIntentBits.GuildMembers,
 		GatewayIntentBits.GuildMessageReactions,
-		GatewayIntentBits.GuildInvites
+		GatewayIntentBits.GuildInvites,
+		GatewayIntentBits.MessageContent
 	],
 	partials: [Partials.Message, Partials.Channel, Partials.Reaction]
 })

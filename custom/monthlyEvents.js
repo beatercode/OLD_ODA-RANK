@@ -132,11 +132,13 @@ module.exports = {
 		const isShoninToUpgrade = shoninToUpgrade != null && shoninToUpgrade.length != 0
 		const isShoninToDowngrade = shoninToDowngrade != null && shoninToDowngrade.length != 0
 		
+		// TO CHECK & ENABLE/DISABLE BEFORE EVENT
 		const isNokaUpToTextChat = false
 		const isShokuninUpToTextChat = false
 		const isShoninUpToTextChat = false		
 		
 		const isTodoDB = false
+		const isTodoMonthinv = false
 		const isTodoDiscord = false
 		const isTodoRecapmessage = false
 		
@@ -182,6 +184,32 @@ module.exports = {
 		/* ------------------------ [END] BOARDS SECTION ------------------------ */
 		/* ------------------------ [START] DATABASE SECTION ------------------------ */
 		if (isTodoDB) {
+
+			if (isTodoMonthinv) {
+
+				// START | SEZIONE CHECK MONTHLY INVITATION
+
+				let monthCheck_nokaToDowngrade = await roleHelper.getUserWithoutMonthInvitation("noka")
+				let monthCheck_shokuninToDowngrade = await roleHelper.getUserWithoutMonthInvitation("shokunin")
+
+				monthCheck_nokaToDowngrade = monthCheck_nokaToDowngrade
+					.filter(ar => !nokaToDowngrade.find(rm => (rm.user_id === ar.user_id) ))
+				monthCheck_shokuninToDowngrade = monthCheck_shokuninToDowngrade
+					.filter(ar => !shokuninToDowngrade.find(rm => (rm.user_id === ar.user_id) ))
+		
+				for(let user of monthCheck_nokaToDowngrade) {
+					await user.downgrade()
+				}
+
+				for(let user of monthCheck_shokuninToDowngrade) {
+					await user.downgrade()
+				}
+
+				// END | SEZIONE CHECK MONTHLY INVITATION
+
+			}
+
+
 			logger.info("INIZIO - Aggiornamento DATABASE UP/DOWN")
 
 			// ⬇️ NOKA to SHOKUNIN

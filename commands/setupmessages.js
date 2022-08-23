@@ -80,7 +80,9 @@ module.exports = {
 					.addComponents(
 						new ButtonBuilder().setCustomId("backupUsers").setLabel("🔴 USER DB TO LOCAL").setStyle(ButtonStyle.Primary),
 						new ButtonBuilder().setCustomId("backupSettings").setLabel("🔴 SETT. DB TO LOCAL").setStyle(ButtonStyle.Primary),
-						new ButtonBuilder().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("upgradeMe").setLabel("⬆️ UPGRADE ME").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("downgradeMe").setLabel("⬇️ DOWNGRADE ME").setStyle(ButtonStyle.Primary),
+						//new ButtonBuilder().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle(ButtonStyle.Primary),
 					)
 				const row2 = new ActionRowBuilder()
 					.addComponents(

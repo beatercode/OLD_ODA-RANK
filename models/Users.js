@@ -26,4 +26,14 @@ const UserSchema = new mongoose.Schema({
 	total_daily: { type: Number, default: 0 },
 })
 
+/*
+module.exports = UserSchema.methods.downgrade = async function() {
+	await roleHelper.downgrade(this)
+}
+
+module.exports = UserSchema.methods.upgrade = async function() {
+	await roleHelper.upgrade(this)
+}
+*/
+
 module.exports = mongoose.model("Users", UserSchema)

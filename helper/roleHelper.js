@@ -179,10 +179,24 @@ module.exports = {
 		}
 	},
 
+	async downgrade(user) {
+
+	},
+
+	async upgrade(user) {
+		
+	},
+
 	async getBoardByRoleName(searchLimit, roleName) {
 		const roleSettings = await this.getRoleSettingsByValue("command", roleName)
 		let board = await this.generateBoardInternal(null, false, roleSettings, searchLimit)
 		return board
+	},
+
+	async getUserWithoutMonthInvitation(roleName) {
+		let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
+		let returnable = await Users.find({ role_id: roleId, monthly_invitation: 0 })
+		return returnable
 	},
 
 	async getUserUpDownByRolePercentage(roleName, percentage, mode) {
