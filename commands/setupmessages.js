@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
-const { ActionRowBuilder, ButtonBuilder, EmbedBuilder } = require("discord.js")
+const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, ButtonStyle } = require("discord.js")
 const mainHelper = require("../helper/mainHelper")
 const updateLeaderboard = require("../helper/updateLeaderboard")
 const logger = require("../helper/_logger")
@@ -28,7 +28,6 @@ module.exports = {
 			const channelRankID = DB_CHANNELS.ch_rank
 			const channelDebugID = DB_CHANNELS.ch_moderazione
 			const channelRank = client.channels.cache.get(channelRankID)
-			console.log(channelRankID)
 			const channelDebug = client.channels.cache.get(channelDebugID)
 
 			let isRankPresent = false
@@ -58,9 +57,9 @@ module.exports = {
 			if (!isRankPresent) {
 				const row = new ActionRowBuilder()
 					.addComponents(
-						new ButtonBuilder().setCustomId("leaderboard").setLabel("📈 LEADERBOARD").setStyle("DANGER"),
-						new ButtonBuilder().setCustomId("claimDaily").setLabel("✅ CLAIM DAILY").setStyle("SUCCESS"),
-						new ButtonBuilder().setCustomId("account").setLabel("🙋‍♂️ ACCOUNT").setStyle("PRIMARY")
+						new ButtonBuilder().setCustomId("leaderboard").setLabel("📈 LEADERBOARD").setStyle(ButtonStyle.Danger),
+						new ButtonBuilder().setCustomId("claimDaily").setLabel("✅ CLAIM DAILY").setStyle(ButtonStyle.Success),
+						new ButtonBuilder().setCustomId("account").setLabel("🙋‍♂️ ACCOUNT").setStyle(ButtonStyle.Primary)
 					)
 
 				const embed = new EmbedBuilder()
@@ -79,36 +78,36 @@ module.exports = {
 			if (!isModPresent) {
 				const row1 = new ActionRowBuilder()
 					.addComponents(
-						new ButtonBuilder().setCustomId("backupUsers").setLabel("🔴 USER DB TO LOCAL").setStyle("PRIMARY"),
-						new ButtonBuilder().setCustomId("backupSettings").setLabel("🔴 SETT. DB TO LOCAL").setStyle("PRIMARY"),
-						new ButtonBuilder().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("backupUsers").setLabel("🔴 USER DB TO LOCAL").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("backupSettings").setLabel("🔴 SETT. DB TO LOCAL").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("shokuninZeroDowngrade").setLabel("🔴 SHOK. 0PT DOWNG.").setStyle(ButtonStyle.Primary),
 					)
 				const row2 = new ActionRowBuilder()
 					.addComponents(
-						new ButtonBuilder().setCustomId("updateLeaderboard").setLabel("🟢 UPDATE LEADERBOARD").setStyle("SECONDARY"),
-						new ButtonBuilder().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle("SECONDARY"),
-						new ButtonBuilder().setCustomId("odaNameDiffChekc").setLabel("🟢 ODA NAME CHECK").setStyle("SECONDARY"),
-						//new ButtonBuilder().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("updateLeaderboard").setLabel("🟢 UPDATE LEADERBOARD").setStyle(ButtonStyle.Secondary),
+						new ButtonBuilder().setCustomId("clearNicknames").setLabel("🟢 CLEAR NICKNAME").setStyle(ButtonStyle.Secondary),
+						new ButtonBuilder().setCustomId("odaNameDiffChekc").setLabel("🟢 ODA NAME CHECK").setStyle(ButtonStyle.Secondary),
+						//new ButtonBuilder().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle(ButtonStyle.Primary),
 					)
 				const row3 = new ActionRowBuilder()
 					.addComponents(
-						new ButtonBuilder().setCustomId("dailyCheck").setLabel("⏰ DAILY CHECK").setStyle("PRIMARY"),
-						new ButtonBuilder().setCustomId("hourlyCheck").setLabel("⏰ HOURLY CHECK").setStyle("PRIMARY"),
-						new ButtonBuilder().setCustomId("monthUpgradeDowngrade").setLabel("⏰ MONTH ADJUST ROLES").setStyle("PRIMARY"),
-						new ButtonBuilder().setCustomId("monthReset").setLabel("⏰ MONTH RESET").setStyle("PRIMARY"),
-						//new ButtonBuilder().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle("PRIMARY"),
+						new ButtonBuilder().setCustomId("dailyCheck").setLabel("⏰ DAILY CHECK").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("hourlyCheck").setLabel("⏰ HOURLY CHECK").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("monthUpgradeDowngrade").setLabel("⏰ MONTH ADJUST ROLES").setStyle(ButtonStyle.Primary),
+						new ButtonBuilder().setCustomId("monthReset").setLabel("⏰ MONTH RESET").setStyle(ButtonStyle.Primary),
+						//new ButtonBuilder().setCustomId("adjustStarred").setLabel("ADJS. STARRED").setStyle(ButtonStyle.Primary),
 					)
 				const row4 = new ActionRowBuilder()
 					.addComponents(
-						new ButtonBuilder().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle("DANGER"),
-						new ButtonBuilder().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle("DANGER"),
-						new ButtonBuilder().setCustomId("dailyFalseAll").setLabel("📍 D. FALSE ALL").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle(ButtonStyle.Danger),
+						new ButtonBuilder().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle(ButtonStyle.Danger),
+						new ButtonBuilder().setCustomId("dailyFalseAll").setLabel("📍 D. FALSE ALL").setStyle(ButtonStyle.Danger),
 					)
 				const row5 = new ActionRowBuilder()
 					.addComponents(
-						new ButtonBuilder().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle("DANGER"),
-						new ButtonBuilder().setCustomId("setupdbMissingUser").setLabel("🔵 USR DISCORD MISS. TO DB").setStyle("DANGER"),
-						new ButtonBuilder().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle("DANGER"),
+						new ButtonBuilder().setCustomId("setupdb").setLabel("🔵 SETT. USR LOCAL TO DB").setStyle(ButtonStyle.Danger),
+						new ButtonBuilder().setCustomId("setupdbMissingUser").setLabel("🔵 USR DISCORD MISS. TO DB").setStyle(ButtonStyle.Danger),
+						new ButtonBuilder().setCustomId("setupmessages").setLabel("🔵 MSG LOCAL TO DS").setStyle(ButtonStyle.Danger),
 					)
 
 				const embed = new EmbedBuilder()

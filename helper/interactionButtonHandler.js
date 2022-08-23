@@ -17,9 +17,10 @@ const surveyHelper = require("../helper/surveyHelper")
 
 module.exports = {
 
-	async handlePointSystemButton(interaction) {
-		logger.info("int");
-		logger.info(interaction);
+	async handleOdaSystemButton(interaction) {
+		logger.info("int")
+		logger.info(interaction)
+		console.log(interaction)
 		try {
 			const member = interaction.member
 			const customId = interaction.customId
@@ -131,13 +132,13 @@ module.exports = {
 				interaction.reply({ content: "Daily check done", ephemeral: true })
 				break
 			case "listSurveys":
-				await surveyHelper.sendSurveyList(interaction);
+				await surveyHelper.sendSurveyList(interaction)
 				break
 			}
 		} catch (err) {
 			if (err) {
 				console.log("Error occured" + err)
-				logger.error("[handlePointSystemButton] ---->")
+				logger.error("[handleOdaSystemButton] ---->")
 				logger.error(err)
 				interaction.reply({ content: "An error occurred during the execution of the command. Open a ticket if the problem persist", ephemeral: true })
 			}

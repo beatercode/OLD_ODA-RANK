@@ -279,7 +279,6 @@ module.exports = {
 		const board = await this.getBoardByRoleName(0, roleName)
 		if (board.board.length > 0) {
 			let toDowngrade = Math.floor(board.board.length / 100 * percentageDown)
-			console.log("BOARD [" + roleName + "] LEN [" + board.board.length + "] - PERC. [" + percentageUp + "]")
 			let fixer = toDowngrade > 0 ? 0 : 1
 			let position = board.board.length - toDowngrade - fixer
 			let fromToDeletePoints = board.board[position].points

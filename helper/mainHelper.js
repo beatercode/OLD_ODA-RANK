@@ -72,6 +72,12 @@ module.exports = {
 		return userListString
 	},
 
+	async todayInDDMMYYY() {
+		var d = new Date()
+		let adjMonth = (d.getMonth() + 1) < 10 ? "0".concat(d.getMonth() + 1) : d.getMonth() + 1
+		return d.getDate()  + "" + adjMonth + "" + d.getFullYear()
+	},
+
 	async commonCatch(err, from, logger) {
 		if (err) {
 			logger.error(`Error in [${from}]`)

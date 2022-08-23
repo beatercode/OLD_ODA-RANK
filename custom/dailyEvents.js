@@ -23,7 +23,6 @@ module.exports = {
 			members.forEach(member => {
 				let currNick = member.nickname
 				if(member.nickname != null && !["Invite", "Ticket"].some(r => currNick.includes(r))) {
-					console.log(currNick)
 					member.setNickname(member.user.username)
 				}
 			})

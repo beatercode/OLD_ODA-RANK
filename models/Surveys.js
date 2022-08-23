@@ -6,15 +6,9 @@ const SurveySchema = new mongoose.Schema({
 	question: { type: String, default: "" },
 	republishable: { type: Boolean, default: false },
 	wasPublished: { type: Boolean, default: false },
-	validFrom: { type: Date, default: new Date()},
-	options: {
-		value: { type: String, default: "" },
-		points: { type: Number, default: 200 },
-	},
-	voters: {
-		user: { type: String, default: ""},
-		vote: { type: String, default: ""}
-	}
+	validFrom: { type: String, default: ""},
+	options: { type: Array, default: [] },
+	voters: { type: Array, default: [] }
 
 
 })

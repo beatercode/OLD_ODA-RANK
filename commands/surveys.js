@@ -3,53 +3,41 @@ const { SlashCommandBuilder } = require("@discordjs/builders")
 //const Survey = require("../models/Surveys")
 const surveyHelper = require("../helper/surveyHelper")
 const logger = require("../helper/_logger")
-const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } = require("discord.js")
+const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, ButtonStyle} = require("discord.js")
 const mainHelper = require("../helper/mainHelper")
 //const { getRoleSettingsByValue } = require("../helper/roleHelper")
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		/*
 		.setName("survey")
 		.setDescription("Survey commands")
-		.addStringOption((option) =>
-			option
-				.setName("command")
-				.setDescription("Specify command to execute")
-				.setRequired(false)
-		),
-		*/
-		.setName("survey")
-		.setDescription("Survey commands")
-		.addSubcommandGroup((group) =>
-			group
-				.setName("manage")
-				.setDescription("Shows information about points in the guild")
-				.addSubcommand((subcommand) =>
-					subcommand
-						.setName("add")
-						.setDescription("To add a new Survey")
-						.addStringOption((option) =>
-							option.setName("id").setDescription("The NEW Survey ID").setRequired(true),
-						)
-						.addStringOption((option) =>
-							option.setName("title").setDescription("The NEW Survey Title").setRequired(true),
-						)
-						.addStringOption((option) =>
-							option.setName("question").setDescription("The NEW Survey Question").setRequired(true),
-						)
+		.addSubcommand(subcommand => subcommand.setName("help").setDescription("Survey Help"))
+		.addSubcommand(subcommand => subcommand.setName("list").setDescription("List the Survey in database"))
+		.addSubcommand(subcommand => subcommand.setName("add").setDescription("Add a survey"))
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName("edit")
+				.setDescription("Lists a users points")
+				.addStringOption((option) =>
+					option.setName("id").setDescription("The Survey\"s ID to edit").setRequired(true),
 				)
 		)
 		.addSubcommand((subcommand) =>
 			subcommand
-				.setName("rem")
+				.setName("send")
+				.setDescription("Send a survey")
+				.addStringOption((option) =>
+					option.setName("id").setDescription("The Survey\"s ID to edit").setRequired(true),
+				)
+		)
+		.addSubcommand((subcommand) =>
+			subcommand
+				.setName("remove")
 				.setDescription("Lists a users points")
 				.addStringOption((option) =>
 					option.setName("id").setDescription("The Survey\"s ID to purge").setRequired(true),
 				)
 		)
-		.addSubcommand(subcommand => subcommand.setName("list").setDescription("List the Survey in database"))
-		//.addSubcommand(subcommand => subcommand.setName("testinput").setDescription("Text modal submitting"))
 	,
 	async execute(interaction) {
 
@@ -66,35 +54,17 @@ module.exports = {
 			case "list":
 				await surveyHelper.sendSurveyList(interaction)
 				break
+			case "send":
+				await surveyHelper.sendSurvey(interaction)
+				break
 			case "add":
-				interaction.reply({ content: "[ADMIN] - Check the logs [2]", ephemeral: true })
+				await surveyHelper.addSurveyInitialize(interaction)
 				break
 			case "remove":
-				interaction.reply({ content: "[ADMIN] - Check the logs [3]", ephemeral: true })
+				await surveyHelper.deleteSurvey(interaction)
 				break
-			case "send":
+			case "edit":
 				interaction.reply({ content: "[ADMIN] - Check the logs [4]", ephemeral: true })
-				break
-			case "testinput":
-
-				// TEST STUFF
-				const modal = new ModalBuilder().setCustomId("odaTestModal").setTitle("ODA Survey")
-				const nftInput = new TextInputBuilder()
-					.setCustomId("nftInput")
-					.setLabel("What's your favorite NFT Project?")
-					.setStyle(TextInputStyle.Short)
-
-				const cryptoInput = new TextInputBuilder()
-					.setCustomId("cryptoInput")
-					.setLabel("What's some of your favorite crypto/token?")
-					.setStyle(TextInputStyle.Paragraph)
-
-				const firstActionRow = new ActionRowBuilder().addComponents(nftInput)
-				const secondActionRow = new ActionRowBuilder().addComponents(cryptoInput)
-
-				modal.addComponents(firstActionRow, secondActionRow)
-				await interaction.showModal(modal)
-				// interaction.reply({ content: "[ADMIN] - Check the logs [5]", ephemeral: true })
 				break
 			default:
 				buildHelpMessage(interaction)
@@ -114,7 +84,7 @@ module.exports = {
 function buildHelpMessage(interaction) {
 	const row = new ActionRowBuilder()
 		.addComponents(
-			new ButtonBuilder().setCustomId("listSurveys").setLabel("LIST").setStyle("SUCCESS")
+			new ButtonBuilder().setCustomId("listSurveys").setLabel("LIST").setStyle(ButtonStyle.Primary)
 		)
 	const embed = new EmbedBuilder()
 		.setColor("#ffffff")
