@@ -22,6 +22,7 @@ module.exports = {
 		try {
 			const member = interaction.member
 			const customId = interaction.customId
+			let res = null
 
 			switch (customId) {
 			case "leaderboard": {
@@ -78,8 +79,8 @@ module.exports = {
 				await setupdb.execute(interaction)
 				break
 			case "setupdbMissingUser":
-				let missingList = await mainHelper.setupdbMissingUser(interaction.client)
-				let retString = `${missingList}\nMissing DB User from Discord completed`
+				let missingListCount = await mainHelper.setupdbMissingUser(interaction.client)
+				let retString = `Missing DB User [${missingListCount}] from Discord completed`
 				interaction.reply({ content: retString, ephemeral: true })
 				break
 			case "setupmessages":
@@ -133,12 +134,14 @@ module.exports = {
 				await surveyHelper.sendSurveyList(interaction)
 				break
 			case "upgradeMe":
-				let upgradeUser = await Users.find({ user_id: interaction.member.user.id })
-				await upgradeUser.upgrade()
+				let upgradeUser = await Users.findOne({ user_id: interaction.member.user.id })
+				res = await roleHelper.upgrade(interaction.client, upgradeUser)
+				interaction.reply({ content: res == 0 ? "Done!" : "Something wrong, check logs", ephemeral: true })
 				break
 			case "downgradeMe":
-				let downgradeUser = await Users.find({ user_id: interaction.member.user.id })
-				await downgradeUser.upgrade()
+				let downgradeUser = await Users.findOne({ user_id: interaction.member.user.id })
+				res = await roleHelper.downgrade(interaction.client, downgradeUser)
+				interaction.reply({ content: res == 0 ? "Done!" : "Something wrong, check logs", ephemeral: true })
 				break
 			}
 		} catch (err) {

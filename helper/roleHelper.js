@@ -179,12 +179,39 @@ module.exports = {
 		}
 	},
 
-	async downgrade(user) {
+	async downgrade(client, user) {
+		console.log("Im gonna downgrade the user: " + user.username)
+		let currentRole = await this.getRoleSettingsByValue("id", user.role_id)
 
+		let prevRole = await this.getRoleSettingsByValue("lvl", (+currentRole.lvl - 1))
+		let updateEvent = await Users.updateOne({ user_id: user.user_id }, { $set: { role_id: prevRole.id, role: prevRole.name } })
+
+		// check db is done
+		if (updateEvent.modifiedCount != 1) return 1
+
+		let member = await this.getMemberFromId(client, user.user_id)
+		let currentRoleObject = await this.getRoleDiscordObjectById(client, currentRole.id)
+		member.roles.remove(currentRoleObject)
+		return 0
 	},
 
-	async upgrade(user) {
-		
+	async upgrade(client, user) {
+		console.log("Im gonna upgrade the user: " + user.username)
+		let currentRole = await this.getRoleSettingsByValue("id", user.role_id)
+
+		// check upgradable user
+		if (currentRole.lvl >= 6) return 1
+
+		let nextRole = await this.getRoleSettingsByValue("lvl", (+currentRole.lvl + 1))
+		let updateEvent = await Users.updateOne({ user_id: user.user_id }, { $set: { role_id: nextRole.id, role: nextRole.name } })
+
+		// check db is done
+		if (updateEvent.modifiedCount != 1) return 1
+
+		let member = await this.getMemberFromId(client, user.user_id)
+		let nextRoleObject = await this.getRoleDiscordObjectById(client, nextRole.id)
+		member.roles.add(nextRoleObject)
+		return 0
 	},
 
 	async getBoardByRoleName(searchLimit, roleName) {

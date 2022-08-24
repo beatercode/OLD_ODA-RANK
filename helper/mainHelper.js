@@ -46,6 +46,7 @@ module.exports = {
 		let memberNotInDB = members.filter(x => !x.user.bot && !allDocsID.includes(x.user.id))
 
 		let userListString = ""
+		let userListCounter = 0
 		memberNotInDB.forEach(async member => {
 			if (!member) return
 
@@ -60,6 +61,7 @@ module.exports = {
 			newUser.role = userRole.name
 
 			userListString += `${member.user.username} added to DB with role ${userRole.name}\n`
+			userListCounter++
 
 			await newUser.save(err => {
 				if (err) {
@@ -69,7 +71,8 @@ module.exports = {
 				}
 			})
 		})
-		return userListString
+		logger.info(userListString)
+		return userListCounter
 	},
 
 	async todayInDDMMYYY() {
