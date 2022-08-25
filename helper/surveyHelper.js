@@ -1,13 +1,13 @@
 /* eslint-disable no-unreachable */
-const Survey = require("../models/Surveys")
 // const logger = require("../helper/_logger")
 const { EmbedBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js")
 const mainHelper = require("./mainHelper")
 const Surveys = require("../models/Surveys")
+const logger = require("./_logger")
 
 module.exports = {
 	async sendSurveyList(interaction) {
-		let surveys = await Survey.find({})
+		let surveys = await Surveys.find({})
 		let fields = generateFields(surveys)
 		const embed = new EmbedBuilder()
 			.setColor("#ffffff")
@@ -26,10 +26,10 @@ module.exports = {
 		switch (subcommand) {
 		case "delete": {
 			if (value == "yes") {
-				await Survey.deleteOne({ customId: id })
+				await Surveys.deleteOne({ customId: id })
 				interaction.reply({ content: "Done", ephemeral: true })
 			} else {
-				interaction.reply({ content: "Idiot", ephemeral: true })
+				interaction.reply({ content: "Alright, dismiss those messages then...", ephemeral: true })
 			}
 			break
 		}
@@ -41,12 +41,15 @@ module.exports = {
 
 	async deleteSurvey(interaction) {
 		let targetId = "Q" + interaction.options._hoistedOptions[0].value
-		let surveyToDelete = await Survey.findOne({ customId: targetId })
+		let surveyToDelete = await Surveys.findOne({ customId: targetId })
+
+		let cDesc = `You are going to delete the Survey: **${surveyToDelete.name}**`
+		cDesc += "\nYou allowed to do that and You sure?"
 
 		const embed = new EmbedBuilder()
 			.setColor("#ffffff")
 			.setTitle("ODA Clan | Removing Survey " + targetId)
-			.setDescription("You allowed to do that and You sure?")
+			.setDescription(cDesc)
 		
 		const row = new ActionRowBuilder()
 			.addComponents(
@@ -59,7 +62,7 @@ module.exports = {
 
 	async sendSurvey(interaction) {
 		let targetId = "Q" + interaction.options._hoistedOptions[0].value
-		let surveyToSend = await Survey.findOne({ customId: targetId })
+		let surveyToSend = await Surveys.findOne({ customId: targetId })
 
 		const embed = new EmbedBuilder()
 			.setColor("#ffffff")
@@ -122,13 +125,36 @@ module.exports = {
 		let voterUserId = interaction.member.user.id
 		let voter = { id: voterUserId, choose: choose }
 
-		let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
-		
-		if (votersUpdate.modifiedCount == 0) {
-			interaction.reply({ content: "You already voted for this survey", ephemeral: true })
-			return
-		} else {
-			interaction.reply({ content: "Your vote has been inserted", ephemeral: true })
+		let targetSurvey = await Surveys.findOne({ customId: qId })
+		let deservedPoints = (targetSurvey.options.find(x => x.value == choose)).points
+
+		if (targetSurvey.mode == "survey") {
+
+			let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
+			if (votersUpdate.modifiedCount == 0) {
+				await Surveys.updateOne({ customId: qId, "voters.id": voterUserId }, { $set: { "voters.$.choose": choose } })
+			} else {
+				await mainHelper.addPoints(voterUserId, deservedPoints)
+			}
+			
+			interaction.reply({ content: "Thanks! Your preference has been updated", ephemeral: true })
+
+		} else if (targetSurvey.mode == "quiz") {
+
+			let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
+			
+			if (votersUpdate.modifiedCount == 0) {
+				interaction.reply({ content: "You already voted for this survey", ephemeral: true })
+				return
+			} else {
+				if (deservedPoints > 0) {
+					await mainHelper.addPoints(voterUserId, deservedPoints)
+					interaction.reply({ content: `Correct! You got ${deservedPoints}`, ephemeral: true })
+				} else {
+					interaction.reply({ content: "Ouchh! Risposta errata", ephemeral: true })
+				}
+			}
+
 		}
 	},
 
@@ -151,9 +177,9 @@ module.exports = {
 			.setLabel("Republishable? (true/false)")
 			.setStyle(TextInputStyle.Short)
 
-		const wasPublishedInput = new TextInputBuilder()
-			.setCustomId("wasPublished")
-			.setLabel("Was Published? (true/false)")
+		const modeInput = new TextInputBuilder()
+			.setCustomId("mode")
+			.setLabel("Mode? ('survey'/'quiz')")
 			.setStyle(TextInputStyle.Short)
 
 		const optionsInput = new TextInputBuilder()
@@ -164,7 +190,7 @@ module.exports = {
 		const row1 = new ActionRowBuilder().addComponents(nameInput)
 		const row2 = new ActionRowBuilder().addComponents(questionInput)
 		const row3 = new ActionRowBuilder().addComponents(republishableInput)
-		const row4 = new ActionRowBuilder().addComponents(wasPublishedInput)
+		const row4 = new ActionRowBuilder().addComponents(modeInput)
 		const row5 = new ActionRowBuilder().addComponents(optionsInput)
 
 		modal.addComponents(row1, row2, row3, row4, row5)
@@ -176,12 +202,12 @@ module.exports = {
 	},
 
 	async addSurvey_firstCommit(fields, interaction) {
-		let { qName, qQuestion, qRepublishable, qWasPublished, qOptions } = "" 
+		let { qName, qQuestion, qRepublishable, qMode, qOptions } = "" 
 		for (let field of fields) {
 			qName = field[0] == "name" ? field[1].value : qName
 			qQuestion = field[0] == "question" ? field[1].value : qQuestion
 			qRepublishable = field[0] == "republishable" ? field[1].value : qRepublishable
-			qWasPublished = field[0] == "wasPublished" ? field[1].value : qWasPublished
+			qMode = field[0] == "mode" ? field[1].value : qMode
 			qOptions = field[0] == "options" ? field[1].value : qOptions
 		}
 
@@ -194,24 +220,25 @@ module.exports = {
 			})	
 		})
 
-		let surveysList = await Survey.find({})
+		let surveysList = await Surveys.find({})
 		let arrayIds = surveysList.map(x => Number(x.customId.substring(1, 2)))
 		const nextId = "Q".concat(Math.max(...arrayIds) + 1)
 
 		let currectValidFrom = await mainHelper.todayInDDMMYYY()
 
-		await Survey.insertMany([{
+		await Surveys.insertMany([{
 			customId: nextId, 
 			name: qName, 
 			question: qQuestion, 
 			republishable: qRepublishable == "true",
-			wasPublished: qWasPublished == "true",
+			wasPublished: false,
+			mode: qMode,
 			validFrom: currectValidFrom,
 			options: objOptions,
 			voters: [{}]
 		}])
 
-		await interaction.reply({ content: "check bro", ephemeral: true })
+		await interaction.reply({ content: "Survey insterted!", ephemeral: true })
 	}
 }
 

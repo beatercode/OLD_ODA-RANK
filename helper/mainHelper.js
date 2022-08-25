@@ -6,6 +6,10 @@ const logger = require("./_logger")
 
 module.exports = {
 
+	async addPoints(userId, points) {
+		await Users.updateMany({ user_id: userId }, { $inc: { points: points } })
+	},
+
 	async isAdminAccount(inMember) {
 		const DB_SETTINGS = config.Settings.values
 		let memberRolesID = inMember._roles
