@@ -180,14 +180,22 @@ module.exports = {
 	},
 
 	async downgrade(client, user) {
-		console.log("Im gonna downgrade the user: " + user.username)
+		let res = 0
+		res = this.downgrade_db(user)
+		res = this.downgrade_discord(client, user)
+		return res
+	},
+
+	async upgrade(client, user) {
+		let res = 0
+		res = this.upgrade_db(user)
+		res = this.upgrade_discord(client, user)
+		return res
+	},
+
+	async downgrade_discord(client, user) {
+		console.log("Im gonna downgrade DISC the user: " + user.username)
 		let currentRole = await this.getRoleSettingsByValue("id", user.role_id)
-
-		let prevRole = await this.getRoleSettingsByValue("lvl", (+currentRole.lvl - 1))
-		let updateEvent = await Users.updateOne({ user_id: user.user_id }, { $set: { role_id: prevRole.id, role: prevRole.name } })
-
-		// check db is done
-		if (updateEvent.modifiedCount != 1) return 1
 
 		let member = await this.getMemberFromId(client, user.user_id)
 		let currentRoleObject = await this.getRoleDiscordObjectById(client, currentRole.id)
@@ -195,22 +203,51 @@ module.exports = {
 		return 0
 	},
 
-	async upgrade(client, user) {
-		console.log("Im gonna upgrade the user: " + user.username)
+	async upgrade_discord(client, user) {
+		console.log("Im gonna upgrade DISC the user: " + user.username)
 		let currentRole = await this.getRoleSettingsByValue("id", user.role_id)
 
 		// check upgradable user
 		if (currentRole.lvl >= 6) return 1
 
 		let nextRole = await this.getRoleSettingsByValue("lvl", (+currentRole.lvl + 1))
-		let updateEvent = await Users.updateOne({ user_id: user.user_id }, { $set: { role_id: nextRole.id, role: nextRole.name } })
-
-		// check db is done
-		if (updateEvent.modifiedCount != 1) return 1
 
 		let member = await this.getMemberFromId(client, user.user_id)
 		let nextRoleObject = await this.getRoleDiscordObjectById(client, nextRole.id)
 		member.roles.add(nextRoleObject)
+		return 0
+	},
+
+	async downgrade_db(user) {
+		console.log("Im gonna downgrade DB the user: " + user.username)
+		let currentRole = await this.getRoleSettingsByValue("id", user.role_id)
+
+		let prevRole = await this.getRoleSettingsByValue("lvl", (+currentRole.lvl - 1))
+		let updateEvent = await Users.updateOne({ user_id: user.user_id }, { $set: { role_id: prevRole.id, role: prevRole.name } })
+
+		// check db is done
+		if (updateEvent.modifiedCount != 1) return 1
+		return 0
+	},
+
+	async upgrade_db(user) {
+		console.log("Im gonna upgrade DB the user: " + user.username)
+
+		try {
+			let currentRole = await this.getRoleSettingsByValue("id", user.role_id)
+
+			// check upgradable user
+			if (currentRole.lvl >= 6) return 1
+
+			let nextRole = await this.getRoleSettingsByValue("lvl", (+currentRole.lvl + 1))
+			let updateEvent = await Users.updateOne({ user_id: user.user_id }, { $set: { role_id: nextRole.id, role: nextRole.name } })
+
+			// check db is done
+			if (updateEvent.modifiedCount != 1) return 1
+		} catch (err) {
+			logger.error(err)
+			return 1
+		}
 		return 0
 	},
 
@@ -220,10 +257,54 @@ module.exports = {
 		return board
 	},
 
-	async getUserWithoutMonthInvitation(roleName) {
+	async getUserBelowMonthInvitationCriteria(roleName) {
 		let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
-		let returnable = await Users.find({ role_id: roleId, monthly_invitation: 0 })
+		let criteria = await this.getMinimumInvitationByRole(roleName)
+		let returnable = await Users.find({ role_id: roleId, $lt: { monthly_invitation: criteria.downgrade } })
 		return returnable
+	},
+
+	async isUserMonthInvitationCriteria(user) {
+		let result = false
+		let roleSettings = await this.getRoleSettingsByValue("name", user.role)
+		let roleName = roleSettings.command
+		let criteria = await this.getInvitationCriteriaByRole(roleName)
+
+		// To comment
+		logger.info("User's criteria [" + roleName + "]: ")
+		logger.info(criteria)
+		// To comment
+
+		let newMonthlyInvitation = +user.monthly_invitation_current + 1
+		console.log("New month inv: " + newMonthlyInvitation)
+		console.log("Criteria upgr: " + criteria.upgrade)
+
+		if (newMonthlyInvitation >= criteria.upgrade) {
+			result = true
+		}
+		return result
+	},
+
+	async getUserMonthInvitationCriteria(mode, roleName) {
+		// mode 0 --> above
+		// mode 1 --> below
+
+		let roleId = (await this.getRoleSettingsByValue("command", roleName)).id
+		let criteria = await this.getInvitationCriteriaByRole(roleName)
+
+		let returnable = null
+		if (mode == 0) {
+			returnable = await Users.find({ role_id: roleId, $gte: { monthly_invitation: criteria.upgrade } })
+		}
+		if (mode == 1) {
+			returnable = await Users.find({ role_id: roleId, $lt: { monthly_invitation: criteria.downgrade } })
+		}
+		return returnable
+	},
+
+	async getInvitationCriteriaByRole(roleName) {
+		const settings = await DBSETTINGS()
+		return settings.ROLES_CRITERIA[roleName]
 	},
 
 	async getUserUpDownByRolePercentage(roleName, percentage, mode) {

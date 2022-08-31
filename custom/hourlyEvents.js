@@ -32,4 +32,5 @@ module.exports = {
 		logger.info("Hourly check ODA IN NAME done ---> updated: " + updatedRows.modifiedCount)
 		logger.info("[HOURLY] checkOdaInName end")
 	},
+
 }

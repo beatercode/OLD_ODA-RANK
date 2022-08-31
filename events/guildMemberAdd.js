@@ -17,39 +17,51 @@ module.exports = {
 			}
 			let invite = null
 			try {
+				logger.info("---------------------- newInvites (hjS5Qmwfnq) RUN ----------------------")
+				//logger.info(newInvites.find(x => x.code === "Xn7PfjmkdC")) //dave hacker
+				//logger.info(newInvites.find(x => x.code === "hjS5Qmwfnq"))
+				logger.info("---------------------- oldInvites (hjS5Qmwfnq) RUN ----------------------")
+				//logger.info(oldInvites.find(x => x.code === "Xn7PfjmkdC")) //dave hacker
+				//logger.info(oldInvites.find(x => x.code === "hjS5Qmwfnq"))
 				invite = newInvites.find(i => i.uses > oldInvites.find(x => x.code === i.code).amount)
 			} catch (err) {
 				logger.error("Let's check what happen to this user [" + member.id + "]")
 			}
 			const inviter = (invite != null && invite.inviter != null) ? invite.inviter : null
 
-			let inviterId = "", inviterPoints = 0
-			let invitedWithCode = ""
 			const DB_SETTINGS = await DBSETTINGS()
+			let inviterId = ""
+			let inviterPoints = 0
+			let invitedWithCode = ""
+
 			if (inviter && invite && invite.code) {
 				logger.info("[TRIGGER] guildMemberad inviter [" + invite.code + "]")
 				invitedWithCode = invite.code
 				let updatesInv = await Invites.updateMany({ code: invitedWithCode }, { $inc: { valid: 1, amount: 1 } })
 				inviterId = inviter.id
 
-				let inviterUserDb = await Users.findOne({ user_id: inviterId })
+				let inviterUserDb = await Users.findOne({ user_id: inviterId, banned_invitation: { $nin: member.user.id } })
 				if (!inviterUserDb) {
 					logger.error(`GO CHECK THIS ID [${member.user.id}][${member.user.username}]`)
 					logger.error(`HE JOINED THE GUILD WITH INV. LINK [${invite.code}] OF SOMEONE ID [${inviterId}]`)
-					logger.error("BUT CAN't FIND HIS REF ON DB")
+					logger.error("BUT CAN'T FIND HIS REF ON DB")
 					return
 				}
 				let pointsBonusMul = inviterUserDb.monthly_invitation < 3 ? 2 : 1
 				//let pointsBonusOdaInNameMul = inviterUserDb.oda_in_name_bonus ? 1.1 : 1;
 				inviterPoints = DB_SETTINGS.INVITATION_POINTS * pointsBonusMul // * pointsBonusOdaInNameMul
+				console.log("Points mul: [" + pointsBonusMul + "] - total inviter points: [" + inviterPoints + "]")
 				if (updatesInv.modifiedCount > 0) {
 					logger.info(`User joined with inv. code [${invitedWithCode}] -> DB updated`)
 				} else {
 					logger.error(`User joined with inv. code [${invitedWithCode}] -> can't update DB`)
 				}
 
+				logger.info("New pending to add")
+				let newPending = member.user.id
 				let updatesUsr = await Users.updateMany({ user_id: inviter.id },
-					{ $inc: { points: inviterPoints, monthly_invitation: 1, total_invitation: 1 } })
+					{ $push: { pending_invitation: newPending } })
+
 				if (updatesUsr.modifiedCount > 0) {
 					logger.info(`User joined with inv. code [${invitedWithCode}] -> inviter point's gived`)
 				} else {
@@ -67,7 +79,11 @@ module.exports = {
 				points: 0,
 				daily: false,
 				consecutive_daily: 0,
+				pending_invitation: [],
 				monthly_invitation: 0,
+				monthly_invitation_current: 0,
+				monthly_updated: false,
+				total_invitation: 0,
 				monthly_points_received: 0,
 				oda_in_name: true,
 				oda_in_name_bonus: false,

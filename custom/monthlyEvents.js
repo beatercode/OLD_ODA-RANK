@@ -20,9 +20,11 @@ module.exports = {
 	},
 
 	async defaultMonthlyResets() {
-		// reset month invite, mult, points
-		await Users.updateMany({},
-			{ $set: { monthly_invitation: 0, consecutive_daily: 0, daily: false, monthly_points_received: 0 } })
+		// reset all user with monthly_updated == false
+		await Users.updateMany({ monthly_updated: false }, { $set: { monthly_invitation: 0, monthly_invitation_current: 0 } })
+
+		// set all monthly_updated == false (someone could be true) - also daily ecc
+		await Users.updateMany({}, { $set: { monthly_updated: false, consecutive_daily: 0, daily: false, monthly_points_received: 0 } })
 	},
 
 	async monthlyAdjustRole(client) {
@@ -102,8 +104,6 @@ module.exports = {
 		logger.info("START - Retriving boards")
 		// mode 0 --> upgrade
 		// mode 1 --> downgrade
-		//let nokaToUpgrade = await roleHelper.
-		//	.getUserUpDownByFixedNumber("noka", nokaFixed_up, 0)
 		let nokaToUpgrade = []
 		let nokaToDowngrade = await roleHelper
 			.getUserUpDownByRolePercentage("noka", nokaPercentage_down, 1)
@@ -113,8 +113,6 @@ module.exports = {
 			.getUserUpDownByRolePercentage("shokunin", shokuninPercentage_down, 1)
 		let shoninToUpgrade = await roleHelper
 			.getUserUpDownByRolePercentage("shonin", shoninPercentage_up, 0)
-		//let shoninToDowngrade = await roleHelper
-		//	.getUserUpDownByRolePercentage("shonin", shoninPercentage_down, 1)
 		let shoninToDowngrade = []
 		
 		const channelAnnouncementsID = DB_CHANNELS.ch_announcements
@@ -133,16 +131,15 @@ module.exports = {
 		const isShoninToDowngrade = shoninToDowngrade != null && shoninToDowngrade.length != 0
 		
 		// TO CHECK & ENABLE/DISABLE BEFORE EVENT
-		const isNokaUpToTextChat = false
-		const isShokuninUpToTextChat = false
-		const isShoninUpToTextChat = false		
+		const isNokaUpToTextChat = true
+		const isShokuninUpToTextChat = true
+		const isShoninUpToTextChat = true		
 		
-		const isTodoDB = false
+		const isTodoDB = true
 		const isTodoMonthinv = false
-		const isTodoDiscord = false
-		const isTodoRecapmessage = false
+		const isTodoDiscord = true
+		const isTodoRecapmessage = true
 		
-		// NOKA RECAP
 		let embedStaffNokaTop10 = []
 		embedStaffNokaTop10.push(new EmbedBuilder().setTitle("Kiyosu Festival Top 10 NOKA!").setColor("#FFFFFF"))
 		let top10Noka = await roleHelper.getUserUpDownByFixedNumber("noka", 10, 0)
@@ -153,6 +150,17 @@ module.exports = {
 			.setDescription("<@&" + DB_ROLES.noka.id + ">  TOP 10")
 		embedStaffNokaTop10.push(tempTop10NokaMsg)
 		await channelStaff.send({ embeds: embedStaffNokaTop10 })
+
+		// START | SEZIONE CHECK MONTHLY INVITATION
+		let monthCheck_nokaToDowngrade = await roleHelper.getUserMonthInvitationCriteria(1, "noka")
+		let monthCheck_shokuninToDowngrade = await roleHelper.getUserMonthInvitationCriteria(1, "shokunin")
+
+		monthCheck_nokaToDowngrade = monthCheck_nokaToDowngrade
+			.filter(ar => !nokaToDowngrade.find(rm => (rm.user_id === ar.user_id) ))
+		monthCheck_shokuninToDowngrade = monthCheck_shokuninToDowngrade
+			.filter(ar => !shokuninToDowngrade.find(rm => (rm.user_id === ar.user_id) ))
+
+		// END | SEZIONE CHECK MONTHLY INVITATION
 
 		logger.info("\nBoards LEN: \nnokaToUpgrade[" + nokaToUpgrade.length + "] \n"
 			+ "nokaToDowngrade[" + nokaToDowngrade.length + "] \n"
@@ -179,34 +187,24 @@ module.exports = {
 		logger.info(shoninToUpgrade.map(x => x.user_id))
 		logger.info("shoninToDowngrade IDs:")
 		logger.info(shoninToDowngrade.map(x => x.user_id))
-		logger.info("END - Retriving boards")
+		logger.info("monthCheck_nokaToDowngrade IDs:")
+		logger.info(monthCheck_nokaToDowngrade.map(x => x.user_id))
+		logger.info("monthCheck_shokuninToDowngrade IDs:")
+		logger.info(monthCheck_shokuninToDowngrade.map(x => x.user_id))
+		logger.info("END - Retriving lists")
 
 		/* ------------------------ [END] BOARDS SECTION ------------------------ */
 		/* ------------------------ [START] DATABASE SECTION ------------------------ */
 		if (isTodoDB) {
 
 			if (isTodoMonthinv) {
-
-				// START | SEZIONE CHECK MONTHLY INVITATION
-
-				let monthCheck_nokaToDowngrade = await roleHelper.getUserWithoutMonthInvitation("noka")
-				let monthCheck_shokuninToDowngrade = await roleHelper.getUserWithoutMonthInvitation("shokunin")
-
-				monthCheck_nokaToDowngrade = monthCheck_nokaToDowngrade
-					.filter(ar => !nokaToDowngrade.find(rm => (rm.user_id === ar.user_id) ))
-				monthCheck_shokuninToDowngrade = monthCheck_shokuninToDowngrade
-					.filter(ar => !shokuninToDowngrade.find(rm => (rm.user_id === ar.user_id) ))
-		
 				for(let user of monthCheck_nokaToDowngrade) {
-					await user.downgrade()
+					await roleHelper.downgrade_db(user)
 				}
 
 				for(let user of monthCheck_shokuninToDowngrade) {
-					await user.downgrade()
+					await roleHelper.downgrade_db(user)
 				}
-
-				// END | SEZIONE CHECK MONTHLY INVITATION
-
 			}
 
 
@@ -277,6 +275,16 @@ module.exports = {
 			await OdaSwitch.updateOne({ name: "Settings" }, { "values.role_upgrade_welcomemsg": false })
 			logger.info("OFF - role_upgrade_welcomemsg")
 			logger.info("Creating Embeds and adding/rem Roles")
+			
+			if (isTodoMonthinv) {
+				for(let user of monthCheck_nokaToDowngrade) {
+					await roleHelper.downgrade_discord(client, user)
+				}
+
+				for(let user of monthCheck_shokuninToDowngrade) {
+					await roleHelper.downgrade_discord(client, user)
+				}
+			}
 
 			// ⬆️ NOKA to SHOKUNIN
 			if (isNokaToDowngrade) {
