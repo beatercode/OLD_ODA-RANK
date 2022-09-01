@@ -27,6 +27,13 @@ module.exports = {
 		try {
 			logger.info("[COMMAND] new start")
 
+			let isAdmin = await mainHelper.isAdminAccount(interaction.member)
+			if (!isAdmin) {
+				interaction.reply({ content: "Only admin can use this command", ephemeral: true })
+				logger.info("[FETCH INVITES] end")
+				return
+			}
+
 			const subcommand = !interaction.options._subcommand ? null : interaction.options._subcommand
 
 			console.log(interaction.options)
