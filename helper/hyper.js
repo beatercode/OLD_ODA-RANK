@@ -39,12 +39,10 @@ module.exports = {
         response = await response.json()
         linkId = response.url
 
-        const finalLinkUrl = `https://hpr.co/${linkId}`
+        logger.info("Final Link Create: " + linkId)
+        console.log("Final Link Create: " + linkId)
 
-        logger.info("Final Link Create: " + finalLinkUrl)
-        console.log("Final Link Create: " + finalLinkUrl)
-
-        return finalLinkUrl
+        return linkId
     },
 
     async extendLicence(user, millisec) {
