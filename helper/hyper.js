@@ -26,7 +26,8 @@ module.exports = {
         const hyperAuthKey = process.env.HYPER_AUTH_KEY
         let linkId = ""
         let api = HYPER_BASE_API + "links"
-        let response = await fetch(api, {
+
+        await fetch(api, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -35,16 +36,18 @@ module.exports = {
             },
             body: JSON.stringify({ max_usages: 1, nickname: "Samurai Membership", plan: samuraiHyperProductID })
         })
-        
-        response = await response.json()
-        linkId = response.url
+            .then(response => response.json())
+            .then(response => {
 
-        const finalLinkUrl = `https://hpr.co/${linkId}`
+                const finalLinkUrl = `https://hpr.co/${response.url}`
 
-        logger.info("Final Link Create: " + finalLinkUrl)
-        console.log("Final Link Create: " + finalLinkUrl)
+                logger.info("Final Link Create: " + finalLinkUrl)
+                console.log("Final Link Create: " + finalLinkUrl)
 
-        return finalLinkUrl
+                return finalLinkUrl
+
+            })
+            .catch(err => console.error(err));
     },
 
     async extendLicence(user, millisec) {
@@ -66,7 +69,7 @@ module.exports = {
                 let userLicence = result.find(x => (x.user.username == user.username || x.user.username.includes(user.username)))
 
                 userLicence = userLicence ? userLicence : false
-                if (!userLicence) { 
+                if (!userLicence) {
                     logger.info("Licenza non trovata = fa parte del team")
                     console.log("Licenza non trovata = fa parte del team")
                     return 0
