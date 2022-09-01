@@ -4,8 +4,6 @@ const config = require("../backup/config.json")
 const logger = require("./_logger")
 require("dotenv").config()
 
-import fetch from 'node-fetch' 
-
 const HYPER_BASE_API = "https://api.hyper.co/v6/"
 
 module.exports = {
@@ -28,8 +26,7 @@ module.exports = {
         const hyperAuthKey = process.env.HYPER_AUTH_KEY
         let linkId = ""
         let api = HYPER_BASE_API + "links"
-
-        await fetch(api, {
+        let response = await fetch(api, {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -38,18 +35,16 @@ module.exports = {
             },
             body: JSON.stringify({ max_usages: 1, nickname: "Samurai Membership", plan: samuraiHyperProductID })
         })
-            .then(response => response.json())
-            .then(response => {
+        
+        response = await response.json()
+        linkId = response.url
 
-                const finalLinkUrl = `https://hpr.co/${response.url}`
+        const finalLinkUrl = `https://hpr.co/${linkId}`
 
-                logger.info("Final Link Create: " + finalLinkUrl)
-                console.log("Final Link Create: " + finalLinkUrl)
+        logger.info("Final Link Create: " + finalLinkUrl)
+        console.log("Final Link Create: " + finalLinkUrl)
 
-                return finalLinkUrl
-
-            })
-            .catch(err => console.error(err));
+        return finalLinkUrl
     },
 
     async extendLicence(user, millisec) {
@@ -71,7 +66,7 @@ module.exports = {
                 let userLicence = result.find(x => (x.user.username == user.username || x.user.username.includes(user.username)))
 
                 userLicence = userLicence ? userLicence : false
-                if (!userLicence) {
+                if (!userLicence) { 
                     logger.info("Licenza non trovata = fa parte del team")
                     console.log("Licenza non trovata = fa parte del team")
                     return 0
