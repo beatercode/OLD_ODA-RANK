@@ -67,15 +67,13 @@ module.exports = {
                 if (!userLicence) { 
                     logger.info("Licenza non trovata = fa parte del team")
                     console.log("Licenza non trovata = fa parte del team")
-                    return 0
+                    return 2
                 }
 
                 let userLicenceSub = userLicence.subscription
                 let userLicenceKey = userLicence.key
 
-                let userLicenceSubUpdated = userLicenceSub
-                userLicenceSubUpdated.current_period_end = userLicenceSubUpdated.current_period_end + millisec
-                userLicenceSubUpdated.trial_end = userLicenceSubUpdated.trial_end + millisec
+                let cancelAtUpdated = userLicenceSub.trial_end + millisec
 
                 let updateApi = HYPER_BASE_API + "licenses/" + userLicenceKey
                 fetch(updateApi, {
@@ -85,10 +83,13 @@ module.exports = {
                         Authorization: hyperAuthKey,
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ subscription: userLicenceSubUpdated })
+                    body: JSON.stringify({ cancel_at: cancelAtUpdated })
                 })
                     .then(response => response.json())
-                    .then(response => console.log("KEY [" + userLicenceKey + "] added [" + millisec + "] milliseconds"))
+                    .then(response => {
+                        console.log("KEY [" + userLicenceKey + "] added [" + millisec + "] milliseconds")
+                        return 0
+                    })
                     .catch(err => console.error(err));
 
             })

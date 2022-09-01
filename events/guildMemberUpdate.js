@@ -1,4 +1,5 @@
 const logger = require("../helper/_logger")
+const { EmbedBuilder } = require("discord.js")
 const Users = require("../models/Users")
 const roleHelper = require("../helper/roleHelper")
 const mainHelper = require("../helper/mainHelper")
@@ -84,8 +85,11 @@ module.exports = {
 								logger.info("Preparazione invio messaggio in chat di provenienza [" + roleName + "]")
 
 								let targetChannel = client.channels.cache.get(roleSettings.chat_channel_id)
-								// TODO
-								let outputString = ""
+								let nextRole = await this.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
+
+								let outputString = roleName == "shonin"
+									? `Congratulations <@${inviterUser.user_id}>, you showed your value and helped to grow our Clan by successfully inviting 2 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>.`
+									: `Congratulations <@${inviterUser.user_id}>, you added great value to our Clan by successfully inviting 5 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>.`
 								const messageToSend = new EmbedBuilder()
 									.setColor(roleSettings.color)
 									.setTitle("ODA Upgrade")
@@ -105,10 +109,11 @@ module.exports = {
 								{ $set: { monthly_invitation_current: 0 } }
 							)
 							logger.info("Preparazione invio messaggio in chat noka")
-							
+
 							let targetChannel = client.channels.cache.get(roleSettings.chat_channel_id)
-							// TODO
-							let outputString = ""
+							let nextRole = await this.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
+
+							let outputString = `Congratulations <@${inviterUser.user_id}>, you showed true passion and commitment by inviting 10 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>, open a ticket to claim your free subscription.`
 							const messageToSend = new EmbedBuilder()
 								.setColor(roleSettings.color)
 								.setTitle("ODA Upgrade")
@@ -124,7 +129,15 @@ module.exports = {
 						let msToAdd = hoursToAdd * 60 * 60 * 1000
 
 						logger.info("Aggiungere " + msToAdd + " alla durata della licenza")
-						await hyper.extendLicence(inviterUser, msToAdd)
+						let extendResult = await hyper.extendLicence(inviterUser, msToAdd)
+
+						if (extendResult == 0) {
+							let targetChannel = client.channels.cache.get(roleSettings.chat_channel_id)
+							await targetChannel.send(`Congratulations <@${inviterUser.user_id}>, you gained ${hoursToAdd} hours to your subriction as you invited a new Kyodai!`)
+						} else {
+							logger.info("Error during extend - check this user id [" + inviterUser.user_id + "]")
+							console.log("Error during extend - check this user id [" + inviterUser.user_id + "]")
+						}
 					}
 				}
 

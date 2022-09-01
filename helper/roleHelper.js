@@ -277,9 +277,9 @@ module.exports = {
 
 		let newMonthlyInvitation = +user.monthly_invitation_current + 1
 		console.log("New month inv: " + newMonthlyInvitation)
-		console.log("Criteria upgr: " + criteria.upgrade)
+		console.log("Criteria upgr: " + criteria != null ? criteria.upgrade : "Not necessary")
 
-		if (newMonthlyInvitation >= criteria.upgrade) {
+		if (criteria != null ? newMonthlyInvitation >= criteria.upgrade : false) {
 			result = true
 		}
 		return result

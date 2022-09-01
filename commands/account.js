@@ -4,6 +4,7 @@ const Users = require("../models/Users")
 const logger = require("../helper/_logger")
 const mainHelper = require("../helper/mainHelper")
 const { getRoleSettingsByValue } = require("../helper/roleHelper")
+const roleHelper = require("../helper/roleHelper")
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -50,12 +51,28 @@ module.exports = {
 				? `He is a **${targetUserDb.role}** with **${targetUserDb.points}** ODA points! He invited **${targetUserDb.total_invitation} kyodai** in the Clan!`
 				: `You are a **${targetUserDb.role}** with **${targetUserDb.points}** ODA points! You invited **${targetUserDb.total_invitation} kyodai** in the Clan!`
 				
-			let haveOneInvThisMonth = targetUserDb.monthly_invitation > 0
+			let haveOneInvThisMonth = targetUserDb.monthly_invitation_current > 0
+
+			let roleName = (await roleHelper.getRoleSettingsByValue("name", targetUserDb.role)).command
+			let criteria = await roleHelper.getInvitationCriteriaByRole(roleName)
+
+			let isCriteriaValid = criteria != undefined && criteria.upgrade != null
+			let criteriaUpgrade = isCriteriaValid ? criteria.upgrade : null
+			let criteriaDowngrade = isCriteriaValid ? criteria.downgrade : 0
+
+			let criteriaEmoji = criteriaUpgrade == null 
+				? "➡️" 
+				: targetUserDb.monthly_invitation_current >= criteriaUpgrade 
+				? "⬆️" 
+				: targetUserDb.monthly_invitation_current < criteriaDowngrade
+				? "⬇️"
+				: "➡️"
+
+			let stringTargetVar = criteriaUpgrade == null ? "Not necessary" : `${targetUserDb.monthly_invitation_current} / ${criteriaUpgrade}`
 
 			let emojiDailyClaim = targetUserDb.daily ? "✅" : "❌"
 			let textDailyClaim = targetUserDb.daily ? "Done" : "To do"
-			let emojiMonthInvCheck = haveOneInvThisMonth ? "✅" : "❌"
-			let textMonthInvCheck = haveOneInvThisMonth ? "Done" : "To do"
+
 			let textRole = targetUserDb.role
 			let level = textRole.substring(textRole.indexOf("Lvl.") + 4, textRole.length)
 			try {
@@ -74,7 +91,7 @@ module.exports = {
 			outputString += `${lvlEmoji} **Level**: <@&${targetUserDb.role_id}>\n\n`
 			outputString += `📈 **Points**: ${targetUserDb.points}\n\n`
 			outputString += `${emojiDailyClaim} **Today Claim**: ${textDailyClaim}\n\n`
-			//outputString += `${emojiMonthInvCheck} **Monthly Invitation**: ${textMonthInvCheck}\n\n`
+			outputString += `${criteriaEmoji} **Target Invitation**: ${stringTargetVar}\n\n`
 			outputString += `🚀 **Daily Streak**: ${targetUserDb.consecutive_daily}\n\n`
 			outputString += `⛳️ **Total Daily**: ${targetUserDb.total_daily}\n\n`
 			outputString += `🎯 **Monthly Invitation**: ${targetUserDb.monthly_invitation}\n\n`
