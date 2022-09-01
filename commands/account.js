@@ -73,12 +73,12 @@ module.exports = {
 			outputString =  `🥋 **Account**: <@${targetUserId}>\n\n`
 			outputString += `${lvlEmoji} **Level**: <@&${targetUserDb.role_id}>\n\n`
 			outputString += `📈 **Points**: ${targetUserDb.points}\n\n`
-			outputString += `${emojiDailyClaim} **Today claim**: ${textDailyClaim}\n\n`
+			outputString += `${emojiDailyClaim} **Today Claim**: ${textDailyClaim}\n\n`
 			//outputString += `${emojiMonthInvCheck} **Monthly Invitation**: ${textMonthInvCheck}\n\n`
-			outputString += `🚀 **Daily streak**: ${targetUserDb.consecutive_daily}\n\n`
+			outputString += `🚀 **Daily Streak**: ${targetUserDb.consecutive_daily}\n\n`
 			outputString += `⛳️ **Total Daily**: ${targetUserDb.total_daily}\n\n`
-			outputString += `🎯 **Monthly invitation**: ${targetUserDb.monthly_invitation}\n\n`
-			outputString += `💯 **Total invitation**: ${targetUserDb.total_invitation}\n\n`
+			outputString += `🎯 **Monthly Invitation**: ${targetUserDb.monthly_invitation}\n\n`
+			outputString += `💯 **Total Invitation**: ${targetUserDb.total_invitation}\n\n`
 
 			const roleColor = roleSettings.color
 			const accountEmbed = new EmbedBuilder()
