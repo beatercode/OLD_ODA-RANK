@@ -4,6 +4,8 @@ const config = require("../backup/config.json")
 const logger = require("./_logger")
 require("dotenv").config()
 
+import fetch from 'node-fetch' 
+
 const HYPER_BASE_API = "https://api.hyper.co/v6/"
 
 module.exports = {
