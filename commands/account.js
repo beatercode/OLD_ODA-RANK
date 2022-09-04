@@ -61,12 +61,12 @@ module.exports = {
 			let criteriaDowngrade = isCriteriaValid ? criteria.downgrade : 0
 
 			let criteriaEmoji = criteriaUpgrade == null 
-				? "➡️" 
+				? "↔️" 
 				: targetUserDb.monthly_invitation_current >= criteriaUpgrade 
 				? "⬆️" 
 				: targetUserDb.monthly_invitation_current < criteriaDowngrade
 				? "⬇️"
-				: "➡️"
+				: "↔️"
 
 			let stringTargetVar = criteriaUpgrade == null ? "Not necessary" : `${targetUserDb.monthly_invitation_current} / ${criteriaUpgrade}`
 
