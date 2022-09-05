@@ -9,25 +9,24 @@ module.exports = {
 	async execute(interaction) {
 
 		try {
+
+			if (interaction.type === InteractionType.ModalSubmit) {
+				if (interaction.customId.includes("survey_open_")) {
+					await surveyHelper.handleSurveyChoose(interaction.customId, interaction)
+				}
+			}
+
 			if (interaction.isButton()) {
 				// SURVEY MANAGE
-				if (interaction.customId.includes("survey_delete_")) {
-					await surveyHelper.handleSurveyDeleteButton(interaction.customId, interaction)
-				}
 				if (interaction.customId.includes("survey_choose_")) {
-					await surveyHelper.handleSurveyChooseButton(interaction.customId, interaction)
+					await surveyHelper.handleSurveyChoose(interaction.customId, interaction)
 				}
-				
+
 				if (interaction.message.embeds[0].title.includes("ODA Clan")) {
 					interactionHandler.handleOdaSystemButton(interaction)
 				}
 			}
-			
-			if (interaction.type === InteractionType.ModalSubmit) {
-				if (interaction.customId.includes("Survey")) {
-					surveyHelper.handleSurveyModal(interaction)
-				}
-			}
+
 			if (!interaction.type === InteractionType.ApplicationCommand) return
 			const command = interaction.client.commands.get(interaction.commandName)
 			if (!command) return

@@ -4,8 +4,114 @@ const { EmbedBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowB
 const mainHelper = require("./mainHelper")
 const Surveys = require("../models/Surveys")
 const logger = require("./_logger")
+require("dotenv").config()
 
 module.exports = {
+
+	async sendSurvey(interaction) {
+
+		// MODE S : survey
+		// MODE Q : quiz
+		// MODE N : novel
+
+		let prod = false
+		let apiToCall = prod ? process.env.API_SURVEY : "http://localhost:3000/survey"
+
+		let targetId = interaction.options._hoistedOptions[0].value
+		// CALL API
+
+		const survey = { survey_id: targetId };
+		const options = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(survey),
+		};
+
+		fetch(apiToCall, options)
+			.then(data => data.json())
+			.then(async data => await interaction.reply({ embeds: [data.embed], components: data.rows }))
+			.catch(e => console.log(e))
+
+		// interaction.reply({ content: "In progress", ephemeral: true })
+	},
+
+	async handleSurveyChoose(data, interaction) {
+		let [command, subcommand, qId, choose] = data.split("_")
+
+		if (subcommand == "open") {
+			for (let field of interaction.fields.fields) {
+				choose = field[0] == "answer" ? field[1].value : ""
+			}
+		}
+
+		let voterUserId = interaction.member.user.id
+		let voter = { id: voterUserId, choose: choose }
+
+		if (choose.toUpperCase() == "OPEN") {
+			this.handleOpenAnswer(interaction, qId)
+			return
+		}
+
+		let targetSurvey = await Surveys.findOne({ customId: qId })
+
+		// If open answer, I take points from first option
+		let deservedPoints = 0
+		if (targetSurvey.options.length > 0 && subcommand == "open") {
+			deservedPoints = targetSurvey.options[0].points
+		} else {
+			deservedPoints = (targetSurvey.options.find(x => x.value == choose)).points
+		}
+
+		if (targetSurvey.mode == "survey") {
+
+			let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
+			if (votersUpdate.modifiedCount == 0) {
+				await Surveys.updateOne({ customId: qId, "voters.id": voterUserId }, { $set: { "voters.$.choose": choose } })
+			} else {
+				await mainHelper.addPoints(voterUserId, deservedPoints)
+			}
+
+			interaction.reply({ content: "Thanks! Your preference has been updated", ephemeral: true })
+
+		} else if (targetSurvey.mode == "quiz") {
+
+			let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
+
+			if (votersUpdate.modifiedCount == 0) {
+				interaction.reply({ content: "You already voted for this survey", ephemeral: true })
+				return
+			} else {
+				if (deservedPoints > 0) {
+					await mainHelper.addPoints(voterUserId, deservedPoints)
+					interaction.reply({ content: `Correct! You got ${deservedPoints}`, ephemeral: true })
+				} else {
+					interaction.reply({ content: "Ouchh! Risposta errata", ephemeral: true })
+				}
+			}
+
+		}
+	},
+
+	async handleOpenAnswer(interaction, qId) {
+
+		let modalId = "survey_open_" + qId + "_null"
+		const modal = new ModalBuilder().setCustomId(modalId).setTitle("ODA Survey - Open")
+
+		const answerInput = new TextInputBuilder()
+			.setCustomId("answer")
+			.setLabel("Answer")
+			.setStyle(TextInputStyle.Paragraph)
+
+		const row = new ActionRowBuilder().addComponents(answerInput)
+
+		modal.addComponents(row)
+		await interaction.showModal(modal)
+	},
+
+	// NOT ACUTALLY USE --> migrate to admin portal
+
 	async sendSurveyList(interaction) {
 		let surveys = await Surveys.find({})
 		let fields = generateFields(surveys)
@@ -21,21 +127,21 @@ module.exports = {
 	},
 
 	async handleSurveyDeleteButton(data, interaction) {
-		let [ command, subcommand, value, id ] = data.split("_")
+		let [command, subcommand, value, id] = data.split("_")
 
 		switch (subcommand) {
-		case "delete": {
-			if (value == "yes") {
-				await Surveys.deleteOne({ customId: id })
-				interaction.reply({ content: "Done", ephemeral: true })
-			} else {
-				interaction.reply({ content: "Alright, dismiss those messages then...", ephemeral: true })
+			case "delete": {
+				if (value == "yes") {
+					await Surveys.deleteOne({ customId: id })
+					interaction.reply({ content: "Done", ephemeral: true })
+				} else {
+					interaction.reply({ content: "Alright, dismiss those messages then...", ephemeral: true })
+				}
+				break
 			}
-			break
-		}
-		default: 
-			interaction.reply({ content: "Something wrong just happened", ephemeral: true })
-			break
+			default:
+				interaction.reply({ content: "Something wrong just happened", ephemeral: true })
+				break
 		}
 	},
 
@@ -50,7 +156,7 @@ module.exports = {
 			.setColor("#ffffff")
 			.setTitle("ODA Clan | Removing Survey " + targetId)
 			.setDescription(cDesc)
-		
+
 		const row = new ActionRowBuilder()
 			.addComponents(
 				new ButtonBuilder().setCustomId("survey_delete_yes_" + targetId).setLabel("🟢 Yes").setStyle(ButtonStyle.Success),
@@ -58,104 +164,6 @@ module.exports = {
 			)
 
 		await interaction.reply({ embeds: [embed], components: [row], ephemeral: true })
-	},
-
-	async sendSurvey(interaction) {
-		let targetId = "Q" + interaction.options._hoistedOptions[0].value
-		let surveyToSend = await Surveys.findOne({ customId: targetId })
-
-		const embed = new EmbedBuilder()
-			.setColor("#ffffff")
-			// .setTitle("ODA Clan Survey")
-			.setTitle("Survey | " + surveyToSend.name)
-			.setDescription(surveyToSend.question)
-		
-		let qOptions = surveyToSend.options
-		let howManyRows = Math.floor(qOptions.length / 3)
-		let rowReminder = qOptions.length % 3
-		console.log(" -- Will use " + howManyRows + " rows for the buttons")
-
-		let rows = []
-		let responseIdPrefix = "survey_choose_" + surveyToSend.customId
-
-		// FOR EVERY ROW
-		for (let i = 0; i < howManyRows; i ++) {
-			rows.push(
-				new ActionRowBuilder()
-					.addComponents(
-						new ButtonBuilder().setCustomId(responseIdPrefix + "_" + qOptions[i * 3 + 0].value)
-							.setLabel(qOptions[i * 3 + 0].value).setStyle(ButtonStyle.Primary),
-						new ButtonBuilder().setCustomId(responseIdPrefix + "_" + qOptions[i * 3 + 1].value)
-							.setLabel(qOptions[i * 3 + 1].value).setStyle(ButtonStyle.Primary),
-						new ButtonBuilder().setCustomId(responseIdPrefix + "_" + qOptions[i * 3 + 2].value)
-							.setLabel(qOptions[i * 3 + 2].value).setStyle(ButtonStyle.Primary),
-					)
-			)
-		}
-
-		// REMINDERS
-		if (rowReminder > 1) {
-			rows.push(
-				new ActionRowBuilder()
-					.addComponents(
-						rowReminder > 0 ? new ButtonBuilder().setCustomId(responseIdPrefix + "_" + qOptions[howManyRows * 3 + 0].value)
-							.setLabel(qOptions[howManyRows * 3 + 0].value).setStyle(ButtonStyle.Primary) : null,
-						rowReminder > 1 ? new ButtonBuilder().setCustomId(responseIdPrefix + "_" + qOptions[howManyRows * 3 + 1].value)
-							.setLabel(qOptions[howManyRows * 3 + 1].value).setStyle(ButtonStyle.Primary) : null
-					)
-			)
-		} else if (rowReminder > 0) {
-			rows.push(
-				new ActionRowBuilder()
-					.addComponents(
-						rowReminder > 0 ? new ButtonBuilder().setCustomId(surveyToSend.customId + "_" + qOptions[howManyRows * 3 + 0].value)
-							.setLabel(qOptions[howManyRows * 3 + 0].value).setStyle(ButtonStyle.Primary) : null
-					)
-			)
-		}
-		
-		await Surveys.updateOne({ customId: targetId }, { $set: { wasPublished: true } } )
-		await interaction.reply({ embeds: [embed], components: rows })
-		// interaction.reply({ content: "In progress", ephemeral: true })
-	},
-
-	async handleSurveyChooseButton(data, interaction) {
-		let [ command, subcommand, qId, choose ] = data.split("_")
-
-		let voterUserId = interaction.member.user.id
-		let voter = { id: voterUserId, choose: choose }
-
-		let targetSurvey = await Surveys.findOne({ customId: qId })
-		let deservedPoints = (targetSurvey.options.find(x => x.value == choose)).points
-
-		if (targetSurvey.mode == "survey") {
-
-			let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
-			if (votersUpdate.modifiedCount == 0) {
-				await Surveys.updateOne({ customId: qId, "voters.id": voterUserId }, { $set: { "voters.$.choose": choose } })
-			} else {
-				await mainHelper.addPoints(voterUserId, deservedPoints)
-			}
-			
-			interaction.reply({ content: "Thanks! Your preference has been updated", ephemeral: true })
-
-		} else if (targetSurvey.mode == "quiz") {
-
-			let votersUpdate = await Surveys.updateOne({ customId: qId, "voters.id": { $ne: voterUserId } }, { $push: { voters: voter } })
-			
-			if (votersUpdate.modifiedCount == 0) {
-				interaction.reply({ content: "You already voted for this survey", ephemeral: true })
-				return
-			} else {
-				if (deservedPoints > 0) {
-					await mainHelper.addPoints(voterUserId, deservedPoints)
-					interaction.reply({ content: `Correct! You got ${deservedPoints}`, ephemeral: true })
-				} else {
-					interaction.reply({ content: "Ouchh! Risposta errata", ephemeral: true })
-				}
-			}
-
-		}
 	},
 
 	async addSurveyInitialize(interaction) {
@@ -202,7 +210,7 @@ module.exports = {
 	},
 
 	async addSurvey_firstCommit(fields, interaction) {
-		let { qName, qQuestion, qRepublishable, qMode, qOptions } = "" 
+		let { qName, qQuestion, qRepublishable, qMode, qOptions } = ""
 		for (let field of fields) {
 			qName = field[0] == "name" ? field[1].value : qName
 			qQuestion = field[0] == "question" ? field[1].value : qQuestion
@@ -217,7 +225,7 @@ module.exports = {
 			objOptions.push({
 				value: element,
 				points: 200
-			})	
+			})
 		})
 
 		let surveysList = await Surveys.find({})
@@ -227,9 +235,9 @@ module.exports = {
 		let currectValidFrom = await mainHelper.todayInDDMMYYY()
 
 		await Surveys.insertMany([{
-			customId: nextId, 
-			name: qName, 
-			question: qQuestion, 
+			customId: nextId,
+			name: qName,
+			question: qQuestion,
 			republishable: qRepublishable == "true",
 			wasPublished: false,
 			mode: qMode,
@@ -247,7 +255,7 @@ function generateFields(array) {
 	for (let item of array) {
 		let qOptions = item.options
 		let optionsReduced = ""
-		for(let o of qOptions) {
+		for (let o of qOptions) {
 			optionsReduced += o.value + ", "
 		}
 		optionsReduced = optionsReduced.substring(0, optionsReduced.length - 2)
