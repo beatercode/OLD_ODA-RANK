@@ -15,7 +15,7 @@ module.exports = {
 		// MODE N : novel
 
 		let prod = false
-		let apiToCall = prod ? process.env.API_SURVEY : "http://localhost:3000/survey"
+		let apiToCall = prod ? process.env.API_SURVEY : "http://localhost:3000/survey/send"
 
 		let targetId = interaction.options._hoistedOptions[0].value
 		// CALL API
