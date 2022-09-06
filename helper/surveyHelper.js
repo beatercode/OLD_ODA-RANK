@@ -29,6 +29,7 @@ module.exports = {
 			body: JSON.stringify(survey),
 		};
 
+		console.log(`${apiToCall}/survey/send`)
 		fetch(`${apiToCall}/survey/send`, options)
 			.then(data => data.json())
 			.then(async data => await interaction.reply({ embeds: [data.embed], components: data.rows }))
