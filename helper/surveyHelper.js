@@ -14,8 +14,8 @@ module.exports = {
 		// MODE Q : quiz
 		// MODE N : novel
 
-		let prod = false
-		let apiToCall = prod ? process.env.API_SURVEY : "http://localhost:3000/survey/send"
+		let prod = true
+		let apiToCall = prod ? process.env.API_SURVEY : "http://localhost:3000"
 
 		let targetId = interaction.options._hoistedOptions[0].value
 		// CALL API
@@ -29,7 +29,7 @@ module.exports = {
 			body: JSON.stringify(survey),
 		};
 
-		fetch(apiToCall, options)
+		fetch(`${apiToCall}/survey/send`, options)
 			.then(data => data.json())
 			.then(async data => await interaction.reply({ embeds: [data.embed], components: data.rows }))
 			.catch(e => console.log(e))
