@@ -62,7 +62,8 @@ module.exports = {
 		if (targetSurvey.options.length > 0 && subcommand == "open") {
 			deservedPoints = targetSurvey.options[0].points
 		} else {
-			deservedPoints = (targetSurvey.options.find(x => x.value == choose)).points
+			deservedPoints = (targetSurvey.options.find(x => x.value == choose))
+			deservedPoints = deservedPoints ? deservedPoints.points : 0
 		}
 
 		if (targetSurvey.mode == "survey") {
