@@ -29,10 +29,15 @@ module.exports = {
 			body: JSON.stringify(survey),
 		};
 
+		let channelFrom = interaction.client.channels.cache.get(interaction.channelId)
+
 		console.log(`${apiToCall}/survey/send`)
 		fetch(`${apiToCall}/survey/send`, options)
 			.then(data => data.json())
-			.then(async data => await interaction.reply({ embeds: [data.embed], components: data.rows }))
+			.then(async data => {
+				await channelFrom.send({ embeds: [data.embed], components: data.rows })
+				interaction.reply({ content: "Survey sent", ephemeral: true })
+			})
 			.catch(e => console.log(e))
 
 		// interaction.reply({ content: "In progress", ephemeral: true })
@@ -99,7 +104,7 @@ module.exports = {
 	async handleOpenAnswer(interaction, qId) {
 
 		let modalId = "survey_open_" + qId + "_null"
-		const modal = new ModalBuilder().setCustomId(modalId).setTitle("ODA Survey - Open")
+		const modal = new ModalBuilder().setCustomId(modalId).setTitle("ODA Clan")
 
 		const answerInput = new TextInputBuilder()
 			.setCustomId("answer")
