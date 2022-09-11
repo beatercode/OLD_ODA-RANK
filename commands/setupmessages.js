@@ -101,6 +101,7 @@ module.exports = {
 					)
 				const row4 = new ActionRowBuilder()
 					.addComponents(
+						new ButtonBuilder().setCustomId("startNovel").setLabel("📍 OPEN SECRET").setStyle(ButtonStyle.Danger),
 						new ButtonBuilder().setCustomId("dailyTrue").setLabel("📍 D. TRUE").setStyle(ButtonStyle.Danger),
 						new ButtonBuilder().setCustomId("dailyFalse").setLabel("📍 D. FALSE").setStyle(ButtonStyle.Danger),
 						new ButtonBuilder().setCustomId("dailyFalseAll").setLabel("📍 D. FALSE ALL").setStyle(ButtonStyle.Danger),
@@ -119,7 +120,7 @@ module.exports = {
 					.addFields({ name: "BACKUP USER", value: "Dump user table to backup json file" }, { name: "BACKUP SETTINGS", value: "Dump settings table to backup json file" }, { name: "D. TRUE", value: "Set ALLs daily claim to true" }, { name: "D. FALSE", value: "Set ALLs daily claim to false" }, )
 					.setFooter({ text: "ODA Clan bot management", iconURL: "https://i.imgur.com/1ED6ifg.jpeg" })
 
-				await channelDebug.send({ embeds: [embed], components: [row1, row2, row3, row4, row5] })
+				await channelDebug.send({ embeds: [embed], components: [row1, row2, row4, row5] })
 				contentOutput += "Default Moderation message created"
 			} else {
 				contentOutput += "Default Moderation message exist. Delete it and launch the command again"
