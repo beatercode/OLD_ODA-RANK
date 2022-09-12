@@ -85,7 +85,7 @@ module.exports = {
 								logger.info("Preparazione invio messaggio in chat di provenienza [" + roleName + "]")
 
 								let targetChannel = client.channels.cache.get(roleSettings.chat_channel_id)
-								let nextRole = await this.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
+								let nextRole = await roleHelper.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
 
 								let outputString = roleName == "shonin"
 									? `Congratulations <@${inviterUser.user_id}>, you showed your value and helped to grow our Clan by successfully inviting 2 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>.`
@@ -111,7 +111,7 @@ module.exports = {
 							logger.info("Preparazione invio messaggio in chat noka")
 
 							let targetChannel = client.channels.cache.get(roleSettings.chat_channel_id)
-							let nextRole = await this.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
+							let nextRole = await roleHelper.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
 
 							let outputString = `Congratulations <@${inviterUser.user_id}>, you showed true passion and commitment by inviting 10 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>, open a ticket to claim your free subscription.`
 							const messageToSend = new EmbedBuilder()
