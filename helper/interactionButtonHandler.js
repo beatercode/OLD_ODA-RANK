@@ -149,7 +149,7 @@ module.exports = {
 				console.log("Error occured" + err)
 				logger.error("[handleOdaSystemButton] ---->")
 				logger.error(err)
-				interaction.reply({ content: "An error occurred during the execution of the command. Open a ticket if the problem persist", ephemeral: true })
+				interaction.reply({ content: "An error occurred during the execution of the command. Open a <#992242964292173935> if the problem persist", ephemeral: true })
 			}
 		}
 

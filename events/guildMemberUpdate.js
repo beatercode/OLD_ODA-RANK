@@ -88,8 +88,8 @@ module.exports = {
 								let nextRole = await roleHelper.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
 
 								let outputString = roleName == "shonin"
-									? `Congratulations <@${inviterUser.user_id}>, you showed your value and helped to grow our Clan by successfully inviting 2 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>.`
-									: `Congratulations <@${inviterUser.user_id}>, you added great value to our Clan by successfully inviting 5 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>.`
+									? `Congratulations <@${inviterUser.user_id}>, you showed your **value** and **helped to grow** our Clan by successfully inviting **2 Kyodai** into the Server. \nYou earned the promotion to <@&${nextRole.id}>.`
+									: `Congratulations <@${inviterUser.user_id}>, you added **great value** to our Clan by successfully inviting **5 Kyodai** into the Server. \nYou earned the promotion to <@&${nextRole.id}>.`
 								const messageToSend = new EmbedBuilder()
 									.setColor(roleSettings.color)
 									.setTitle("ODA Upgrade")
@@ -113,7 +113,7 @@ module.exports = {
 							let targetChannel = client.channels.cache.get(roleSettings.chat_channel_id)
 							let nextRole = await roleHelper.getRoleSettingsByValue("lvl", (+roleSettings.lvl + 1))
 
-							let outputString = `Congratulations <@${inviterUser.user_id}>, you showed true passion and commitment by inviting 10 Kyodai into the Server. You earned the promotion to <@&${nextRole.id}>, open a ticket to claim your free subscription.`
+							let outputString = `Congratulations <@${inviterUser.user_id}>, you showed **true passion** and **commitment** by inviting **10 Kyodai** into the Server. \nYou earned the promotion to <@&${nextRole.id}>, open a <#992242964292173935> to claim your **free subscription**.`
 							const messageToSend = new EmbedBuilder()
 								.setColor(roleSettings.color)
 								.setTitle("ODA Upgrade")
